@@ -1,43 +1,63 @@
 .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2% 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
-    .header__logo {
-        margin-right: 2%;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 14px 0;
+    }
+
+    &__logo {
+        width: 5%;
+    }
+
+    &__burger {
         width: 10%;
-        padding: 2%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
     }
 
-    .header__title {
-        max-width: 80%;
-        color: red;
-        background-image: url("../img/icon/fb.svg") no-repeat center;
-    }
-}
+    .btn-menu {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-.main__section {
-    padding: 120px 0;
-    margin-bottom: 120px;
-}
+        &::before {
+            content: "";
+            top: -12px;
+        }
 
-.main__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    align-items: center;
-    padding: 0px;
-    list-style: none;
-
-    .main__items {
-        width: 40%;
-        margin: 20px;
+        &::after {
+            content: "";
+            top: 12px;
+            width: 20px;
+        }
     }
 
-    .main__img {
-        object-fit: cover;
+    .btn-menu,
+    .btn-menu::after,
+    .btn-menu::before {
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: #9acd32;
+
+        transition: 0.4s;
+    }
+
+    &__menu {
+        font-weight: 700;
+    }
+
+    .first-element {
+        font-weight: 700;
+        color: #ff0000;
     }
 }
