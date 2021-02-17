@@ -1,0 +1,43 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 0;
+
+    .header__logo {
+        margin-right: 2%;
+        width: 10%;
+        padding: 2%;
+    }
+
+    .header__title {
+        max-width: 80%;
+        color: red;
+        background-image: url("../img/icon/fb.svg") no-repeat center;
+    }
+}
+
+.main__section {
+    padding: 120px 0;
+    margin-bottom: 120px;
+}
+
+.main__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding: 0px;
+    list-style: none;
+
+    .main__items {
+        width: 40%;
+        margin: 20px;
+    }
+
+    .main__img {
+        object-fit: cover;
+    }
+}

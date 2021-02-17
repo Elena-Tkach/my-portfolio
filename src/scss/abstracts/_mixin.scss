@@ -1,0 +1,9 @@
+@mixin gradient-text {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, #a7c939, #d8d823);
+    // background: linear-gradient(-1deg, #8993ad 20%,  rgb(250, 15, 140) 46%);
+    // background: linear-gradient(20deg, #8993ad, #f76927, #ec1280);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}

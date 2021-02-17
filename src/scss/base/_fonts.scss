@@ -1,0 +1,50 @@
+// /* roboto-regular - cyrillic_latin */
+// @font-face {
+//   font-family: "Roboto"; /*Название семейства - шрифта или общее имя. В данном случае - это семейство - шрифтов.*/
+//   font-style: normal; /*Стиль шрифта: нормальй, илалик или жирный*/
+//   font-weight: 400; /*Толщина шрифта или насыщенность*/
+//   font-display: swap; /*Временная шкала отображения шрифтов. Их 4 вида: block, swap, fallback, optional. По умолчанию стоит auto */
+//   src: local("Roboto"), local("Roboto-Regular"),  /*Проверяет есть ли шрифт на локальном компе пользователя, если нет ищет указаные ниже пути к шрифту*/
+//        url("../fonts/roboto-regular.woff2") format("woff2"), /* Super Modern Browsers */
+//        url("../fonts/roboto-regular.woff") format("woff"); /* Modern Browsers */
+
+// }
+
+// /* roboto-bold-700 - cyrillic_latin */
+// @font-face {
+//   font-family: "Roboto";
+//   font-style: normal;
+//   font-weight: 700;
+//   font-display: swap;
+//   src: local("Roboto Bold"), local("Roboto-Bold"),
+//        url("../fonts/roboto-bold.woff2") format("woff2"),
+//        url("../fonts/roboto-bold.woff") format("woff");
+
+// }
+// /* roboto-Black-900 - cyrillic_latin */
+// @font-face {
+//   font-family: "Roboto";
+//   font-style: normal;
+//   font-weight: 900;
+//   font-display: swap;
+//   src: local("Roboto Black"), local("Roboto-Black"),
+//        url("../fonts/roboto-black.woff2") format("woff2"),
+//        url("../fonts/roboto-black.woff") format("woff");
+
+//  }
+
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff2") format("woff2"), url("../#{$url}.woff") format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@include font-face("Montserrat", "montserrat-500", 500);
+@include font-face("Montserrat", "montserrat-700", 700);
+@include font-face("Montserrat", "montserrat-regular", 400);
+@include font-face("Montserrat-Alter", "montserrat-alter-regular", 400);
+@include font-face("Montserrat-Alter", "montserrat-alter-700", 700);
