@@ -7,3 +7,9 @@
 
     -webkit-text-fill-color: transparent;
 }
+
+@mixin focus-style {
+    &:focus {
+        outline: 1px solid $manz;
+    }
+}

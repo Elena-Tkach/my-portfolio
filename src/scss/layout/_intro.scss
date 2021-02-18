@@ -1,0 +1,11 @@
+.intro {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 160px 0 100px;
+
+    &__content {
+        padding: 20px;
+        width: 45%;
+    }
+}

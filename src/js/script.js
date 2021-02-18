@@ -1,3 +1,7 @@
 'use strict';
+import { writeBurger } from '_burger.js';
 
-@@include('_burger.js');
+writeBurger();
+
+
+// @@include('_burger.js');

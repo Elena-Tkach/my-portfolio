@@ -63,12 +63,12 @@ const js = () => {
 
 const images = () => {
     return src(['./src/img/**/*.{jpg,png,svg,ico,gif,webp}'])
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            interlaced: true,
-            optomizationLevel: 4
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     svgoPlugins: [{ removeViewBox: false }],
+        //     interlaced: true,
+        //     optomizationLevel: 2
+        // }))
         .pipe(dest('./dist/img'))
 }
 
@@ -97,7 +97,7 @@ const watchFiles = () => {
     watch('./src/js/**.js', js);
     watch('./src/fonts/*.{woff,woff2}', fonts);
     watch('./src/img/**.svg', svgSprites);
-    watch('./src/img/**/*.{jpg,png,svg,ico,gif,webp}', images);
+    // watch('./src/img/**/*.{jpg,png,svg,ico,gif,webp}', images);
 
 }
 
@@ -109,7 +109,7 @@ exports.css = css;
 exports.watchFiles = watchFiles;
 exports.fileinclude = html;
 
-exports.default = series(clean, parallel(html, js, fonts, resources, images, svgSprites), css, watchFiles);
+exports.default = series(clean, parallel(html, js, fonts, images, resources, svgSprites), css, watchFiles);
 
 const cssBuild = () => {
     return src('./src/scss/**/*.scss')
