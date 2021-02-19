@@ -1,0 +1,57 @@
+.slider__btn-list {
+    display: flex;
+    justify-content: space-around;
+
+    width: auto;
+    @include list-reset;
+}
+
+.slider__btn {
+    position: absolute;
+    top: 0%;
+    right: 6%;
+    transform: translate(-50%, -50%);
+
+    color: #fff;
+    font-weight: 200;
+    font-size: 60px;
+
+    border: none;
+    background-color: transparent;
+    transition: all 0.6s ease;
+
+    &:focus {
+        outline: none;
+    }
+
+    @include tablet-768 {
+        margin-top: 20px;
+        position: relative;
+        transform: none;
+    }
+}
+
+.btn--left {
+    margin-right: 15%;
+
+    @include tablet-768 {
+        margin-right: 0;
+    }
+
+    &::before {
+        content: "\2190";
+    }
+
+    &:hover {
+        right: 7%;
+    }
+}
+
+.btn--right {
+    &::before {
+        content: "\2192";
+    }
+    &:hover {
+        right: 5%;
+    }
+}

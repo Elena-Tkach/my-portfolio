@@ -7,7 +7,13 @@
 @import "abstracts/variable";
 @import "abstracts/global";
 
+@import "components/swiper-bundle";
+@import "components/slider";
+@import "components/sliderArticle";
+@import "components/sliderBtn";
+
 @import "layout/header";
 @import "layout/main";
 @import "layout/intro";
+@import "layout/portfolio";
 @import "layout/footer";

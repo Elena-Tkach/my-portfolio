@@ -1,3 +1,9 @@
+@mixin list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 @mixin gradient-text {
     color: rgb(255, 255, 255);
     background: linear-gradient(90deg, #a7c939, #d8d823);
@@ -11,5 +17,59 @@
 @mixin focus-style {
     &:focus {
         outline: 1px solid $manz;
+    }
+}
+
+@mixin btn-after {
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 7%;
+
+        height: 100%;
+        width: 14px;
+        background: url("../../img/icon/next.svg") no-repeat 50% 50%;
+
+        transform: translate3d(-7px, 0, 0);
+        transition: all 0.6s ease;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:hover {
+        color: #2a2f3f;
+        padding-right: 55px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+        &:after {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+            transition-delay: 0.3s;
+        }
+    }
+}
+
+@mixin laptopM-1400 {
+    @media (max-width: 1399.98px) {
+        @content;
+    }
+}
+
+@mixin laptopM-1200 {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin laptopS-1024 {
+    @media (max-width: 1023.98px) {
+        @content;
+    }
+}
+
+@mixin tablet-768 {
+    @media (max-width: 767.98px) {
+        @content;
     }
 }
