@@ -1,3 +1,82 @@
 <footer class="footer">
-    <small class="footer__small">Elena Tkach</small>
+    <span class="overlay"></span>
+    <div class="container">
+        <div class="footer__offer">
+            <form class="footer__form form " action="mail.php" enctype="multipart/form-data" method="POST">
+                <fieldset class="form__group">
+                    <legend class="form__title ">Написать мне!</legend>
+
+                    <input class="form__name name " type="text" name="Name" placeholder="Ваше имя" required>
+
+                    <textarea class="form__text " name="text" placeholder="Ваш текст" required></textarea>
+
+                </fieldset>
+                <button class="form__button form__button--size button" type="submit">Отправить</button>
+
+                <div class="placeholder">
+                    <small>* поле обязательно для заполнения</small>
+                </div>
+
+            </form>
+
+            <h3 class="footer__title">
+                <a class="footer__link" href="https://github.com/Elena-Tkach/my-portfolio" target="_blank"
+                    rel="noopener">Посмотреть
+                    код этого сайта на
+                    GitHub</a>
+            </h3>
+        </div>
+
+        <div class="footer__inner">
+            <address class="footer__contacts contacts">
+                <p class="contacts__title">Контакты</p>
+                <ul class="contacts__list">
+                    <li class="contacts__item"><a class="contacts__link link link--phone" href="tel:+79091561420">+7
+                            (909)156 14 20</a>
+                    </li>
+                    <li class="contacts__item"> <a class="contacts__link link link--mail"
+                            href="mailto:tcachelena@gmail.com">tcachelena@gmail.com</a></li>
+                    <li class="contacts__item">
+                        <p class="contacts__address">г.Москва, м. Бабушкинская</p>
+                    </li>
+                </ul>
+
+                <ul class="footer__socials socials">
+                    <li class="socials__item">
+                        <a class="socials__link socials__link--vk" href="https://vk.com/" aria-label="я в Вконтакте"
+                            target="_blank" rel="noopener"><svg class="socials__svg">
+                                <use xlink:href="img/sprite.svg#vk"></use>
+                            </svg></a>
+                    </li>
+                    <li class="socials__item">
+                        <a class="socials__link socials__link--fb" href="https://facebook.com/" aria-label="Я в фэйсбук"
+                            target="_blank" rel="noopener"><svg class="socials__svg">
+                                <use xlink:href="img/sprite.svg#fb"></use>
+                            </svg></a>
+                    </li>
+
+                    <li class="socials__item"><a class="socials__link socials__link--inst" href="https://instagram.com/"
+                            aria-label="Я в инстаграм" target="_blank" rel="noopener">
+                            <svg class="socials__svg">
+                                <use xlink:href="img/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </address>
+            <nav class="footer__nav nav">
+                <p class="nav__title">Мои работы и код</p>
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="https://github.com/Elena-Tkach?tab=repositories"
+                            rel="noopener">GitHub
+                        </a>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#">Портфолио</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Резюме</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    <small class="footer__small">Elena Tkach | 2021</small>
 </footer>
