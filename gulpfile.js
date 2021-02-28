@@ -50,7 +50,7 @@ const svgSprites = () => {
 
 
 const js = () => {
-    return src('./src/js/*.js')
+    return src('./src/js/script.js')
         .pipe(fileInclude())
         .pipe(sourcemaps.init())
         .pipe(rename('script.min.js'))

@@ -1,0 +1,14 @@
+
+.btn-link {
+    @include button;
+    @include btn-after;
+
+    &--green {
+        border-color: $yellowgreen;
+    }
+
+    .btn-span {
+        position: relative;
+        z-index: 1;
+    }
+}

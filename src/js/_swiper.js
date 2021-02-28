@@ -55,6 +55,8 @@ const swiper = new Swiper(`.js-swiper`, {
         }
 
     }
+
 })
 
-console.log(`работает `);
+
+
