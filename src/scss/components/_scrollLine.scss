@@ -2,11 +2,9 @@
     z-index: 3;
     position: fixed;
     top: 0;
-    right: 4vw;
+    right: 5vw;
     transform: translate3d(0, 45vh, 0);
-    opacity: 1;
 
-    transform: translate(50% 50%);
     transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 1s ease;
 
@@ -14,8 +12,9 @@
         display: block;
         position: relative;
         width: 2px;
-        height: 15vh;
-        background: rgba(255, 255, 255, 0.2);
+        height: 10vh;
+
+        background: #ffffff33;
     }
 
     &__green {
@@ -25,17 +24,17 @@
         width: 100%;
         height: 100%;
 
-        transform: scaleY(0);
+        // transform: scaleY(0);
 
         transform-origin: top center;
         background: #a7c939;
 
-        background: linear-gradient(#a7c939, #d7d922);
+        background: $scroll-line;
     }
 }
 
-// .sticky {
-//     transform: translate3d(0, -60vh, 0);
+// // .sticky {
+// //     transform: translate3d(0, -60vh, 0);
 
-//     transition-duration: 1.6s;
-// }
+// //     transition-duration: 1.6s;
+// // }

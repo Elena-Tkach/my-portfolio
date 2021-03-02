@@ -8,13 +8,13 @@
 
 .slider__btn {
     position: absolute;
-    top: 0%;
+    top: 7%;
     right: 6%;
     transform: translate(-50%, -50%);
 
-    color: #fff;
-    font-weight: 200;
-    font-size: 60px;
+    color: $white;
+
+    @include font-style(calc(4vw + 10px), 200);
 
     border: none;
     background-color: transparent;

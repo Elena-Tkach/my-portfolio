@@ -1,10 +1,20 @@
-
 .btn-link {
-    @include button;
-    @include btn-after;
-
     &--green {
+        @include button(75px);
         border-color: $yellowgreen;
+        @include btn-after($button-gradient, $yellowgreen, 87px);
+    }
+
+    &--yellow {
+        @include button(75px);
+        border-color: $manz;
+        @include btn-after($button-gradient, $yellowgreen, 87px);
+    }
+
+    &--white {
+        @include button(55px);
+        border-color: $white;
+        @include btn-after($white, $white, 68px);
     }
 
     .btn-span {

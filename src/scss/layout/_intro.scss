@@ -10,7 +10,7 @@
         position: relative;
         z-index: 2;
         width: 50%;
-        padding-right: 13%;
+        padding-right: 10%;
     }
 
     &__subtitle {
@@ -38,19 +38,18 @@
     }
 
     &__background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         width: 150%;
         background: radial-gradient(circle, rgba(177, 175, 204, 0.3) 0%, rgba(29, 29, 29, 1) 58%);
     }
 
     &__user {
-        // z-index: 1;
+        z-index: 1;
         position: absolute;
-        bottom: -0%;
+        bottom: 0%;
         right: 0%;
     }
+}
+
+.intro__overlay {
+    background: linear-gradient(180deg, rgba(138, 135, 135, 0) 40%, rgba(29, 29, 29, 1) 98%);
 }

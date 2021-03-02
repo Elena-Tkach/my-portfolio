@@ -4,23 +4,30 @@
     list-style: none;
 }
 
+@mixin position-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
 //button
-@mixin button {
+@mixin button($right) {
     position: relative;
 
     border: 2px solid transparent;
     background-color: transparent;
     border-radius: 40px;
-
-    padding: 12px 58px;
+    padding: 14px #{$right};
 
     text-transform: uppercase;
-    @include font-style(calc(0.2vw + 10px), 400);
+    @include font-style(calc(0.1vw + 10px), 700);
     cursor: pointer;
     transition: all 0.6s ease;
 }
 
-@mixin btn-after {
+@mixin btn-after($gradient, $background, $right) {
     &:after {
         content: "";
         position: absolute;
@@ -45,7 +52,7 @@
         right: -2px;
         bottom: -2px;
 
-        background: $button-gradient;
+        background: #{$gradient};
         border-radius: 40px;
 
         opacity: 0;
@@ -54,10 +61,10 @@
 
     &:hover {
         color: $nero;
-        padding-right: 65px;
+        padding-right: #{$right};
 
-        background: yellowgreen;
-        box-shadow: 1px 1px 12px rgba(250, 250, 250, 0.3);
+        background: #{$background};
+        box-shadow: 0 10px 15px #00000046;
 
         &:before {
             opacity: 1;
@@ -68,6 +75,18 @@
             transform: translate3d(0, 0, 0);
             transition-delay: 0.3s;
         }
+    }
+}
+
+@mixin title-before {
+    &:before {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background: #fff;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: middle;
     }
 }
 
@@ -90,11 +109,11 @@
     font-weight: #{$weight};
 }
 
-@mixin laptopM-1400 {
-    @media (max-width: 1399.98px) {
-        @content;
-    }
-}
+// @mixin laptopM-1400 {
+//     @media (min-width: 1399.98px) {
+//         @content;
+//     }
+// }
 
 @mixin laptopM-1200 {
     @media (max-width: 1199.98px) {

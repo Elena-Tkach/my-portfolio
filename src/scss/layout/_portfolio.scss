@@ -1,62 +1,23 @@
 .portfolio {
     display: flex;
     flex-wrap: wrap;
-    background-color: $nero;
-    padding: 120px 0;
+    padding: 120px 0 200px;
     position: relative;
-}
-
-.portfolio__big-title {
-    position: absolute;
-    top: 0;
-    // top: 1vh;
-    left: 0;
-    width: 100%;
-
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 18vw;
-    color: rgb(255, 255, 255);
-
-    line-height: 1;
-    white-space: nowrap;
-
-    pointer-events: none;
-    opacity: 0.03;
-
-    overflow: hidden;
-
-    @include tablet-768 {
-        top: 22vh;
-        opacity: 0.02;
-    }
 }
 
 .portfolio__title {
     margin: 0;
     margin-bottom: 20px;
+    color: $white;
 
-    font-size: calc(1vw + 16px);
-    font-weight: 900;
-    color: rgb(255, 255, 255);
-    text-align: start;
-
-    &:before {
-        content: "";
-        width: 40px;
-        height: 3px;
-        background: #fff;
-        display: inline-block;
-        margin-right: 15px;
-        vertical-align: middle;
-    }
+    @include font-style(calc(1vw + 16px), 700);
+    @include title-before;
 }
 
 .portfolio__subtitle {
-    font-size: calc(1vw + 8px);
+    @include font-style(calc(1vw + 8px), 400);
     margin: 0;
-    color: rgb(255, 255, 255);
-    text-align: start;
+    color: $white;
 
     margin-bottom: 50px;
 
@@ -64,11 +25,13 @@
         font-size: calc(1vw + 12px);
     }
 }
-.portfolio__wrap {
+
+.portfolio__slider {
     position: relative;
     width: 100%;
 }
-.portfolio__slider {
+
+.portfolio__wrap {
     margin: 20px 0;
 }
 
@@ -84,7 +47,7 @@
 }
 
 .portfolio__caption {
-    color: rgba(255, 255, 255, 0.753);
+    color: $white;
     font-weight: 900;
     font-size: calc(1vw + 12px);
     line-height: 1.3;
@@ -98,40 +61,5 @@
         font-weight: 700;
         line-height: 1.5;
         width: 100%;
-    }
-}
-
-.more-link {
-    &--color {
-        border-color: #9acd32;
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-
-            background: $button-gradient;
-            border-radius: 40px;
-
-            opacity: 0;
-            transition: all 0.6s ease;
-        }
-
-        &:hover {
-            background: yellowgreen;
-
-            &:before {
-                opacity: 1;
-            }
-        }
-        @include btn-after;
-    }
-
-    .span {
-        position: relative;
-        z-index: 1;
     }
 }

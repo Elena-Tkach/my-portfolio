@@ -8,8 +8,12 @@ $waikawaGrey: #2a2f3f;
 
 //gradient
 $gradient-yellowGreen: linear-gradient(90deg, #a7c939, #d8d823);
+
+$button-gradient: linear-gradient(90deg, #a7c939, #d8d823);
+$scroll-line: linear-gradient(#758d25, #f6fa2a);
+
+//gradient slider
 $slider-gradient-green: linear-gradient(#437953, #5f5f07);
 $slider-gradient-black: linear-gradient(#2a2f3f, #050505);
-$button-gradient: linear-gradient(90deg, #a7c939, #d8d823);
-
-$gradient-black-and-pinck: linear-gradient(9deg, rgba(247, 5, 103, 1), rgba(134, 190, 249, 1), rgba(27, 27, 27, 1));
+$gradient-black-and-pinck: linear-gradient(180deg, #66253f 0%, #1b1b1b 100%);
+$slider-black-magenta: linear-gradient(184deg, rgb(85, 69, 104) 0%, rgb(16, 17, 7) 100%);

@@ -1,16 +1,20 @@
 .slider {
     &__list {
-        width: 1150px;
+        width: 100%;
         padding: 0;
         @include list-reset;
 
-        @include laptopM-1200 {
-            width: 900px;
-        }
+        // @include laptopM-1400 {
+        //     width: 1350px;
+        // }
 
-        @include laptopS-1024 {
-            width: 720px;
-        }
+        // @include laptopM-1200 {
+        //     width: 900px;
+        // }
+
+        // @include laptopS-1024 {
+        //     width: 720px;
+        // }
 
         @include tablet-768 {
             width: 335px;
@@ -19,7 +23,7 @@
 
     &__item {
         max-width: 40%;
-        padding: 0 12% 0 0;
+        padding: 0 10% 0 0;
 
         &:nth-child(even) {
             padding-top: 10vh;
@@ -30,7 +34,7 @@
 
         @include laptopM-1200 {
             max-width: 42%;
-            padding: 0 13% 0 0;
+            // padding: 0 13% 0 0;
         }
 
         @include laptopS-1024 {

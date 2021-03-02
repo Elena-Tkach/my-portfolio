@@ -1,5 +1,5 @@
 .article {
-    padding: 90px 0 0 100px;
+    padding: 0 0 100px 0;
     position: relative;
 
     @include laptopS-1024 {
@@ -8,18 +8,14 @@
 }
 
 .article__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    // overflow: hidden;
+    @include position-absolute;
 
     width: 100%;
     height: 100%;
 
     transform-origin: left center;
-    // transform-origin: left center;
-    transform: translate3d(0, 0, 0) scaleX(0);
-    // transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: translate3d(0, 0, 0) scaleX(1);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 
     &--card1 {
         background: url("../../img/portfolio/slide1.jpg") no-repeat center/cover;
@@ -29,10 +25,15 @@
         background: url("../../img/portfolio/slide2.jpg") no-repeat center/cover;
     }
 
+    &--card3 {
+        background: url("../../img/portfolio/slide3.jpg") no-repeat center/cover;
+    }
+    &--card4 {
+        background: url("../../img/portfolio/slide4.jpg") no-repeat center/cover;
+    }
+
     .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include position-absolute;
 
         width: 100%;
         height: 100%;
@@ -41,34 +42,44 @@
         opacity: 0.8;
 
         &--card1 {
-            background: $slider-gradient-green;
+            background: $gradient-black-and-pinck;
         }
         &--card2 {
             background: $slider-gradient-black;
+        }
+
+        &--card3 {
+            background: $slider-gradient-green;
+        }
+        &--card4 {
+            background: $slider-black-magenta;
         }
     }
 }
 
 .article__content {
+    z-index: 10;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+
     width: 80%;
     opacity: 0;
     transform: translateX(-60px);
     transition: all 2s ease;
 
-    padding: 0;
-    z-index: 10;
-
     .article__title {
         text-align: start;
-        color: white;
 
-        font-weight: 900;
-        font-size: calc(1vw + 25px);
+        color: $white;
+
+        @include font-style(calc(2vw + 16px), 700);
 
         line-height: 1.3;
         text-shadow: 5px 7px 2px rgba(0, 0, 0, 0.2);
         margin: 0;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
+        margin-right: 15%;
 
         @include laptopS-1024 {
             font-size: 30px;
@@ -77,31 +88,25 @@
 
     .article__subtitle {
         text-align: start;
-        color: white;
-        font-size: calc(0.6vw + 10px);
+        color: $white;
+
+        @include font-style(calc(0.6vw + 10px), 500);
 
         margin: 0;
         margin-bottom: 20px;
         margin-left: -10%;
     }
 
-    .btn--color {
-        margin-right: -100%;
-
-        border-color: white;
+    .article__btn-link {
+        left: 60%;
         pointer-events: auto;
-        // @include btn-after;
-
-        &:hover {
-            background: white;
-        }
 
         @include laptopM-1200 {
-            margin-right: -80%;
+            left: 45%;
         }
 
         @include laptopS-1024 {
-            margin-right: -65%;
+            left: 30%;
         }
 
         @include tablet-768 {
@@ -119,7 +124,7 @@
 .article__list {
     @include list-reset;
     position: absolute;
-    bottom: 2%;
+    bottom: 12%;
     right: 2%;
 
     width: 50%;
@@ -152,17 +157,17 @@
     }
 }
 
-.swiper-slide-active,
-.swiper-slide-next {
-    .article__background {
-        // transform-origin: left center;
+// .swiper-slide-active,
+// .swiper-slide-next {
+//     .article__background {
+//         // transform-origin: left center;
 
-        transform: translate3d(0, 0, 0) scaleX(1);
-        transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-        transition-delay: 0.1s;
-        // transition: all 1s ease;
-    }
-}
+//         transform: translate3d(0, 0, 0) scaleX(1);
+//         transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+//         transition-delay: 0.1s;
+//         // transition: all 1s ease;
+//     }
+// }
 
 .swiper-slide-active,
 .swiper-slide-next {
