@@ -1,3 +1,36 @@
 .education {
     position: relative;
+    padding: 15vh 0;
+
+    &__image {
+        @include position-absolute;
+
+        background: 50% 50% no-repeat;
+        background-size: cover;
+        width: 60%;
+        background-position: calc(var(--x) / 20) calc(var(--y) / 20);
+    }
+
+    &__img {
+        position: absolute;
+        left: -30%;
+        // background-position: calc(var(--x) / 20) calc(var(--y) / 20);
+    }
+}
+
+.ed-article {
+    margin-left: 50%;
+    width: 50%;
+
+    &__list {
+        @include list-reset;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 45%;
+    }
 }

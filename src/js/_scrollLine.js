@@ -2,10 +2,25 @@
 
 
 const progressEl = document.querySelector(`.js-progress`);
+const article = document.querySelectorAll(`.article__content`);
+
 
 window.addEventListener(`scroll`, function () {
     onProgressScroll(progressEl);
+
 })
+
+
+
+// const articleParallax = function () {
+//     article.forEach((item) => {
+//         item.style.top = value + 5 + `px`;
+//         console.log(`efasfd`)
+//     })
+
+// }
+
+// articleParallax();
 
 const onProgressScroll = function (element) {
     let scrollTop = window.scrollY;
@@ -16,6 +31,14 @@ const onProgressScroll = function (element) {
 
     element.style.height = `${percentageProgress}%`;
 }
+
+
+
+const pos = document.documentElement;
+pos.addEventListener(`mousemove`, e => {
+    pos.style.setProperty(`--x`, e.clientX + `px`);
+    pos.style.setProperty(`--y`, e.clientY + `px`);
+})
 
 
 
