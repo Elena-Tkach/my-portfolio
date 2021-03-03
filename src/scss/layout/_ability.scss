@@ -1,0 +1,70 @@
+.ability {
+    // padding: 1vh 0;
+    // overflow: hidden;
+    // position: relative;
+    // width: 100%;
+
+    &__list {
+        @include list-reset;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+
+        height: 1020px;
+    }
+
+    &__item {
+        margin-bottom: 60px;
+        width: 10%;
+        margin-left: -160px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        animation: marque-text 100s linear infinite;
+
+        &:nth-child(2) {
+            animation-delay: -90s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -80s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: -70s;
+        }
+        &:nth-child(5) {
+            animation-delay: -60s;
+        }
+        &:nth-child(6) {
+            animation-delay: -50s;
+        }
+        &:nth-child(7) {
+            animation-delay: -40s;
+        }
+
+        &:nth-child(8) {
+            animation-delay: -30s;
+        }
+
+        &:nth-child(9) {
+            animation-delay: -20s;
+        }
+
+        &:nth-child(10) {
+            animation-delay: -10s;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        white-space: normal;
+        // width: 220px;
+        border: 2 px solid $manz;
+        background: rgba(0, 0, 0, 0.1);
+        margin-bottom: 60px;
+    }
+
+    
+}

@@ -3,3 +3,19 @@
     flex: 1 0 auto;
     transition: ease 1s;
 }
+
+.title {
+    @include font-style(calc(1vw + 16px), 700);
+
+    &--line {
+        @include title-before;
+    }
+}
+
+.subtitle {
+    @include font-style(calc(1vw + 8px), 400);
+
+    @include tablet-768 {
+        font-size: calc(1vw + 12px);
+    }
+}

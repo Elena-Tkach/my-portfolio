@@ -64,7 +64,7 @@
         padding-right: #{$right};
 
         background: #{$background};
-        box-shadow: 0 10px 15px #00000046;
+        box-shadow: $box-shadow;
 
         &:before {
             opacity: 1;
@@ -130,5 +130,39 @@
 @mixin tablet-768 {
     @media (max-width: 767.98px) {
         @content;
+    }
+}
+
+// @keyframes marque-text {
+//     0% {
+//         transform: translateX(0%);
+//     }
+
+//     100% {
+//         transform: translateX(-50%);
+//     }
+// }
+
+@keyframes marque-text {
+    0% {
+        opacity: 0;
+
+        transform: rotate(0.001deg) translate3d(1685px, 10px, 0);
+    }
+    5%,
+    95% {
+        opacity: 0;
+    }
+    6%,
+    94% {
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(0.001deg) translate3d(0, 310px, 0);
+    }
+    100% {
+        opacity: 0;
+
+        transform: rotate(0.001deg) translate3d(-1685px, 10px, 0);
     }
 }
