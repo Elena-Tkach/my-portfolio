@@ -1,9 +1,4 @@
 .ability {
-    // padding: 1vh 0;
-    // overflow: hidden;
-    // position: relative;
-    // width: 100%;
-
     &__list {
         @include list-reset;
         overflow: hidden;
@@ -14,12 +9,11 @@
     }
 
     &__item {
-        margin-bottom: 60px;
-        width: 10%;
-        margin-left: -160px;
+        width: 20%;
+        margin-left: -140px;
         position: absolute;
         top: 0;
-        left: 50%;
+        left: 52%;
 
         animation: marque-text 100s linear infinite;
 
@@ -58,13 +52,80 @@
     }
 
     &__inner {
-        position: relative;
-        white-space: normal;
-        // width: 220px;
-        border: 2 px solid $manz;
-        background: rgba(0, 0, 0, 0.1);
         margin-bottom: 60px;
     }
 
-    
+    &__text {
+        margin: 0;
+    }
+}
+
+.inner {
+    position: relative;
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 200px;
+    height: 220px;
+
+    padding: 10%;
+
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.6s ease;
+
+    &--border {
+        box-shadow: 0px 0px 0px 2px #ded849 inset;
+    }
+
+    &--shadow {
+        box-shadow: 0px 4px 35px 0px rgb(0, 0, 0);
+
+        &:hover {
+            box-shadow: 0px 0px 25px 0px #99cd3246;
+        }
+    }
+}
+
+.text {
+    position: relative;
+
+    &--fonts {
+        font-size: 40px;
+        font-weight: 700;
+        font-family: "Montserrat-Alter";
+    }
+    &--size {
+        font-size: 28px;
+    }
+
+    &--outline {
+        color: transparent;
+        -webkit-text-stroke: 1px $white;
+    }
+    &--figma {
+        padding-top: 90px;
+        background: url("img/icon/figma.png") no-repeat top;
+    }
+
+    &--html {
+        padding-top: 90px;
+        background: url("img/icon/html.png") no-repeat top;
+    }
+
+    &--css {
+        padding-top: 90px;
+        background: url("img/icon/css.png") no-repeat top;
+    }
+
+    &--git {
+        padding-top: 90px;
+        background: url("img/icon/git.png") no-repeat top;
+    }
+
+    &--mysql {
+        padding-top: 90px;
+        background: url("img/icon/mysq.png") no-repeat top;
+    }
 }
