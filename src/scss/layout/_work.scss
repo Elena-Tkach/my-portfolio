@@ -1,0 +1,26 @@
+.work {
+    position: relative;
+    padding: 15vh 0 150px;
+
+    &__inner {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    &__wrap {
+        width: 70%;
+    }
+
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        margin: 0;
+    }
+
+    &__btn-link {
+        align-self: flex-end;
+    }
+}

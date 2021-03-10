@@ -1,69 +1,112 @@
 <section class="work">
     <div class="container">
-        <h2 class="work__title">Предыдущий опыт</h2>
-        <button class="work__btn">Больше тут</button>
+        <div class="work__inner">
+            <div class="work__wrap">
+                <h2 class="work__title title title--line">Предыдущий опыт</h2>
+                <p class="work__subtitle subtitle">Последние места где работала и некоторые обязанности</p>
+            </div>
+            <a class="work__btn-link  btn-link btn-link--green"><span class="btn-span">Больше</span></a>
+        </div>
     </div>
 
     <div class="work__slide slide">
         <ul class="slide__btn-list">
-            <li class="slide__btn-item"><button class="slide__arrow arrow-next"></button></li>
-            <li class="slide__btn-item"><button class="slide__arrow arrow-prev"></button></li>
+            <li class="slide__btn-item"><button class="slide__arrow arrow-next js-arrowNext"></button></li>
+            <li class="slide__btn-item"><button class="slide__arrow arrow-prev js-arrowPrev"></button></li>
         </ul>
 
-        <div class="slide__wrap">
-            <ul class="slide__list">
-                <li class="slide__item">
-                    <artile class="slide__slide-article slide-article">
-                        <span class="slide-article__overlay"></span>
-                        <div class="slide-article__content content">
-                            <h3 class="content__titile">OOO "АлкоМед"</h3>
-                            <p class="content__subtitle">Менеджер по маркетингу и рекламе</p>
-                            <time class="content__date" datetime="2021-02-19T11:53:48.059Z">2013-2017 |
-                                <span class="span">3 года 8 месяцев</span>
-                            </time>
-                            <p class="content__text">Вела, анализировала и планировала рекламные кампании в Я. Диверкт,
-                                Google AdWords, My Target, Facebook.
-                            </p>
-                            <p class="content__text">Больше можно узнать нажав
-                                <a href="#" class="content__link">сюда</a>
-                            </p>
+        <div class="slide__wrap   swiper-container  js-slid ">
+            <ul class="slide__list swiper-wrapper">
+                <li class="slide__item swiper-slide">
+                    <a class="slide__slide-article article" href="#">
+                        <div
+                            class="article__background article__background--transition article__background--work-card1">
 
                         </div>
-                    </artile>
-                </li>
-                <li class="slide__item">
-                    <artile class="slide__slide-article slide-article">
-                        <span class="slide-article__overlay"></span>
+                        <div class="overlay overlay--work-card1"></div>
                         <div class="slide-article__content content">
-                            <h3 class="content__titile">OOO "Пари"</h3>
-                            <p class="content__subtitle">Менеджер по сопровождению клиентов</p>
-                            <time class="content__date" datetime="2021-02-19T11:53:48.059Z">2019-2019 |
-                                <span class="span">11 месяцев</span>
-                            </time>
-                            <p class="content__text">Взаимодействовала с подрядчиками и вела контроль проведения
-                                рекламных кампаний
-                            </p>
-                            <p class="content__text">Больше можно узнать нажав
-                                <a href="#" class="content__link">сюда</a>
-                            </p>
+                            <div class="content__inner">
+                                <h3 class="content__titile title">OOO "АлкоМед"</h3>
+                                <p class="content__subtitle subtitle">Менеджер по маркетингу и рекламе</p>
+                                <time class="content__date" datetime="2021-02-19T11:53:48.059Z">2013-2017 |
+                                    <span class="span">3 года 8 месяцев</span>
+                                </time>
+
+                            </div>
+
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <p class="content__text">Вела, анализировала и планировала рекламные кампании в Я.
+                                        Диверкт,
+                                        Google AdWords, My Target, Facebook.
+                                    </p>
+                                </li>
+                                <li class="content__item">
+                                    <p class="content__text">Больше можно узнать нажав
+                                        <a class="content__link" href="#">сюда</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="slide__item swiper-slide">
+                    <artile class="slide__slide-article article">
+                        <div class="article__background article__background--work-card2">
+                            <div class="overlay overlay--work-card2"></div>
+                        </div>
+                        <div class="slide-article__content content">
+                            <div class="content__inner">
+                                <h3 class="content__titile title">OOO "Пари"</h3>
+                                <p class="content__subtitle subtitle">Менеджер по сопровождению клиентов</p>
+                                <time class="content__date" datetime="2021-02-19T11:53:48.059Z">2019-2019 |
+                                    <span class="span">11 месяцев</span>
+                                </time>
+                            </div>
+
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <p class="content__text">Взаимодействовала с подрядчиками и вела контроль проведения
+                                        рекламных кампаний на разлиных площадках.
+                                    </p>
+                                </li>
+                                <li class="content__item">
+                                    <p class="content__text">Больше можно узнать нажав
+                                        <a href="#" class="content__link">сюда</a>
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
                     </artile>
                 </li>
-                <li class="slide__item">
-                    <artile class="slide__slide-article slide-article">
-                        <span class="slide-article__overlay"></span>
+
+                <li class="slide__item swiper-slide">
+                    <artile class="slide__slide-article article">
+                        <div class="article__background article__background--work-card3">
+                            <div class="overlay overlay--work-card3"></div>
+                        </div>
                         <div class="slide-article__content content">
-                            <h3 class="content__titile">Проект Furniprice.ru</h3>
-                            <p class="content__subtitle">Интернет-маркетолог</p>
-                            <time class="content__date" datetime="2021-02-19T11:53:48.059Z">2018-2018 |
-                                <span class="span">4 месяца</span>
-                            </time>
-                            <p class="content__text">Вела, анализировала и планировала рекламные кампании в Я. Диверкт,
-                                Google AdWords.
-                            </p>
-                            <p class="content__text">Больше можно узнать нажав
-                                <a href="#" class="content__link">сюда</a>
-                            </p>
+                            <div class="content__inner">
+                                <h3 class="content__titile title">Проект Furniprice.ru</h3>
+                                <p class="content__subtitle subtitle">Интернет-маркетолог</p>
+                                <time class="content__date" datetime="2021-02-19T11:53:48.059Z">2018-2018 |
+                                    <span class="span">4 месяца</span>
+                                </time>
+                            </div>
+
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <p class="content__text">Вела, анализировала и планировала рекламные кампании в Я.
+                                        Диверкт, Google AdWords.вела контроль за исполнителей.
+                                    </p>
+                                </li>
+                                <li class="content__item">
+                                    <p class="content__text">Больше можно узнать нажав
+                                        <a href="#" class="content__link">сюда</a>
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
                     </artile>
                 </li>

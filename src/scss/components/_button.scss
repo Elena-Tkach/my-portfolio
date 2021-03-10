@@ -1,4 +1,6 @@
 .btn-link {
+    // display: flex;
+    // align-items: center;
     &--green {
         @include button(75px);
         border-color: $yellowgreen;

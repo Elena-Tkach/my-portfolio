@@ -1,18 +1,10 @@
 .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @include position-absolute;
 }
 
 .overlay {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: -1%;
-    right: 0;
+    @include position-absolute;
+    z-index: 2;
 }
 
 .big-title {

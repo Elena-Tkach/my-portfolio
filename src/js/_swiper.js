@@ -59,4 +59,59 @@ const swiper = new Swiper(`.js-swiper`, {
 })
 
 
+const swiper2 = new Swiper(`.js-slide`, {
+
+    slidesPerView: 3,
+    // initialSlide: 1,
+    spaceBetween: 170,
+    centeredSlides: true,
+    loop: true,
+
+    // slidesPerGroup: 2,
+
+
+    // loopFillGroupWithBlank: true,
+    grabCursor: true,
+    preventClicks: true,
+
+    speed: 500,
+
+
+    navigation: {
+        nextEl: `.js-arrowNext`,
+        prevEl: `.js-arrowPrev`,
+    },
+
+    keyboard: true,
+
+    // breakpoints: {
+    //     // 320: {
+    //     //     slidesPerView: 1,
+    //     //     // slidesPerGroup: 1,
+    //     //     // spaceBetween: 90,
+    //     // },
+
+    //     768: {
+    //         slidesPerView: 2,
+    //         slidesPerGroup: 2,
+    //     },
+
+    //     1024: {
+    //         slidesPerView: 2,
+    //         slidesPerGroup: 2,
+    //         spaceBetween: 10,
+    //     },
+
+    //     1200: {
+    //         slidesPerView: 2,
+    //         slidesPerGroup: 2,
+    //         spaceBetween: 10,
+
+    //     }
+
+    // }
+
+})
+
+
 
