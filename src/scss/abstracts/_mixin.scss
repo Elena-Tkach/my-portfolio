@@ -98,6 +98,13 @@
     -webkit-text-fill-color: transparent;
 }
 
+@mixin gradient-text-yellow {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(180deg, #a7c939, #d8d823);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @mixin focus-style {
     &:focus {
         outline: 1px solid $manz;

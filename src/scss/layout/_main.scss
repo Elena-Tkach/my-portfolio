@@ -5,6 +5,7 @@
 }
 
 .title {
+    margin: 0;
     @include font-style(calc(1vw + 16px), 700);
 
     &--line {

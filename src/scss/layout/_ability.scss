@@ -1,5 +1,7 @@
 .ability {
+    position: relative;
     &__list {
+        z-index: 3;
         @include list-reset;
         overflow: hidden;
         white-space: nowrap;

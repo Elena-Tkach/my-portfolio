@@ -119,6 +119,7 @@
 }
 
 .article__list {
+    z-index: 2;
     @include list-reset;
     position: absolute;
     bottom: 12%;

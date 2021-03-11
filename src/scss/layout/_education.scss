@@ -1,6 +1,7 @@
 .education {
     position: relative;
     padding: 15vh 0 150px;
+    display: flex;
 
     &__image {
         @include position-absolute;
