@@ -1,6 +1,6 @@
 html,
 body {
-    height: 100%;
+    // height: 100%;
     box-sizing: border-box;
 }
 
@@ -19,9 +19,9 @@ body {
     color: #e4ebee;
     background-color: #1d1d1d;
 
-    display: flex;
-    // justify-content: space-between;
-    flex-direction: column;
+    // display: flex;
+    // // justify-content: space-between;
+    // flex-direction: column;
 }
 
 img {
@@ -36,9 +36,8 @@ a {
 }
 
 .container {
-    width: 1400px;
+    width: 85%;
+    // width: 1400px;
     margin: 0 auto;
     padding: 0 15px;
-
-    
 }
