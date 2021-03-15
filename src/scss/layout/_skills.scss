@@ -1,7 +1,12 @@
 .skills {
     position: relative;
-    padding: 150px 0 200px;
+    padding: 25vh 0 25vh;
     overflow: hidden;
+
+    &__big-title {
+        z-index: 4;
+        top: -2%;
+    }
 
     &__title {
         margin: 0;
@@ -47,27 +52,26 @@
 
 .bg-image {
     @include position-absolute;
-
     z-index: -1;
     background: url("img/skills/bg.jpg") no-repeat;
-    background-position: 90% 120%;
+    background-position: 70% 120%;
 
     &__background {
         position: absolute;
-        top: 30%;
+        top: 40%;
         left: 0;
         bottom: 0%;
         right: 0%;
 
         width: 120%;
-        height: 120%;
+        height: 100%;
 
         z-index: 1;
-        background: radial-gradient(circle, rgba(59, 59, 59, 0.767) 0%, rgba(29, 29, 29, 1) 35%);
+        background: $skills-gradient;
     }
 }
 
 .skills__overlay {
     z-index: -1;
-    background: linear-gradient(180deg, rgba(135, 136, 138, 0) 80%, rgba(29, 29, 29, 1) 100%);
+    background: $skills-gradient-overlay;
 }

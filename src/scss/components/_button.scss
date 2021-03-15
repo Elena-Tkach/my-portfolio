@@ -2,21 +2,41 @@
     // display: flex;
     // align-items: center;
     &--green {
-        @include button(75px);
+        @include button;
+        @include btn-size(85px);
+
         border-color: $yellowgreen;
-        @include btn-after($button-gradient, $yellowgreen, 87px);
+        @include btn-after($button-gradient, $yellowgreen, 97px);
+
+        @include laptopS-1024 {
+            @include btn-size(75px);
+
+            @include btn-after($button-gradient, $yellowgreen, 87px);
+        }
     }
 
     &--yellow {
-        @include button(75px);
+        @include button;
+        @include btn-size(85px);
         border-color: $manz;
-        @include btn-after($button-gradient, $yellowgreen, 87px);
+        @include btn-after($button-gradient, $yellowgreen, 97px);
+
+        @include laptopS-1024 {
+            @include btn-size(75px);
+            @include btn-after($button-gradient, $yellowgreen, 87px);
+        }
     }
 
     &--white {
-        @include button(55px);
+        @include button;
+        @include btn-size(65px);
         border-color: $white;
-        @include btn-after($white, $white, 68px);
+        @include btn-after($white, $white, 78px);
+
+        @include laptopS-1024 {
+            @include btn-size(55px);
+            @include btn-after($button-gradient, $yellowgreen, 68px);
+        }
     }
 
     .btn-span {

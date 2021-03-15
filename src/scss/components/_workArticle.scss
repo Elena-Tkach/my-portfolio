@@ -31,15 +31,15 @@
         opacity: 0.8;
         transform: scale(1.1) translateZ(0);
         &--work-card1 {
-            background: $slider-gradient-black;
+            background: linear-gradient(280deg, rgba(9, 48, 95, 0.269) 10%, rgb(1, 15, 31) 80%);
         }
 
         &--work-card2 {
-            background: $slider-black-magenta;
+            background: $slider-gradient-black;
         }
 
         &--work-card3 {
-            background: linear-gradient(90deg, rgba(42, 47, 63, 0.85) 100%, rgba(42, 47, 63, 0.4));
+            background: linear-gradient(90deg, #242350 0%, #00ff887c 100%);
         }
     }
 
@@ -90,7 +90,6 @@
             margin-left: 30%;
         }
         &__text {
-            text-shadow: 1px 3px 8px rgb(0, 0, 0);
             margin: 0;
         }
 
