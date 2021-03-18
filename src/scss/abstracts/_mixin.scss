@@ -34,7 +34,6 @@
     }
 }
 
-
 @mixin btn-after($gradient, $background, $right) {
     &:after {
         content: "";
@@ -113,11 +112,15 @@
     -webkit-text-fill-color: transparent;
 }
 
-@mixin focus-style {
-    &:focus {
-        outline: 1px solid $manz;
-    }
+@mixin glass-block {
+    box-shadow: $box-shadow;
+    background-color: rgba(78, 78, 78, 0.02);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(131, 131, 131, 0.09);
+    border-right: 1px solid rgba(117, 117, 117, 0.05);
+    border-bottom: 1px solid rgba(117, 117, 117, 0.05);
 }
+
 
 @mixin font-style($size, $weight) {
     font-size: #{$size};
@@ -125,7 +128,7 @@
 }
 
 @mixin laptopM-1440 {
-    @media (max-width: 1400px) {
+    @media (max-width: 1440px) {
         @content;
     }
 }
@@ -144,6 +147,12 @@
 
 @mixin tablet-768 {
     @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile-468 {
+    @media (max-width: 480px) {
         @content;
     }
 }
@@ -169,5 +178,17 @@
         opacity: 0;
 
         transform: rotate(0.001deg) translate3d(-1685px, 10px, 0);
+    }
+}
+
+@keyframes arrow {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0;
     }
 }

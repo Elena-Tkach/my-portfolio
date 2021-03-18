@@ -6,6 +6,10 @@
     @include list-reset;
 }
 
+.btn {
+    width: 50px;
+}
+
 .slider__btn {
     position: absolute;
     top: 7%;
@@ -22,21 +26,22 @@
 
     &:focus {
         outline: none;
+        @include gradient-text;
     }
 
     @include tablet-768 {
-        margin-top: 20px;
-        position: relative;
+        // position: relative;
         transform: none;
+        font-size: calc(6vw + 10px);
     }
 }
 
 .btn--left {
     margin-right: 15%;
 
-    @include tablet-768 {
-        margin-right: 0;
-    }
+    // @include tablet-768 {
+    //     margin-right: 0;
+    // }
 
     &::before {
         content: "\2190";

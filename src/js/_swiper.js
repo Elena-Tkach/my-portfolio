@@ -10,7 +10,7 @@ const swiper = new Swiper(`.js-swiper`, {
     loopFillGroupWithBlank: true,
     grabCursor: true,
     preventClicks: true,
-    speed: 500,
+    speed: 600,
 
 
 
@@ -39,20 +39,9 @@ const swiper = new Swiper(`.js-swiper`, {
         768: {
             slidesPerView: 2,
             slidesPerGroup: 2,
+            spaceBetween: 20,
         },
 
-        1024: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 10,
-        },
-
-        1200: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 10,
-
-        }
 
     }
 

@@ -37,7 +37,10 @@ a {
 
 .container {
     width: 85%;
-    // width: 1400px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @include mobile-468 {
+        padding: 0 20px;
+    }
 }

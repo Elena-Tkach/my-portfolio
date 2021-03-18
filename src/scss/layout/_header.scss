@@ -15,6 +15,14 @@
 
     &__logo {
         width: 5%;
+
+        @include tablet-768 {
+            width: 7%;
+        }
+
+        @include mobile-468 {
+            display: none;
+        }
     }
 
     &__menu {
@@ -29,7 +37,6 @@
         font-weight: 500;
         font-size: calc(0.3vw + 10px);
         padding: 5px;
-        @include focus-style;
     }
 
     .first-element {
@@ -48,7 +55,7 @@
     border: none;
     background-color: transparent;
     padding: 5px;
-    @include focus-style;
+
     &__text {
         font-weight: 700;
         font-size: calc(0.3vw + 10px);

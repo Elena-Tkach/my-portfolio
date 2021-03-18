@@ -1,30 +1,33 @@
 .btn-link {
     // display: flex;
     // align-items: center;
-    &--green {
-        @include button;
-        @include btn-size(85px);
 
-        border-color: $yellowgreen;
-        @include btn-after($button-gradient, $yellowgreen, 97px);
-
-        @include laptopS-1024 {
-            @include btn-size(75px);
-
-            @include btn-after($button-gradient, $yellowgreen, 87px);
-        }
-    }
-
+    &--green,
     &--yellow {
         @include button;
         @include btn-size(85px);
-        border-color: $manz;
         @include btn-after($button-gradient, $yellowgreen, 97px);
 
         @include laptopS-1024 {
             @include btn-size(75px);
+
             @include btn-after($button-gradient, $yellowgreen, 87px);
         }
+
+        @include tablet-768 {
+            @include btn-size(65px);
+        }
+
+        @include mobile-468 {
+            @include btn-after($button-gradient, $yellowgreen, 65px);
+        }
+    }
+    &--green {
+        border-color: $yellowgreen;
+    }
+
+    &--yellow {
+        border-color: $manz;
     }
 
     &--white {
@@ -34,8 +37,8 @@
         @include btn-after($white, $white, 78px);
 
         @include laptopS-1024 {
-            @include btn-size(55px);
-            @include btn-after($button-gradient, $yellowgreen, 68px);
+            @include btn-size(45px);
+            @include btn-after($button-gradient, $yellowgreen, 45px);
         }
     }
 

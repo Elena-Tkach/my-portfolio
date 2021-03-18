@@ -1,25 +1,43 @@
 .portfolio {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding: 15vh 0 10vh;
-    // padding: 120px 0 200px;
-    position: relative;
+    padding: 100px 0 200px;
+
+    @include laptopS-1024 {
+        padding-top: 50px;
+    }
+
+    @include tablet-768 {
+        padding-bottom: 80px;
+    }
 
     &__big-title {
         z-index: 2;
-        top: -2%;
+        top: 0;
+
+        @include laptopS-1024 {
+            top: 0;
+        }
     }
-}
 
-.portfolio__title {
-    margin: 0;
-    margin-bottom: 20px;
-}
+    &__title {
+        margin: 0;
+        margin-bottom: 20px;
+    }
 
-.portfolio__subtitle {
-    margin: 0;
+    &__subtitle {
+        margin: 0;
 
-    margin-bottom: 50px;
+        margin-bottom: 50px;
+        @include tablet-768 {
+            margin-bottom: 80px;
+        }
+
+        @include mobile-468 {
+            margin-bottom: 50px;
+        }
+    }
 }
 
 .portfolio__slider {
@@ -39,7 +57,6 @@
 
     @include tablet-768 {
         margin-top: 15%;
-        text-align: center;
     }
 }
 

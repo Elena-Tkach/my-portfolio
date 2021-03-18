@@ -8,6 +8,10 @@
     margin: 0;
     @include font-style(calc(1vw + 16px), 700);
 
+    @include tablet-768 {
+        font-size: calc(2vw + 16px);
+    }
+
     &--line {
         @include title-before;
     }
@@ -17,6 +21,6 @@
     @include font-style(calc(1vw + 8px), 400);
 
     @include tablet-768 {
-        font-size: calc(1vw + 12px);
+        font-size: calc(1.6vw + 10px);
     }
 }

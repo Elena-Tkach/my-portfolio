@@ -31,9 +31,7 @@
         }
 
         .overlay {
-            // width: 100%;
-            // height: 100%;
-
+           
             background: $waikawaGrey;
             opacity: 0.8;
 
@@ -95,7 +93,7 @@
     }
 
     .article__btn-link {
-        left: 60%;
+        left: 55%;
         pointer-events: auto;
 
         @include laptopM-1200 {
@@ -103,17 +101,18 @@
         }
 
         @include laptopS-1024 {
-            left: 30%;
+            left: 40%;
         }
 
         @include tablet-768 {
+            left: 25%;
             &::after {
                 display: none;
             }
+        }
 
-            &:hover {
-                padding-right: 45px;
-            }
+        @include mobile-468 {
+            left: 30%;
         }
     }
 }
@@ -134,11 +133,18 @@
         width: 80%;
     }
 
+    @include tablet-768 {
+        bottom: 8%;
+        right: 0;
+
+        width: 90%;
+    }
+
     .article__item {
         text-transform: uppercase;
         color: $white;
         font-size: 12px;
-        line-height: 1.5;
+        line-height: 1.6;
         opacity: 0;
         transform: translate3d(0, 10px, 0);
         transition: all 1s ease;

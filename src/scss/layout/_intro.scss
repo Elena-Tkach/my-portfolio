@@ -4,30 +4,47 @@
     overflow: hidden;
     justify-content: space-between;
     width: 100%;
+    padding: 350px 0 150px;
 
-    padding: 20% 0 10vh;
-    min-height: 850px;
+    @include laptopM-1200 {
+        padding: 350px 0 150px;
+    }
 
     @include laptopS-1024 {
-        padding: 20vh 0 10vh;
-        min-height: 550px;
+        padding: 260px 0 80px;
+    }
+
+    @include mobile-468 {
+        padding: 100px 0 50px;
+
+        &__image {
+            display: none;
+        }
     }
 
     &__content {
         position: relative;
         z-index: 3;
         width: 50%;
+
+        @include tablet-768 {
+            width: 70%;
+        }
+
+        @include mobile-468 {
+            width: 100%;
+        }
     }
 
     &__subtitle {
         margin: 0;
-        margin-bottom: 90px;
+        margin-bottom: 15%;
     }
 
     &__title {
         margin: 0;
         margin-left: 7%;
-        margin-bottom: 150px;
+        margin-bottom: 15%;
 
         line-height: 0.5;
         @include font-style(calc(6vw + 10px), 700);
@@ -35,15 +52,28 @@
         -webkit-text-stroke: 1px #e4ebee;
 
         @include laptopS-1024 {
-            margin-bottom: 15vh;
+            margin-bottom: 25%;
+            line-height: 0.8;
+        }
+
+        @include mobile-468 {
+            font-size: 40px;
+            margin-left: 0;
         }
     }
 
     .intro__span {
         margin: 0;
+
         color: $white;
         font-family: "Montserrat-Alter";
         @include font-style(calc(0.6vw + 10px), 400);
+
+        @include mobile-468 {
+            font-size: 14px;
+            @include gradient-text;
+            line-height: 0.8;
+        }
     }
 
     &__background {
@@ -58,15 +88,29 @@
     &__user {
         z-index: 1;
         position: absolute;
+
         bottom: 1%;
-        right: 15vh;
+        right: 2%;
         transition: all 0.6s ease;
 
         @include laptopM-1440 {
-            right: 0;
+            right: -2vh;
         }
+
         @include laptopM-1200 {
             right: -10%;
+        }
+
+        @include laptopS-1024 {
+            right: -20%;
+        }
+
+        @include tablet-768 {
+            right: -30%;
+        }
+
+        @include mobile-468 {
+            right: -50%;
         }
     }
 }

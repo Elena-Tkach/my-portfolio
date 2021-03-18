@@ -2,39 +2,50 @@
     <div class="skills__big-title big-title">hello</div>
 
     <div class="container">
-        <h2 class="skills__title title">Мои навыки в веб-разработке</h2>
+        <h2 class="skills__title title">Мои навыки в&nbsp;веб&nbsp;-&nbsp;разработке</h2>
 
-        <div class="skills__column column">
+        <ul class="skills__list ">
 
-            <div class="column__group">
-                <h3 class="column__title">Умею</h3>
+            <li class="skills__item column">
+                <div class="column__wrap">
+                    <h3 class="column__title">Умею</h3>
+                    <button class="column__btn-arrow " type="button" aria-label="Развернуть список"
+                        aria-expanded="true">
+                    </button>
+                </div>
+
                 <ul class="column__list">
-                    <li class="column__item"><span class="column__span">Кроссбаузерная и адаптивная верстка</span></li>
-                    <li class="column__item"><span class="column__span">Работать в Photoshop и Figma</span></li>
-                    <li class="column__item"><span class="column__span">Семантическая верстка</span></li>
-                    <li class="column__item"><span class="column__span">Css-анимация, плагины</span></li>
-                    <li class="column__item"><span class="column__span">Базовые знания JavaScript (junior
-                            уровень)</span></li>
-                    <li class="column__item"><span class="column__span">Написать простые JS-скрипты</span></li>
-                    <li class="column__item"><span class="column__span">Рефактринг и оптимизация существующего
-                            кода</span></li>
+                    <li class="column__item">Кроссбаузерная и адаптивная верстка</li>
+                    <li class="column__item">Работать в Photoshop и Figma</li>
+                    <li class="column__item">Семантическая верстка</li>
+                    <li class="column__item">Css-анимация, плагины</li>
+                    <li class="column__item">Базовые знания JavaScript (junior
+                        уровень)</li>
+                    <li class="column__item">Написать простые JS-скрипты</li>
+                    <li class="column__item">Рефактринг и оптимизация существующего
+                        кода</li>
                 </ul>
-            </div>
+            </li>
 
-            <div class="column__group">
-                <h3 class="column__title">Использовала</h3>
+            <li class="skills__item column">
+                <div class="column__wrap">
+                    <h3 class="column__title">Использовала</h3>
+                    <button class="column__btn-arrow " type="button" aria-label="Развернуть список"
+                        aria-expanded="true">
+                    </button>
+                </div>
                 <ul class="column__list">
-                    <li class="column__item"><span class="column__span">HTML5, CSS3</span></li>
-                    <li class="column__item"><span class="column__span">Препроцессор Sass</span></li>
-                    <li class="column__item"><span class="column__span">Flexbox, Grid</span></li>
-                    <li class="column__item"><span class="column__span">Методология БЭМ</span></li>
-                    <li class="column__item"><span class="column__span">Системы котроля версий Git</span></li>
-                    <li class="column__item"><span class="column__span">Сборка проектов с помощью Gulp</span></li>
-                    <li class="column__item"><span class="column__span">Базовые знания PHP, MySQL</span></li>
+                    <li class="column__item">HTML5, CSS3</li>
+                    <li class="column__item">Препроцессор Sass</span></li>
+                    <li class="column__item">Flexbox, Grid</li>
+                    <li class="column__item">Методология БЭМ</li>
+                    <li class="column__item">Системы котроля версий Git</li>
+                    <li class="column__item">Сборка проектов с помощью Gulp</li>
+                    <li class="column__item">Базовые знания PHP, MySQL</li>
                 </ul>
-            </div>
+            </li>
 
-        </div>
+        </ul>
 
         <a class="skills__btn btn-link btn-link--yellow ">
             <span class="btn-span">Резюме</span>
@@ -43,8 +54,24 @@
     </div>
 
     <div class="skill__bg-image bg-image">
-        <div class="bg-image__background"></div>
+        <picture class="skill__picture">
+
+            <source media="(max-width: 768px)" srcset="img/skills/mobile@1x.webp 1x,
+                    img/skills/mobile@2x.webp 2x">
+            <source media="(max-width: 1024px)" srcset="img/skills/tablet@1x.webp 1x,
+                    img/skills/tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/skills/desktop@1x.webp 1x,
+                        img/skills/desktop@2x.webp 2x">
+
+
+            <source media="(max-width: 768px)" srcset="img/skills/mobile@1x.jpg 1x,
+                    img/skills/mobile@2x.jpg 2x">
+            <source media="(max-width: 1024px)" srcset="img/skills/tablet@1x.jpg 1x,
+                    img/skills/tablet@2x.jpg 2x">
+            <img class="bg-image__img" src="img/skills/desktop@1x.jpg" srcset="img/skills/desktop@2x.jpg"
+                alt="Девушка за мотировом">
+        </picture>
+        <div class="skills__overlay overlay"></div>
 
     </div>
-    <div class="skills__overlay overlay"></div>
 </section>
