@@ -36,7 +36,7 @@ const swiper = new Swiper(`.js-swiper`, {
         //     // spaceBetween: 90,
         // },
 
-        768: {
+        769: {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 20,
@@ -73,9 +73,16 @@ const swiper2 = new Swiper(`.js-slide`, {
 
     keyboard: true,
 
+    pagination: {
+        el: `.js-pagination`,
+        type: `bullets`,
+        clickable: true,
+    },
+
+
     breakpoints: {
 
-        768: {
+        769: {
             slidesPerView: 3,
 
         }

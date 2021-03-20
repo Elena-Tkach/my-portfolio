@@ -94,6 +94,11 @@
         display: inline-block;
         margin-right: 15px;
         vertical-align: middle;
+
+        @include tablet-768 {
+            width: 30px;
+            margin-right: 10px;
+        }
     }
 }
 
@@ -121,7 +126,6 @@
     border-bottom: 1px solid rgba(117, 117, 117, 0.05);
 }
 
-
 @mixin font-style($size, $weight) {
     font-size: #{$size};
     font-weight: #{$weight};
@@ -141,6 +145,12 @@
 
 @mixin laptopS-1024 {
     @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tablet-820 {
+    @media (max-width: 820px) {
         @content;
     }
 }
@@ -178,6 +188,28 @@
         opacity: 0;
 
         transform: rotate(0.001deg) translate3d(-1685px, 10px, 0);
+    }
+}
+
+@keyframes marq-text-small {
+    0% {
+        opacity: 0;
+        transform: rotate(0.001deg) translate3d(842px, 10px, 0);
+    }
+    5%,
+    95% {
+        opacity: 0;
+    }
+    6%,
+    94% {
+        opacity: 1;
+    }
+    50% {
+        transform: rotate(0.001deg) translate3d(0, 165px, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(0.001deg) translate3d(-842px, 10px, 0);
     }
 }
 

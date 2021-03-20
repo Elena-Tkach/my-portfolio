@@ -31,7 +31,6 @@
         }
 
         .overlay {
-           
             background: $waikawaGrey;
             opacity: 0.8;
 
@@ -104,15 +103,19 @@
             left: 40%;
         }
 
-        @include tablet-768 {
+        @include tablet-820 {
             left: 25%;
+        }
+
+        @include tablet-768 {
+            left: 50%;
             &::after {
                 display: none;
             }
         }
 
         @include mobile-468 {
-            left: 30%;
+            left: 0%;
         }
     }
 }
@@ -180,12 +183,19 @@
         transform: translateX(0);
         transition: all 1.6s ease;
         transition-delay: 0.5s;
+
+        @include tablet-768 {
+            transition: none;
+        }
     }
 
     .article__item {
         opacity: 1;
         transform: translate3d(0, 0px, 0);
         transition-delay: 1.3s;
+        @include tablet-768 {
+            transition: none;
+        }
 
         &:nth-child(2) {
             transition-delay: 1.5s;

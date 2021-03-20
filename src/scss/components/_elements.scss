@@ -11,9 +11,6 @@
 
 .big-title {
     position: absolute;
-
-    // top: -15%;
-    // left: 0;
     width: 100%;
 
     text-align: center;
@@ -30,33 +27,8 @@
     overflow: hidden;
     transform: $transform;
 
-    @include tablet-768 {
-        top: 22vh;
-        opacity: 0.1;
-    }
-}
-
-.about-me__big-title {
-    position: absolute;
-    width: 100%;
-    bottom: -15%;
-
-    text-align: center;
-    text-transform: uppercase;
-    @include font-style(calc(14vw + 10px), 700);
-    color: #000;
-
-    line-height: 1;
-    white-space: nowrap;
-
-    pointer-events: none;
-    opacity: 0.1;
-
-    overflow: hidden;
-    transform: $transform;
-
-    @include tablet-768 {
-        top: 22vh;
-        opacity: 0.1;
-    }
+    // @include tablet-768 {
+    //     top: 22vh;
+    //     opacity: 0.1;
+    // }
 }

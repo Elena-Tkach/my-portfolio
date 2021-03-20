@@ -1,5 +1,6 @@
 .ability {
     position: relative;
+
     &__list {
         z-index: 3;
         @include list-reset;
@@ -8,16 +9,33 @@
         position: relative;
 
         height: 1020px;
+
+        @include tablet-820 {
+            height: 820px;
+        }
+
+        @include tablet-768 {
+            height: 620px;
+        }
+
+        @include mobile-468 {
+            margin-top: -20%;
+        }
     }
 
     &__item {
-        width: 20%;
         margin-left: -140px;
         position: absolute;
         top: 0;
         left: 52%;
 
         animation: marque-text 100s linear infinite;
+
+
+        @include tablet-768 {
+            animation: marq-text-small 100s linear infinite;
+            margin-left: -80px;
+        }
 
         &:nth-child(2) {
             animation-delay: -90s;
@@ -55,6 +73,10 @@
 
     &__inner {
         margin-bottom: 60px;
+
+        @include tablet-768 {
+            margin-bottom: 40px;
+        }
     }
 
     &__text {
@@ -69,13 +91,18 @@
     justify-content: center;
     align-items: center;
 
-    max-width: 200px;
+    width: 220px;
     height: 220px;
 
     padding: 10%;
 
     transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.6s ease;
+
+    @include tablet-768 {
+        max-width: 140px;
+        height: 160px;
+    }
 
     &--border {
         box-shadow: 0px 0px 0px 2px #ded849 inset;

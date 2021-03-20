@@ -1,14 +1,29 @@
 .work {
     position: relative;
     padding: 15vh 0 150px;
+    @include tablet-768 {
+        padding-bottom: 80px;
+    }
+
+    @include mobile-468 {
+        padding: 10vh 0 50px;
+    }
 
     &__inner {
         display: flex;
         margin-bottom: 12%;
+
+        @include tablet-768 {
+            flex-direction: column;
+        }
     }
 
     &__wrap {
         width: 70%;
+
+        @include tablet-768 {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -18,9 +33,16 @@
 
     &__subtitle {
         margin: 0;
+        @include tablet-768 {
+            margin-bottom: 50px;
+        }
     }
 
     &__btn-link {
         align-self: flex-end;
+    }
+
+    &__big-title {
+        bottom: -15%;
     }
 }

@@ -5,10 +5,27 @@
     justify-content: space-between;
     width: 100%;
 
+    @include laptopM-1200 {
+        padding: 5vh 0 15vh;
+    }
+
+    @include tablet-820 {
+        padding-bottom: 5vh;
+    }
+
+    @include tablet-768 {
+        flex-direction: column;
+        padding: 50px 0 50px;
+    }
+
     &__image {
-        // position: relative;
-        // @include position-absolute;
-        // width: 38%;
+        @include tablet-768 {
+            margin-bottom: 80px;
+        }
+
+        @include mobile-468 {
+            margin-bottom: 20px;
+        }
     }
 
     &__img {
@@ -16,18 +33,43 @@
         @include position-absolute;
 
         box-shadow: 0 12px 35px #000000;
+
+        @include laptopM-1200 {
+            width: 60%;
+            left: -12%;
+        }
+
+        @include tablet-768 {
+            box-shadow: none;
+            position: relative;
+            height: 55vw;
+            width: 100%;
+            left: 0;
+        }
     }
 
     &__big-title {
         z-index: -1;
         top: -10%;
+
+        @include tablet-768 {
+            top: 0;
+        }
     }
 }
 
 .ed-article {
-    // margin-left: 50%;
-    // padding: 0 45px 0 20px;
     width: 48%;
+
+    @include tablet-768 {
+        width: 85%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    @include mobile-468 {
+        width: 100%;
+    }
 
     &__title {
         margin: 0;
@@ -37,12 +79,29 @@
     &__subtitle {
         margin: 0;
         margin-bottom: 10vh;
+        @include laptopS-1024 {
+            margin-bottom: 5vh;
+        }
     }
 
     &__list-text {
         @include list-reset;
         margin-bottom: 10vh;
         width: 80%;
+
+        @include laptopS-1024 {
+            margin-bottom: 5vh;
+        }
+
+        @include tablet-768 {
+            width: 100%;
+            font-size: calc(1vw + 10px);
+            margin-left: 7%;
+        }
+
+        @include mobile-468 {
+            margin-left: 0;
+        }
     }
 
     &__item-text {
@@ -68,6 +127,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include tablet-768 {
+            width: 100%;
+        }
     }
 
     &__item-img {
@@ -78,6 +141,10 @@
 
         &:nth-last-child(-n + 2) {
             margin-bottom: 0;
+        }
+
+        @include mobile-468 {
+            box-shadow: none;
         }
     }
 }

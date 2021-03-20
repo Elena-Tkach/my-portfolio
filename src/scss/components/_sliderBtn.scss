@@ -1,9 +1,12 @@
 .slider__btn-list {
-    display: flex;
-    justify-content: space-around;
+    // display: flex;
 
-    width: auto;
+    // width: auto;
     @include list-reset;
+
+    // @include tablet-768 {
+    //     justify-content: space-around;
+    // }
 }
 
 .btn {
@@ -24,31 +27,37 @@
     background-color: transparent;
     transition: all 0.6s ease;
 
-    &:focus {
-        outline: none;
-        @include gradient-text;
-    }
+    // &:focus {
+    //     color: $manz;
+    //     outline: none;
+    //     // @include gradient-text;
+    // }
 
     @include tablet-768 {
         // position: relative;
-        transform: none;
+        top: -5%;
+        // left: 50%;
         font-size: calc(6vw + 10px);
     }
 }
 
 .btn--left {
-    margin-right: 15%;
+    right: 26%;
 
-    // @include tablet-768 {
-    //     margin-right: 0;
-    // }
+    @include tablet-768 {
+        left: 30%;
+    }
 
     &::before {
         content: "\2190";
     }
 
     &:hover {
-        right: 7%;
+        right: 27%;
+
+        @include tablet-768 {
+            right: 0;
+        }
     }
 }
 
@@ -58,5 +67,17 @@
     }
     &:hover {
         right: 5%;
+
+        @include tablet-768 {
+            right: 20%;
+        }
     }
+
+    @include tablet-768 {
+        right: 20%;
+    }
+
+    // @include tablet-768 {
+    //     margin-left: 15%;
+    // }
 }

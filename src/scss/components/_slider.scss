@@ -8,7 +8,8 @@
     &__item {
         &:nth-child(even) {
             padding-top: 10vh;
-            @include mobile-468 {
+
+            @include tablet-768 {
                 padding-top: 0;
             }
         }
@@ -24,8 +25,12 @@
         @include laptopS-1024 {
             height: 400px;
         }
-        @include tablet-768 {
+
+        @include tablet-820 {
             height: 300px;
+        }
+        @include mobile-468 {
+            margin-right: 0;
         }
     }
 }
