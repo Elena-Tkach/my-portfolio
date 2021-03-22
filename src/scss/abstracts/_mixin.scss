@@ -224,3 +224,46 @@
         top: 0;
     }
 }
+
+@keyframes arrow-2 {
+    0% {
+        opacity: 0;
+        transform: translate(0, -20px) rotate(45deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 20px) rotate(45deg);
+    }
+}
+
+@keyframes arrow-3 {
+    0% {
+        opacity: 0;
+        transform: translate(0, -33px) rotate(-45deg);
+    }
+    10%,
+    90% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(-45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 23px) rotate(-45deg);
+    }
+}
+
+@keyframes phone {
+    0% {
+        transform: translate(0, 0px) rotate(8deg);
+    }
+
+    100% {
+        transform: translate(0, 0px) rotate(-8deg);
+    }
+}

@@ -1,5 +1,5 @@
 .header {
-    position: fixed;
+    position: absolute;
     z-index: 10;
     top: 0;
     left: 0;
@@ -10,42 +10,49 @@
         justify-content: space-between;
         align-items: center;
 
-        padding: 14px 0;
-    }
-
-    &__logo {
-        top: 0;
-        position: relative;
-        width: 5%;
-        animation: arrow 2s ease infinite;
+        padding: 4% 0 14px;
 
         @include tablet-768 {
-            width: 7%;
-        }
-
-        @include mobile-468 {
-            display: none;
+            padding: 14px 0;
         }
     }
 
     &__menu {
-        width: 10%;
+        // width: 20%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         position: relative;
     }
+}
 
-    .phone {
-        font-weight: 500;
-        font-size: calc(0.3vw + 10px);
-        padding: 5px;
-    }
+.phone {
+    font-weight: 500;
+    font-size: calc(0.3vw + 10px);
+    padding: 5px;
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transform: translate3d(0, 0vh, 0);
 
-    .first-element {
+    &__span {
         font-weight: 700;
         color: $yellowgreen;
         @include gradient-text;
+    }
+
+    &--img {
+        @include mobile-468 {
+            display: block;
+            padding: 10px;
+            font-size: 0px;
+            background: url("img/header/phone.svg") no-repeat center;
+            background-size: auto 100%;
+            transition: all 0.6s ease;
+
+            &:hover {
+                animation: phone 0.1s linear infinite;
+                transition: all 0.6s ease;
+            }
+        }
     }
 }
 
@@ -57,29 +64,35 @@
 
     border: none;
     background-color: transparent;
-    padding: 5px;
+    // padding: 5px;
 
     &__text {
         font-weight: 700;
         font-size: calc(0.3vw + 10px);
+        // margin-top: 5px;
+
+        @include tablet-768 {
+            display: none;
+        }
     }
 
     &__line {
         width: 32px;
-        height: 25px;
+        height: 20px;
+
         margin-right: 5px;
         transform: translateY(2px);
 
         .line {
             position: absolute;
             width: 100%;
-            height: 4px;
+            height: 3px;
             right: 0;
             opacity: 1;
 
             background: #a7c939;
-            border-radius: 3px;
-            transition: all 0.3s ease;
+            border-radius: 2px;
+            transition: all 0.6s ease;
 
             &:nth-child(1) {
                 top: 0;
@@ -88,12 +101,12 @@
             }
 
             &:nth-child(2) {
-                top: 9px;
+                top: 7px;
                 background: linear-gradient(#b2cc34, #ccd628);
             }
 
             &:nth-child(3) {
-                top: 18px;
+                top: 14px;
                 width: 60%;
                 background: linear-gradient(#ccd628, #d7d922);
             }
@@ -109,4 +122,63 @@
             }
         }
     }
+}
+
+.header__arrows {
+    .header__logo {
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-bottom: 6px solid $yellowgreen;
+        border-right: 6px solid$yellowgreen;
+        transform: rotate(45deg);
+        margin: -22px 0;
+        border-radius: 2px;
+        transition: all 0.6s ease;
+
+        @include tablet-768 {
+            width: 20px;
+            height: 20px;
+            border-bottom: 4px solid $yellowgreen;
+            border-right: 4px solid$yellowgreen;
+        }
+    }
+
+    @include mobile-468 {
+        display: none;
+    }
+}
+
+.arrows-animate {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transition: all 0.6s ease;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-left: 6px solid $yellowgreen;
+        border-bottom: 6px solid $yellowgreen;
+        border-radius: 2px;
+        transition: all 0.6s ease;
+        animation: arrow-3 3s linear infinite;
+    }
+
+    &:after {
+        transition: all 0.6s ease;
+        animation: arrow-3 3s linear infinite -2.1s;
+    }
+
+    .header__logo {
+        display: none;
+        transition: all 0.6s ease;
+    }
+}
+
+.fixed {
+    position: fixed;
 }
