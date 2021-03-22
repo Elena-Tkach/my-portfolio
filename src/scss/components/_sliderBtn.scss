@@ -1,21 +1,16 @@
 .slider__btn-list {
-    // display: flex;
-
-    // width: auto;
     @include list-reset;
-
-    // @include tablet-768 {
-    //     justify-content: space-around;
-    // }
 }
 
 .btn {
-    width: 50px;
+    width: 70px;
+
+    @include outline-none;
 }
 
 .slider__btn {
     position: absolute;
-    top: 7%;
+    top: -5%;
     right: 6%;
     transform: translate(-50%, -50%);
 
@@ -28,15 +23,11 @@
     transition: all 0.6s ease;
 
     // &:focus {
-    //     color: $manz;
-    //     outline: none;
-    //     // @include gradient-text;
+    //     box-shadow: $box-shadow;
     // }
 
     @include tablet-768 {
-        // position: relative;
         top: -5%;
-        // left: 50%;
         font-size: calc(6vw + 10px);
     }
 }
@@ -76,8 +67,4 @@
     @include tablet-768 {
         right: 20%;
     }
-
-    // @include tablet-768 {
-    //     margin-left: 15%;
-    // }
 }

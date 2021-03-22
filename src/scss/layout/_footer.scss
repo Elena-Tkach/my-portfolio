@@ -59,6 +59,12 @@
     &__btn {
         border: none;
         background: transparent;
+        @include outline-none;
+    }
+
+    &__link {
+        @include outline-none;
+        padding: 12px;
     }
 
     &__title {
@@ -131,6 +137,9 @@
     }
 
     &__link {
+        padding: 5px;
+        @include outline-none;
+
         @include font-style(calc(0.5vw + 10px), 400);
         color: rgba(228, 235, 238, 0.6);
         transition: all 0.6s ease;
@@ -186,17 +195,24 @@
         }
     }
 
+    &__link {
+        outline: none;
+    }
+
     &__svg {
-        opacity: 0.6;
+        opacity: 0.5;
         width: 50px;
         height: 40px;
 
         fill: rgba(228, 235, 238, 0.6);
         transition: all 0.6s ease;
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+            fill: rgba(29, 29, 29, 1);
             opacity: 1;
-            box-shadow: $box-shadow;
         }
 
         @include laptopS-1024 {
@@ -223,9 +239,13 @@
     }
 
     &__link {
+        padding: 5px;
+        @include outline-none;
+
         @include font-style(calc(0.5vw + 10px), 400);
         color: rgba(228, 235, 238, 0.6);
         transition: all 0.6s ease;
+
         &:hover {
             color: rgba(228, 235, 238, 1);
             text-shadow: $text-shadow;

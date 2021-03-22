@@ -1,6 +1,6 @@
 .btn-link {
-    // display: flex;
-    // align-items: center;
+
+    @include outline-none;
 
     &--green,
     &--yellow {

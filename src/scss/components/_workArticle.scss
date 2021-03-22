@@ -140,14 +140,17 @@
             .overlay {
                 transition-duration: 1.2s;
                 opacity: 0.9;
+                transition-delay: 0.1s;
             }
             .article__background {
                 transform: translate3d(-20px, 0, 0);
+                transition-delay: 0.1s;
             }
 
             .content {
                 margin-left: 8%;
                 margin-right: 4%;
+                transition-delay: 0.1s;
             }
         }
 
