@@ -60,11 +60,23 @@
         border: none;
         background: transparent;
         @include outline-none;
+
+        @include tablet-768 {
+            &:hover {
+                box-shadow: none;
+            }
+        }
     }
 
     &__link {
         @include outline-none;
         padding: 12px;
+
+        @include tablet-768 {
+            &:hover {
+                box-shadow: none;
+            }
+        }
     }
 
     &__title {

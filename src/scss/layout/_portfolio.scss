@@ -30,13 +30,10 @@
         margin: 0;
 
         margin-bottom: 50px;
-        @include tablet-768 {
-            margin-bottom: 25%;
-        }
 
-        // @include mobile-468 {
-        //     margin-bottom: 50px;
-        // }
+        @include tablet-768 {
+            margin-bottom: 30%;
+        }
     }
 }
 

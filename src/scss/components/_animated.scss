@@ -1,0 +1,42 @@
+.animation {
+    opacity: 0;
+    transition: all 1.6s ease;
+
+    &-class {
+        opacity: 1;
+        transition: all 0.8s ease-in-out;
+    }
+}
+
+// .portfolio__wrap {
+//     .slider__list {
+//         .animation {
+//             &-class {
+//                 opacity: 1;
+//                 transition: all 0.8s ease;
+
+//                 &:nth-child(even) {
+//                     transition-delay: 0.4s;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.animation-class {
+    .title {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .subtitle {
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 0.4s;
+    }
+}
+
+.text-animated {
+    transform: translateY(-100px);
+    transition: transform 0.8s ease-in-out;
+}

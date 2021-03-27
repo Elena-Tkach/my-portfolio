@@ -4,11 +4,12 @@ let scroll = 0;
 const defaultOffset = 200;
 const header = document.querySelector(`.js-header`);
 const animateArrow = document.querySelector(`.js-arrows`);
+const scrollItems = document.querySelectorAll(`.js-scroll`);
 
 
 
 const progressEl = document.querySelector(`.js-progress`);
-const article = document.querySelectorAll(`.article__content`);
+// const article = document.querySelectorAll(`.article__content`);
 const pos = document.documentElement;
 
 // const windowClient = document.documentElement.scrollTop;
@@ -19,6 +20,7 @@ const pos = document.documentElement;
 window.addEventListener(`scroll`, function () {
     onProgressScroll(progressEl);
     scrollheader();
+    checkBoxes();
 });
 
 
@@ -56,3 +58,14 @@ pos.addEventListener(`mousemove`, e => {
     pos.style.setProperty(`--y`, e.clientY + `px`);
 });
 
+function checkBoxes(box) {
+    const triggerTop = window.innerHeight - 100;
+
+
+    scrollItems.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        if (boxTop < triggerTop) {
+            box.classList.add("animation-class");
+        }
+    });
+}

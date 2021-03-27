@@ -12,7 +12,7 @@
         // height: 100%;
 
         // transform-origin: left center;
-        // transform: translate3d(0, 0, 0) scaleX(1);
+        // transform: translate3d(0, 0, 0) scaleX(0);
         // transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         &--card1 {
@@ -62,6 +62,11 @@
     transform: translateX(-60px);
     transition: all 2s ease;
 
+    @include tablet-768 {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
     .article__title {
         text-align: start;
 
@@ -95,6 +100,10 @@
         left: 55%;
         pointer-events: auto;
 
+        @include laptopM-1440 {
+            left: 50%;
+        }
+
         @include laptopM-1200 {
             left: 45%;
         }
@@ -109,9 +118,6 @@
 
         @include tablet-768 {
             left: 50%;
-            &::after {
-                display: none;
-            }
         }
 
         @include mobile-468 {
@@ -133,14 +139,12 @@
     justify-content: flex-start;
 
     @include laptopS-1024 {
-        width: 80%;
+        width: 90%;
+        bottom: 8%;
     }
 
     @include tablet-768 {
-        bottom: 8%;
         right: 0;
-
-        width: 90%;
     }
 
     .article__item {
@@ -184,9 +188,9 @@
         transition: all 1.6s ease;
         transition-delay: 0.5s;
 
-        @include tablet-768 {
-            transition: none;
-        }
+        // @include tablet-768 {
+        //     transition: none;
+        // }
     }
 
     .article__item {

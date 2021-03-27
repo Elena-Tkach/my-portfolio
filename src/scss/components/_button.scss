@@ -1,5 +1,4 @@
 .btn-link {
-
     @include outline-none;
 
     &--green,
@@ -38,7 +37,7 @@
 
         @include laptopS-1024 {
             @include btn-size(45px);
-            @include btn-after($button-gradient, $yellowgreen, 45px);
+            @include btn-after($white, $white, 45px);
         }
     }
 

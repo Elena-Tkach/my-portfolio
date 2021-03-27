@@ -1,16 +1,18 @@
 .slider__btn-list {
     @include list-reset;
+    z-index: 11;
 }
 
 .btn {
     width: 70px;
-
+    height: 70px;
+    border-radius: 50%;
     @include outline-none;
 }
 
 .slider__btn {
     position: absolute;
-    top: -5%;
+    top: 7%;
     right: 6%;
     transform: translate(-50%, -50%);
 
@@ -22,12 +24,8 @@
     background-color: transparent;
     transition: all 0.6s ease;
 
-    // &:focus {
-    //     box-shadow: $box-shadow;
-    // }
-
     @include tablet-768 {
-        top: -5%;
+        top: -7%;
         font-size: calc(6vw + 10px);
     }
 }
