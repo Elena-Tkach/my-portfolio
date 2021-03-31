@@ -11,8 +11,8 @@
             </div>
 
 
-            <div class="header__menu">
-                <button class="header__burger burger" aria-label="Открыть меню">
+            <div class="header__menu menu js-menu ">
+                <button class="header__burger burger js-burger" aria-label="Открыть меню">
                     <span class="burger__line">
                         <span class="line"></span>
                         <span class="line"></span>
@@ -21,6 +21,93 @@
                     <span class="burger__text">Меню</span>
                 </button>
 
+                <div class="menu__wrap ">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                <div class="menu__background menu__background--card1">
+                                    <div class="overlay overlay--card1"></div>
+                                </div>
+
+                                <div class="menu__content">
+                                    <svg class="menu__svg">
+                                        <use xlink:href="img/sprite.svg#portfolio"></use>
+                                    </svg>
+                                    <h4 class="menu__title ">Мое портфолио</h4>
+                                    <p class="menu__subtitle">Сайты и не только над, которыми я работала</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">
+                                <div class="menu__background menu__background--card2">
+                                    <div class="overlay overlay--card2"></div>
+                                </div>
+
+                                <div class="menu__content">
+                                    <svg class="menu__svg">
+                                        <use xlink:href="img/sprite.svg#cv"></use>
+                                    </svg>
+                                    <h4 class="menu__title">Мое резюме</h4>
+                                    <p class="menu__subtitle">Резюме в привычном формате :)</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <nav class="menu__nav nav nav--header">
+                        <div class="overlay "></div>
+                        <ul class="nav__list nav__list--menu">
+                            <li class="nav__item nav__item--header">
+                                <a href="#" class="nav__link nav__link--header">Обо мне</a>
+                            </li>
+
+                            <li class="nav__item nav__item--header">
+                                <a href="#" class="nav__link nav__link--header">Опыт работы</a>
+                            </li>
+
+                            <li class="nav__item nav__item--header">
+                                <a href="#" class="nav__link nav__link--header">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="menu__btn">
+                            <a class="menu__btn-link btn-link btn-link--green button" href="#">
+                                <span class="menu__btn-span btn-span">Портфолио</span>
+                            </a>
+                        </div>
+
+
+                        <address class="nav__socials socials">
+                            <ul class="socials__list ">
+                                <li class="socials__item">
+                                    <a class="socials__link socials__link--vk" href="https://vk.com/"
+                                        aria-label="я в Вконтакте" target="_blank" rel="noopener">
+                                        <svg class="socials__svg">
+                                            <use xlink:href="img/sprite.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+
+                                <li class="socials__item">
+                                    <a class="socials__link socials__link--fb" href="https://facebook.com/"
+                                        aria-label="Я в фэйсбук" target="_blank" rel="noopener"><svg
+                                            class="socials__svg">
+                                            <use xlink:href="img/sprite.svg#fb"></use>
+                                        </svg></a>
+                                </li>
+
+                                <li class="socials__item">
+                                    <a class="socials__link socials__link--inst" href="https://instagram.com/"
+                                        aria-label="Я в инстаграм" target="_blank" rel="noopener">
+                                        <svg class="socials__svg">
+                                            <use xlink:href="img/sprite.svg#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>

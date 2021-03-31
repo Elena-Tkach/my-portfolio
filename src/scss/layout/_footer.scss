@@ -185,8 +185,9 @@
 
         display: flex;
         justify-content: space-around;
-        // align-items: center;
+    }
 
+    &__list--footer {
         @include tablet-768 {
             flex-direction: column;
         }
@@ -194,7 +195,9 @@
 
     &__item {
         padding: 8%;
+    }
 
+    &__item--footer {
         @include tablet-768 {
             padding: 6%;
             &:first-child {
@@ -250,7 +253,7 @@
         }
     }
 
-    &__link {
+    &__link--footer {
         padding: 5px;
         @include outline-none;
 

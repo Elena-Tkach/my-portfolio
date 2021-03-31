@@ -92,4 +92,13 @@ const swiper2 = new Swiper(`.js-slide`, {
 })
 
 
+VanillaTilt.init(document.querySelectorAll(".js-tilt"), {
+    max: 8,
+    speed: 1000
+});
+
+
+
+
+
 

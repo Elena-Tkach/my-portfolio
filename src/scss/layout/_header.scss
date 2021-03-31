@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    z-index: 10;
+    z-index: 13;
     top: 0;
     left: 0;
     right: 0;
@@ -93,6 +93,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2px;
+    z-index: 14;
 
     border: none;
     background-color: transparent;
@@ -104,6 +105,7 @@
     &__text {
         font-weight: 700;
         font-size: calc(0.3vw + 10px);
+        margin-right: 5%;
 
         transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -172,10 +174,13 @@
         width: 30px;
         height: 30px;
         border-bottom: 6px solid $yellowgreen;
-        border-right: 6px solid$yellowgreen;
+        border-right: 6px solid $yellowgreen;
+        border-image: $gradient-yellowGreen;
+        border-image-slice: 1;
+
         transform: rotate(45deg);
         // margin: -42px 0;
-        border-radius: 2px;
+        border-radius: 3px;
 
         transition: all 0.6s ease;
 

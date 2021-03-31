@@ -1,6 +1,13 @@
 
-const writeBurger = function () {
-    return console.log('Hello!!!');
-}
+const menuEl = document.querySelector(`.js-menu`);
+const btnBurgerEl = document.querySelector(`.js-burger`);
 
-writeBurger();
+
+btnBurgerEl.addEventListener('click', (e) => {
+    onShowHideMenuClick();
+})
+
+const onShowHideMenuClick = () => {
+    menuEl.classList.toggle(`open`);
+    body.classList.toggle(`menu-open`);
+}
