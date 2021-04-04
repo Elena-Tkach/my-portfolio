@@ -4,7 +4,6 @@ const swiper = new Swiper(`.js-swiper`, {
 
     slidesPerView: 1,
     spaceBetween: 10,
-    // slidesPerGroup: 2,
 
 
     loopFillGroupWithBlank: true,
@@ -30,11 +29,7 @@ const swiper = new Swiper(`.js-swiper`, {
     keyboard: true,
 
     breakpoints: {
-        // 320: {
-        //     slidesPerView: 1,
-        //     // slidesPerGroup: 1,
-        //     // spaceBetween: 90,
-        // },
+
 
         769: {
             slidesPerView: 2,
@@ -93,7 +88,7 @@ const swiper2 = new Swiper(`.js-slide`, {
 
 
 VanillaTilt.init(document.querySelectorAll(".js-tilt"), {
-    max: 8,
+    max: 5,
     speed: 1000
 });
 

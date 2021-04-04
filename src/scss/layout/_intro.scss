@@ -4,14 +4,14 @@
     overflow: hidden;
     justify-content: space-between;
     width: 100%;
-    padding: 350px 0 150px;
+    padding: 300px 0 150px;
 
     @include laptopM-1200 {
         padding: 350px 0 150px;
     }
 
     @include laptopS-1024 {
-        padding: 260px 0 80px;
+        padding: 200px 0 80px;
     }
 
     @include mobile-468 {
@@ -40,27 +40,78 @@
         font-size: calc(1vw + 8px);
         font-weight: 400;
         margin: 0;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
     }
 
     &__title {
+        position: relative;
         margin: 0;
-        margin-left: 7%;
-        margin-bottom: 15%;
+        // margin-left: 7%;
+        margin-bottom: 8%;
 
-        line-height: 0.5;
+        line-height: 0;
         @include font-style(calc(6vw + 10px), 700);
-        color: transparent;
-        -webkit-text-stroke: 1px #e4ebee;
+        transition: all 0.6s ease;
 
         @include laptopS-1024 {
-            margin-bottom: 25%;
-            line-height: 0.8;
+            // margin-bottom: 25%;
+            line-height: 0.5;
         }
 
         @include mobile-468 {
             font-size: 40px;
             margin-left: 0;
+        }
+    }
+
+    .intro__span--name {
+        position: relative;
+        line-height: 1.2;
+        margin-right: 10%;
+
+        color: transparent;
+        -webkit-text-stroke: 1px #e4ebee;
+
+        &::before {
+            @include text-before(#e4ebee);
+
+            animation: anim-text 6s ease-in-out;
+            animation-fill-mode: forwards;
+
+            @include mobile-468 {
+                color: #e4ebee;
+                animation: none;
+            }
+        }
+
+        @include mobile-468 {
+            margin-left: 10%;
+            margin-right: 50%;
+        }
+    }
+
+    .itro__span--surname {
+        position: relative;
+        line-height: 1.8;
+        margin-left: 45%;
+        color: #e4ebee;
+        -webkit-text-stroke: 1px #e4ebee;
+
+        &::before {
+            line-height: 1.23;
+            @include text-before($nero);
+            animation: anim-text 6s alternate;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+
+            @include mobile-468 {
+                animation: none;
+            }
+        }
+
+        @include mobile-468 {
+            top: -110px;
+            left: 10%;
         }
     }
 
@@ -70,6 +121,10 @@
         color: $white;
         font-family: "Montserrat-Alter";
         @include font-style(calc(0.6vw + 10px), 400);
+
+        @include laptopS-1024 {
+            margin-left: 10%;
+        }
 
         @include mobile-468 {
             font-size: 14px;

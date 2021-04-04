@@ -99,7 +99,7 @@
     .article__btn-link {
         left: 55%;
         pointer-events: auto;
-        
+
         @include laptopM-1440 {
             left: 50%;
         }
@@ -113,7 +113,7 @@
         }
 
         @include tablet-768 {
-            left: 50%;
+            left: 40%;
         }
 
         @include mobile-468 {

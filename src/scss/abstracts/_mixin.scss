@@ -4,6 +4,17 @@
     list-style: none;
 }
 
+@mixin visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
 @mixin position-absolute {
     position: absolute;
     top: 0;
@@ -110,6 +121,18 @@
             margin-right: 10px;
         }
     }
+}
+
+@mixin text-before($color) {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: #{$color};
+    -webkit-text-stroke: 1px #e4ebee;
+    overflow: hidden;
 }
 
 //gradient
@@ -233,6 +256,27 @@
 
     100% {
         color: #9acd32;
+    }
+}
+
+@keyframes animate-text {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+@keyframes anim-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
     }
 }
 

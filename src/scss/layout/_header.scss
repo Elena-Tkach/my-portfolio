@@ -25,7 +25,7 @@
         justify-content: space-between;
         align-items: center;
 
-        padding: 5vh 0;
+        padding: 3vh 0;
 
         @include tablet-768 {
             padding: 14px 0;
@@ -42,8 +42,7 @@
 
     &__contact {
         width: 30%;
-        transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-
+        transition: $cubic-bizie;
         transform: translate3d(0, 0vh, 0);
     }
 }
@@ -99,7 +98,7 @@
     background-color: transparent;
     @include outline-none;
 
-    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: $cubic-bizie;
     transform: translate3d(0vh, 0, 0);
 
     &__text {
@@ -107,7 +106,7 @@
         font-size: calc(0.3vw + 10px);
         margin-right: 5%;
 
-        transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: $cubic-bizie;
 
         @include tablet-768 {
             display: none;
@@ -164,9 +163,9 @@
 }
 
 .header__arrows {
-    // width: 30%;
     text-align: center;
-    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    transition: $cubic-bizie;
     transform: translate3d(0, 0vh, 0);
 
     .header__logo {
@@ -229,6 +228,7 @@
 .hide {
     &::before {
         opacity: 0;
+        transform: translate3d(0, -15vh, 0);
     }
 
     .header__contact,
