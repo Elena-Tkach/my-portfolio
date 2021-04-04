@@ -3,18 +3,19 @@
 
     &--green,
     &--yellow {
+        @include font-style(calc(0.1vw + 10px), 700);
         @include button;
-        @include btn-size(85px);
+        @include btn-size(16px, 85px);
         @include btn-after($button-gradient, $yellowgreen, 97px);
 
         @include laptopS-1024 {
-            @include btn-size(75px);
+            @include btn-size(14px, 75px);
 
             @include btn-after($button-gradient, $yellowgreen, 87px);
         }
 
         @include tablet-768 {
-            @include btn-size(65px);
+            @include btn-size(14px, 65px);
         }
 
         @include mobile-468 {
@@ -30,15 +31,30 @@
     }
 
     &--white {
+        @include font-style(calc(0.01vw + 10px), 700);
         @include button;
-        @include btn-size(65px);
+        @include btn-size(14px, 50px);
         border-color: $white;
-        @include btn-after($white, $white, 78px);
+        @include btn-after($white, $white, 62px);
+
+        @include laptopM-1440 {
+            @include btn-size(12px, 50px);
+        }
+
+        @include laptopM-1200 {
+            @include btn-size(12px, 45px);
+            @include btn-after($white, $white, 54px);
+        }
 
         @include laptopS-1024 {
-            @include btn-size(45px);
+            font-size: calc(0.01vw + 8px);
+            @include btn-size(10px, 40px);
             @include btn-after($white, $white, 45px);
         }
+
+        // @include tablet-820 {
+        //     left: 25%;
+        // }
     }
 
     .btn-span {

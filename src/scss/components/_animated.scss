@@ -8,6 +8,21 @@
     }
 }
 
+// .itro__span--surname {
+//     .animation {
+//         opacity: 0;
+//         transform: translateX(-60px);
+//         transition: all 2s ease;
+
+//         &-class {
+//             opacity: 1;
+//             transform: translateX(0);
+//             transition: all 1.6s ease;
+//             transition-delay: 0.5s;
+//         }
+//     }
+// }
+
 // .portfolio__wrap {
 //     .slider__list {
 //         .animation {
@@ -34,9 +49,17 @@
         transform: translateY(0px);
         transition-delay: 0.4s;
     }
+
+    .itro__span--surname {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 1.6s ease;
+        transition-delay: 0.5s;
+    }
 }
 
 .text-animated {
+    opacity: 1;
     transform: translateY(-100px);
     transition: transform 0.8s ease-in-out;
 }

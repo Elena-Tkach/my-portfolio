@@ -40,6 +40,10 @@
 
     &__btn-link {
         align-self: flex-end;
+
+        @include tablet-768 {
+            align-self: flex-start;
+        }
     }
 
     &__big-title {

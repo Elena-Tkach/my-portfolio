@@ -32,12 +32,12 @@ a {
 }
 
 .container {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     padding: 0 15px;
 
     @include laptopM-1440 {
-        width: 85%;
+        width: 80%;
     }
     @include mobile-468 {
         width: 100%;

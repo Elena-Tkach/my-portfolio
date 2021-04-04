@@ -1,24 +1,10 @@
 
-const image = document.querySelector(`.js-parallax`);
+const images = document.querySelectorAll('.js-parallax');
+console.log(images);
+new simpleParallax(images, {
+    scale: 1.2,
+    delay: .6,
 
-window.addEventListener(`scroll`, function () {
-    const par = document.documentElement.scrollTop;
-
-    isPartiallyVisible(image);
+    // transition: 'cubic-bezier(.3,.34,.8,.66)'
+    transition: 'linear'
 });
-
-
-
-
-function isPartiallyVisible(el) {
-    var elementBoundary = el.getBoundingClientRect();
-
-    var top = elementBoundary.top;
-    var bottom = elementBoundary.bottom;
-    var height = elementBoundary.height;
-
-    console.log(top);
-
-    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
-}
-

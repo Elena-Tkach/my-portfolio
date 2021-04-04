@@ -1,6 +1,6 @@
 .education {
     position: relative;
-    padding: 15vh 0 35vh;
+    padding: 10vh 0 35vh;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -29,13 +29,13 @@
     }
 
     &__img {
-        width: 50%;
+        width: 46%;
         @include position-absolute;
 
         box-shadow: 0 12px 35px #000000;
 
         @include laptopM-1200 {
-            width: 60%;
+            width: 56%;
             left: -12%;
         }
 

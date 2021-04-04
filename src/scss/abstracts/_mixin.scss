@@ -42,17 +42,13 @@
     border-radius: 40px;
 
     text-transform: uppercase;
-    @include font-style(calc(0.1vw + 10px), 700);
+
     cursor: pointer;
     transition: all 0.6s ease;
 }
 
-@mixin btn-size($width) {
-    padding: 16px #{$width};
-
-    @include laptopS-1024 {
-        padding: 14px #{$width};
-    }
+@mixin btn-size($height, $width) {
+    padding: #{$height} #{$width};
 }
 
 @mixin btn-after($gradient, $background, $right) {
@@ -306,25 +302,29 @@
 //     }
 // }
 
-// @keyframes arrow-3 {
-//     0% {
-//         opacity: 0;
-//         transform: translate(0, -33px) rotate(-45deg);
-//     }
-//     10%,
-//     90% {
-//         opacity: 0;
-//     }
-//     50% {
-//         opacity: 1;
-//         transform: translate(0, 0) rotate(-45deg);
-//     }
-//     100% {
-//         opacity: 0;
-//         transform: translate(0, 23px) rotate(-45deg);
-//     }
-// }
+@keyframes text {
+    0% {
+        opacity: 0;
+        transform: translateX(-160px);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes subtitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-160px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 // @keyframes phone {
 //     0% {
 //         transform: translate(0, 0px) rotate(8deg);

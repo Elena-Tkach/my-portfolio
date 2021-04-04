@@ -41,6 +41,7 @@
         font-weight: 400;
         margin: 0;
         margin-bottom: 10%;
+        animation: subtitle 2s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
     &__title {
@@ -51,7 +52,8 @@
 
         line-height: 0;
         @include font-style(calc(6vw + 10px), 700);
-        transition: all 0.6s ease;
+        // transition: all 0.6s ease;
+        animation: text 2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         @include laptopS-1024 {
             // margin-bottom: 25%;
@@ -75,8 +77,9 @@
         &::before {
             @include text-before(#e4ebee);
 
-            animation: anim-text 6s ease-in-out;
+            animation: anim-text 3s ease-in-out;
             animation-fill-mode: forwards;
+            animation-delay: 1s;
 
             @include mobile-468 {
                 color: #e4ebee;
@@ -100,9 +103,9 @@
         &::before {
             line-height: 1.23;
             @include text-before($nero);
-            animation: anim-text 6s alternate;
+            animation: anim-text 3s alternate;
             animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation-delay: 1.6s;
 
             @include mobile-468 {
                 animation: none;
