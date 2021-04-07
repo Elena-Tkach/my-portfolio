@@ -41,7 +41,11 @@
         font-weight: 400;
         margin: 0;
         margin-bottom: 10%;
-        animation: subtitle 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &--animation {
+            animation: subtitle 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            animation-duration: 2s;
+        }
     }
 
     &__title {
@@ -52,8 +56,11 @@
 
         line-height: 0;
         @include font-style(calc(6vw + 10px), 700);
-        // transition: all 0.6s ease;
-        animation: text 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &--animation {
+            animation: text 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            animation-duration: 2s;
+        }
 
         @include laptopS-1024 {
             // margin-bottom: 25%;
@@ -64,6 +71,11 @@
             font-size: 40px;
             margin-left: 0;
         }
+    }
+
+    &__container-btn {
+        animation: btn 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+        animation-duration: 2s;
     }
 
     .intro__span--name {
@@ -137,11 +149,60 @@
     }
 
     &__background {
-        width: 140%;
-        background: $intro-gradient;
+        width: 160%;
+        height: 100%;
+        background: $intro-gradient2;
 
         @include laptopM-1440 {
             width: 150%;
+        }
+
+        .color-green,
+        .color-yellow,
+        .color-pink {
+            z-index: -1;
+            position: absolute;
+            filter: blur(100px);
+
+            @include mobile-468 {
+                display: none;
+            }
+        }
+
+        .color-green {
+            top: 10%;
+            left: 40%;
+            // background: $yellowgreen;
+            width: 600px;
+            height: 400px;
+            background: linear-gradient(45deg, $manz, $yellowgreen);
+
+            @include tablet-768 {
+                left: 50%;
+            }
+        }
+        .color-yellow {
+            bottom: 0px;
+            left: 34%;
+            background: $manz;
+            width: 600px;
+            height: 400px;
+            @include tablet-768 {
+                left: 50%;
+                bottom: -12%;
+            }
+        }
+
+        .color-pink {
+            bottom: 5%;
+            left: 55%;
+            background: #0199ff;
+            width: 300px;
+            height: 300px;
+            @include tablet-768 {
+                left: 60%;
+                bottom: -12%;
+            }
         }
     }
 
@@ -151,7 +212,12 @@
 
         bottom: 1%;
         right: 2%;
-        transition: all 0.6s ease;
+
+        &--animation {
+            transition: all 0.6s ease;
+            animation: intro-image 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            animation-duration: 2s;
+        }
 
         @include laptopM-1440 {
             right: -2vh;

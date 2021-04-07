@@ -51,11 +51,9 @@
             @include btn-size(10px, 40px);
             @include btn-after($white, $white, 45px);
         }
-
-        // @include tablet-820 {
-        //     left: 25%;
-        // }
     }
+
+    
 
     .btn-span {
         position: relative;

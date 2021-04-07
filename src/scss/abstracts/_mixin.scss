@@ -276,31 +276,7 @@
     }
 }
 
-// @keyframes arrow {
-//     0% {
-//         top: 0;
-//     }
-//     50% {
-//         top: 10px;
-//     }
-//     100% {
-//         top: 0;
-//     }
-// }
-
-// @keyframes arrow-2 {
-//     0% {
-//         opacity: 0;
-//         transform: translate(0, -20px) rotate(45deg);
-//     }
-//     50% {
-//         opacity: 1;
-//     }
-//     100% {
-//         opacity: 0;
-//         transform: translate(0, 20px) rotate(45deg);
-//     }
-// }
+//animation of the intro section
 
 @keyframes text {
     0% {
@@ -325,12 +301,37 @@
         transform: translateY(0);
     }
 }
-// @keyframes phone {
-//     0% {
-//         transform: translate(0, 0px) rotate(8deg);
-//     }
 
-//     100% {
-//         transform: translate(0, 0px) rotate(-8deg);
-//     }
-// }
+@keyframes btn {
+    0% {
+        opacity: 0;
+        transform: translateY(260px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes intro-image {
+    0% {
+        opacity: 0;
+        transform: translateX(260px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes gradient {
+    0%,
+    100% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
