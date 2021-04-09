@@ -9,4 +9,5 @@ const body = document.body;
 @@include('_burger.js');
 @@include('_addedElem.js');
 @@include('_parallax.js');
+@@include('_modal-icon.js');
 

@@ -163,6 +163,10 @@
             z-index: -1;
             position: absolute;
             filter: blur(100px);
+            transition: all 0.6s ease;
+            animation: intro-image 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            animation-duration: 2s;
+            // animation-delay: 2s;
 
             @include mobile-468 {
                 display: none;
@@ -170,11 +174,12 @@
         }
 
         .color-green {
-            top: 10%;
-            left: 40%;
+            top: 25%;
+            left: 38%;
             // background: $yellowgreen;
             width: 600px;
             height: 400px;
+            // background: $white;
             background: linear-gradient(45deg, $manz, $yellowgreen);
 
             @include tablet-768 {
@@ -184,7 +189,7 @@
         .color-yellow {
             bottom: 0px;
             left: 34%;
-            background: $manz;
+            background: #cce3f1;
             width: 600px;
             height: 400px;
             @include tablet-768 {
@@ -192,11 +197,11 @@
                 bottom: -12%;
             }
         }
-
         .color-pink {
             bottom: 5%;
             left: 55%;
-            background: #0199ff;
+            background: $manz;
+            // background: linear-gradient(45deg, $manz, $yellowgreen);
             width: 300px;
             height: 300px;
             @include tablet-768 {

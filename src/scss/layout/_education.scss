@@ -134,9 +134,7 @@
     }
 
     &__item-img {
-        z-index: 5;
         width: 45%;
-        box-shadow: 0 10px 35px #000000;
         margin-bottom: 20px;
 
         &:nth-last-child(-n + 2) {
@@ -145,6 +143,19 @@
 
         @include mobile-468 {
             box-shadow: none;
+        }
+    }
+
+    &__img {
+        transition: all 0.6s ease;
+        cursor: zoom-in;
+        box-shadow: 0 10px 35px #000000;
+
+        &:hover {
+            z-index: 10;
+
+            transform: translate(-90%, -50%) scale(2.8);
+            transition-delay: 0.3s;
         }
     }
 }

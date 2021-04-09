@@ -8,6 +8,23 @@ btnBurgerEl.addEventListener('click', (e) => {
 })
 
 const onShowHideMenuClick = () => {
-    menuEl.classList.toggle(`open`);
+    const addClassActive = menuEl.classList.toggle(`open`);
     body.classList.toggle(`menu-open`);
+
+    if (addClassActive) {
+        btnBurgerEl.setAttribute(`aria-label`, `Закрыть навигационное меню`);
+    }
+
+    if (!addClassActive) {
+        btnBurgerEl.setAttribute(`aria-label`, `Открыть навигационное меню`);
+    }
+
 }
+
+
+menuEl.addEventListener(`keydown`, (e) => {
+    if (e.code === `Escape`) {
+        onShowHideMenuClick();
+
+    }
+});
