@@ -11,3 +11,10 @@ const body = document.body;
 @@include('_parallax.js');
 @@include('_modal-icon.js');
 
+//генерит год в футере 
+const year = new Date().getFullYear();
+document.querySelector('.year').textContent = year;
+
+
+
+

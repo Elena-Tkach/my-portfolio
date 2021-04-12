@@ -17,7 +17,15 @@ body {
     line-height: 1;
 
     color: #e4ebee;
-    background-color: #1d1d1d;
+}
+
+.body {
+    &--nero {
+        background-color: $nero;
+    }
+    &--pink {
+        background-color: $razzmatazz;
+    }
 }
 
 img {

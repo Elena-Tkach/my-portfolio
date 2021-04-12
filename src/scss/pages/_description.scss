@@ -1,0 +1,28 @@
+.description {
+    z-index: 2;
+    position: relative;
+    padding: 10vh 0 30vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &__big-title {
+        top: -10%;
+    }
+
+    // &__image {
+    //     position: relative;
+    //     width: 46%;
+    // }
+
+    &__img {
+        width: 40%;
+        @include position-absolute;
+
+        box-shadow: 0 12px 35px #501b38;
+    }
+
+    &__desc-article {
+        width: 48%;
+    }
+}

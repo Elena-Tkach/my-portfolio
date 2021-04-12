@@ -1,6 +1,6 @@
 .education {
     position: relative;
-    padding: 10vh 0 35vh;
+    padding: 15vh 0 35vh;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -49,7 +49,7 @@
     }
 
     &__big-title {
-        z-index: -1;
+        // z-index: -1;
         top: -10%;
 
         @include tablet-768 {
