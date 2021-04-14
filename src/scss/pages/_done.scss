@@ -1,11 +1,19 @@
 .done {
     position: relative;
     width: 100%;
-    padding: 200px 0 100px;
+    padding: 100px 0 100px;
     background: rgba(229, 46, 113, 1);
     // background: linear-gradient(to top, rgba(229, 46, 113, 0.5), rgba(229, 46, 113, 1));
 
+    @include laptopM-1200 {
+        padding: 80px 0 100px;
+    }
+
+    @include tablet-768 {
+        padding-bottom: 30px;
+    }
     &__title {
+        color: #fff;
         opacity: 1;
         margin-bottom: 8%;
     }
@@ -15,8 +23,12 @@
         display: flex;
         width: 100%;
         justify-content: center;
-        align-items: top;
+        // align-items: top;
         flex-wrap: wrap;
+
+        @include mobile-468 {
+            padding: 5%;
+        }
     }
 
     &__item {
@@ -25,10 +37,15 @@
         width: 23%;
         padding-top: 7%;
         margin-right: 2%;
-        margin-bottom: 5%;
+        margin-bottom: 7%;
 
         &:last-child {
             margin-right: 0;
+        }
+
+        @include tablet-768 {
+            width: 45%;
+            padding-top: 12%;
         }
 
         &--layout {
@@ -58,11 +75,30 @@
             display: inline-block;
             vertical-align: middle;
         }
+
+        @include mobile-468 {
+            width: 80%;
+            padding-top: 14%;
+
+            background-size: 15%;
+            &::before {
+                width: 40%;
+                height: 2px;
+            }
+        }
     }
 
     &__text {
         margin: 0;
         color: #fff;
-        font-weight: 700;
+        font-weight: 500;
+        font-size: 16px;
+
+        @include mobile-468 {
+            font-size: 16px;
+            margin: 0 5%;
+            line-height: 1.5;
+            margin-bottom: 5%;
+        }
     }
 }

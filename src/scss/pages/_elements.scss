@@ -1,0 +1,77 @@
+.elements {
+    z-index: 10;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+    &__list {
+        @include list-reset;
+    }
+}
+
+.element {
+    position: absolute;
+    font-weight: 700;
+
+    &:nth-child(1) {
+        top: 0;
+        left: 20%;
+        font-size: 50px;
+
+        color: $manz;
+        // transform: $transform-elX rotate(40deg);
+        // transform: translate(-50%, -20%) rotate(40deg);
+    }
+
+    &:nth-child(2) {
+        top: 40%;
+        left: 10%;
+        font-size: 60px;
+        color: $yellowgreen;
+        animation: elements 2s infinite;
+        // transform: $transform rotate(140deg);
+    }
+
+    &:nth-child(3) {
+        top: 15%;
+        left: 75%;
+        font-size: 40px;
+        color: $yellowgreen;
+
+        transform: rotate(140deg);
+    }
+
+    &:nth-child(4) {
+        bottom: 3%;
+        left: 60%;
+        font-size: 25px;
+        color: $manz;
+        // transform: $transform rotate(10deg);
+    }
+
+    &:nth-child(5) {
+        bottom: 47%;
+        left: 90%;
+        font-size: 20px;
+        color: $manz;
+        // transform: $transform rotate(-10deg);
+    }
+
+    &:nth-child(6) {
+        top: 30%;
+        right: 15%;
+        font-size: 40px;
+        color: $manz;
+        // transform: $transform-elX rotate(50deg);
+    }
+
+    .gradient {
+        text-shadow: $text-shadow;
+    }
+}

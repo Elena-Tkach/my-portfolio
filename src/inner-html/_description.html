@@ -3,45 +3,54 @@
     <div class="description__big-title big-title ">description</div>
 
     <div class="description__image">
-
         <picture class="description__picture ">
-            <source media="(max-width: 768px)" srcset="img/education/mobile320@1x..webp 1x,
-            img/education/mobile320@2x.webp 2x">
+            <source media="(max-width: 768px)" srcset="img/thesis/mobile@1x.webp 1x,
+            img/thesis/mobile@2x.webp 2x">
 
-            <source media="(max-width: 1024px)" srcset="img/education/tablet1024@1x.webp 1x,
-                        img/education/tablet1024@2x.webp 2x">
+            <source type="image/webp" srcset="img/thesis/desktop1@1x.webp, img/thesis/desktop1@2x.webp 2x">
 
-            <source type="image/webp" srcset="img/education/desctop@1x.webp, img/education/desctop@2x.webp 2x">
+            <source media="(max-width: 768px)" srcset="img/thesis/mobile@1x.png 1x,
+            img/thesis/mobile@2x.png 2x">
+            <img class="description__img js-parallax" src="img/thesis/desktop1@1x.png"
+                srcset="img/thesis/desktop1@2x.png" alt="Фрагменты сайта">
+        </picture>
 
-            <source media="(max-width: 768px)" srcset="img/education/mobile320@1x.jpg 1x,
-                        img/education/mobile320@2x.jpg 2x">
-
-
-            <source media="(max-width: 1024px)" srcset="img/education/tablet1024@1x.jpg 1x,
-                        img/education/tablet1024@2x.jpg 2x">
-
-            <img class="description__img js-parallax" src="img/education/desctop@1x.jpg"
-                srcset="img/education/desctop@2x.jpg" alt="Монитор на рабочем столе">
+        <picture>
+            <img class="description__img-boll js-parallax" src="img/thesis/desktop@1x.png"
+                srcset="img/thesis/desktop@1x.png" alt="Фрагменты сайта">
         </picture>
 
     </div>
-    <div class="description__desc-article desc-article animate js-scroll">
-        <h2 class="ed-article__title title title--animate">Верстка лендинга</h2>
-        <p class="ed-article__subtitle subtitle subtitle--animate">Поставленные задачи:</p>
+    <div class="description__content content  js-scroll">
+        <h2 class="content__title title title--animate">Верстка лендинга</h2>
+        <p class="content__subtitle subtitle subtitle--animate">Поставленные и выполненные задачи:</p>
 
-        <ul class="ed-article__list-text animation js-scroll">
-            <li class="ed-article__item-text animation js-scroll">
-                <p class="ed-article__text"> Высшее образование в ИЭиК, Специальность "Психолог" 2012 г.</p>
+        <ul class="content__list list-content ">
+
+            <li class="list-content__items ">
+                <p class="list-content__title">Доcтупность</p>
+
+                <ul class="list-content__list ">
+                    <li class="list-content__item ">Элементы доступны с клавиатуры</li>
+                    <li class="list-content__item ">Элементы имеют описание для Электронных книг</li>
+                </ul>
             </li>
 
-            <li class="ed-article__item-text animation js-scroll">
-                <p class="ed-article__text"> В декабре 2020 г завершила курс по веб-верстке в Skillbox.
-                    Так же прошла курс от центра “Практикум” : Веб -программирование.</p>
-            </li>
+            <li class="list-content__items ">
+                <p class="list-content__title">Оптимизация</p>
 
-            <li class="ed-article__item-text animation js-scroll">
-                <p class="ed-article__text"> Сейчас прохожу курс JavaScript (основы).</p>
+                <ul class="list-content__list">
+                    <li class="list-content__item">Изображения сжаты до максимума без потери качества</li>
+                    <li class="list-content__item">Код сжат</li>
+                    <li class="list-content__item">Оценка проекта в Google Lighthouse в среднем 95</li>
+                </ul>
             </li>
         </ul>
+
+        <a class="content__btn-link btn-link btn-link--green" href="#" target="_blank" rel="noopener"><span
+                class="btn-span">Перейти на сайт</span></a>
     </div>
+
+
+
 </section>

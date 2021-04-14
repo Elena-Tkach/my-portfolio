@@ -27,6 +27,8 @@ $box-shadow: 0 10px 15px #00000046;
 $text-shadow: 5px 7px 2px rgba(0, 0, 0, 0.2);
 
 $transform: translateX(calc(var(--x) / -30)) translateY(calc(var(--y) / -30));
+$transform-elX: translateX(calc(var(--x) / 20)) translateY(calc(var(--y) / 20));
+$transform-el2: translateX(calc(var(--x) / -10)) translateY(calc(var(--y) / -10));
 
 $outline: 1px solid $manz;
 
