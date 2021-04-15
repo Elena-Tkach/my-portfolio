@@ -11,15 +11,6 @@ const swiper = new Swiper(`.js-swiper`, {
     preventClicks: true,
     speed: 600,
 
-
-
-    // pagination: {
-    //     el: `.js-pagination`,
-    //     type: `bullets`,
-    //     clickable: true,
-    // },
-
-
     navigation: {
         nextEl: `.js-btnNext`,
         prevEl: `.js-btnPrev`,
@@ -50,11 +41,6 @@ const swiper2 = new Swiper(`.js-slide`, {
     spaceBetween: 20,
     centeredSlides: true,
     loop: true,
-
-    // slidesPerGroup: 2,
-
-
-    // loopFillGroupWithBlank: true,
     grabCursor: true,
     preventClicks: true,
 

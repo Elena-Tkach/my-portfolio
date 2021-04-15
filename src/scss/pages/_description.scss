@@ -15,7 +15,7 @@
     @include tablet-768 {
         flex-direction: column;
         align-items: center;
-        padding: 10vh 0 5vh;
+        padding: 5vh 0 5vh;
     }
 
     &__big-title {
@@ -53,23 +53,6 @@
         }
     }
 
-    &__img-boll {
-        width: 40%;
-        @include position-absolute;
-        top: 40%;
-        left: 75%;
-
-        @include laptopS-1024 {
-            top: 70%;
-            left: 45%;
-        }
-
-        @include tablet-768 {
-            top: -1%;
-            left: 45%;
-        }
-    }
-
     &__content {
         z-index: 3;
     }
@@ -77,7 +60,7 @@
 
 .content {
     width: 52%;
-    padding: 1% 10% 1% 1%;
+    padding: 1% 10% 1% 5%;
     color: #fff;
 
     @include tablet-768 {
@@ -169,5 +152,29 @@
                 padding-right: 65px;
             }
         }
+    }
+}
+
+.img-boll {
+    z-index: 10;
+    position: absolute;
+    background: url("img/thesis/oval.png") no-repeat center;
+    background-size: 90%;
+    bottom: -10%;
+    right: 5%;
+    width: 30%;
+    height: 450px;
+    // padding: 15%;
+
+    @include laptopM-1440 {
+        bottom: -35%;
+    }
+
+    @include tablet-768 {
+        bottom: -15%;
+    }
+
+    @include mobile-468 {
+        bottom: -25%;
     }
 }

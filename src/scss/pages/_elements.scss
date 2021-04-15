@@ -25,8 +25,7 @@
         font-size: 50px;
 
         color: $manz;
-        // transform: $transform-elX rotate(40deg);
-        // transform: translate(-50%, -20%) rotate(40deg);
+        transform: $transform-elX rotate(40deg);
     }
 
     &:nth-child(2) {
@@ -34,8 +33,7 @@
         left: 10%;
         font-size: 60px;
         color: $yellowgreen;
-        animation: elements 2s infinite;
-        // transform: $transform rotate(140deg);
+        transform: $transform rotate(140deg);
     }
 
     &:nth-child(3) {
@@ -44,7 +42,7 @@
         font-size: 40px;
         color: $yellowgreen;
 
-        transform: rotate(140deg);
+        transform: $transform rotate(140deg);
     }
 
     &:nth-child(4) {
@@ -52,7 +50,11 @@
         left: 60%;
         font-size: 25px;
         color: $manz;
-        // transform: $transform rotate(10deg);
+        transform: $transform-elX rotate(10deg);
+
+        @include tablet-768 {
+            bottom: 15%;
+        }
     }
 
     &:nth-child(5) {
@@ -60,15 +62,24 @@
         left: 90%;
         font-size: 20px;
         color: $manz;
-        // transform: $transform rotate(-10deg);
+        transform: $transform rotate(-10deg);
+
+        @include mobile-468 {
+            left: 80%;
+        }
     }
 
     &:nth-child(6) {
-        top: 30%;
-        right: 15%;
+        top: 60%;
+        right: 45%;
         font-size: 40px;
         color: $manz;
-        // transform: $transform-elX rotate(50deg);
+        transform: $transform-elX rotate(50deg);
+    }
+
+    @include tablet-768 {
+        font-weight: 400;
+        font-size: 12px;
     }
 
     .gradient {

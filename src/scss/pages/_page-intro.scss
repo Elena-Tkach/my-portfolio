@@ -15,7 +15,7 @@
     }
 
     @include tablet-768 {
-        padding: 150px 0 80px;
+        padding: 150px 0 50px;
     }
 
     @include mobile-468 {
@@ -54,7 +54,8 @@
 
         @include tablet-768 {
             @include font-style(calc(1vw + 10px), 400);
-            padding: 0 20%;
+            padding: 0 10%;
+            margin-bottom: 30px;
         }
 
         @include mobile-468 {

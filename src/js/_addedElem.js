@@ -36,4 +36,3 @@ const onShowHideSkillsListClick = (e) => {
 
 
 }
-

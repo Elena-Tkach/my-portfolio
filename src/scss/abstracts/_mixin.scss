@@ -220,36 +220,6 @@
     }
 }
 
-@keyframes elements {
-    0% {
-        // transform: rotate(0.001deg) translate3d(1685px, 10px, 0);
-
-        transform: translate(0px, 0px);
-    }
-
-    25% {
-        transform: translate(10px, 12px);
-    }
-
-    50% {
-        transform: translate(0px, 10px);
-    }
-
-    55% {
-        transform: translate(-10px, 12px);
-    }
-
-    100% {
-        transform: translate(0px, 0px);
-    }
-
-    // 50% {
-    //     transform: translate3d(5px, 34px);
-    // }
-    // 100% {
-    //     transform: translate3d(0px, 0px);
-    // }
-}
 
 @keyframes marq-text-small {
     0% {

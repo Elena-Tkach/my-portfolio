@@ -3,6 +3,10 @@
     padding: 10vh 0 10vh;
     background: $razzmatazz;
 
+    @include mobile-468 {
+        padding: 2vh 0 10vh;
+    }
+
     &__inner {
         position: relative;
 
