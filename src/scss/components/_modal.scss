@@ -4,7 +4,7 @@
 
     visibility: hidden;
     opacity: 0;
-    overflow: auto;
+    // overflow: auto;
 
     top: 0;
     left: 0;
@@ -28,6 +28,15 @@
         margin: auto;
         width: 600px;
         min-height: 480px;
+        transition: all 0.6s ease;
+
+        @include tablet-768 {
+            width: 420px;
+        }
+
+        @include mobile-468 {
+            width: 320px;
+        }
     }
 }
 
@@ -62,6 +71,14 @@
         background-size: 50%;
         transform: translate(-50%, -50%) rotate(90deg);
     }
+
+    @include tablet-768 {
+        left: calc(50% + 188px);
+    }
+
+    @include mobile-468 {
+        left: calc(50% + 140px);
+    }
 }
 
 .color {
@@ -84,6 +101,6 @@
     &:nth-child(2) {
         top: -8%;
         left: -8%;
-        background: linear-gradient(184deg, $yellowgreen 0%, rgb(155, 180, 212) 100%);
+        background: $slider-gradient-green;
     }
 }

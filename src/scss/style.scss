@@ -20,6 +20,7 @@
 @import "components/workArticle";
 @import "components/modal";
 @import "components/form";
+@import "components/pop-up";
 
 @import "layout/header";
 @import "layout/main";
@@ -32,9 +33,12 @@
 @import "layout/about-me";
 @import "layout/footer";
 
-@import "pages/page-intro";
-@import "pages/description";
-@import "pages/done";
-@import "pages/technical";
-@import "pages/bigImage";
-@import "pages/elements";
+@import "thesis-pages/page-intro";
+@import "thesis-pages/description";
+@import "thesis-pages/done";
+@import "thesis-pages/technical";
+@import "thesis-pages/bigImage";
+@import "thesis-pages/elements";
+
+@import "portfolio-pages/portfolio-intro";
+@import "portfolio-pages/work-list";

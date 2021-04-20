@@ -1,11 +1,15 @@
 .form {
     width: 100%;
     padding: 10%;
+
     @include glass-block;
     background-color: rgba(114, 114, 114, 0.2);
-    // border: 1px solid rgb(225, 225, 225, 0.5);
     backdrop-filter: blur(25px);
     border-radius: 2%;
+
+    @include mobile-468 {
+        padding: 12% 10%;
+    }
 
     &__group {
         margin: 0;
@@ -19,6 +23,12 @@
         margin: 0;
         margin-bottom: 40px;
         @include font-style(calc(1vw + 10px), 500);
+
+        @include tablet-768 {
+            font-size: calc(2vw + 10px);
+
+            margin-bottom: 20px;
+        }
     }
 
     &__input,
@@ -32,7 +42,7 @@
     }
 
     &__input {
-        padding: 2%;
+        padding: 4%;
         color: rgb(255, 255, 255);
         font-size: 16px;
         margin-bottom: 20px;
@@ -41,7 +51,7 @@
     &__text {
         color: rgb(255, 255, 255);
         font-size: 16px;
-        padding: 2%;
+        padding: 4%;
         resize: vertical;
         margin-bottom: 40px;
         height: 100px;

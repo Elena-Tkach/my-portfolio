@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="fonts/montserrat-500.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-700.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-alter-700.woff2" as="font">
+
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+
+
+    <title>Ткач Елена</title>
+</head>
+
+<body class="body">
+    @@include("html/_header.html")
+
+    <main class="main">
+        @@include("portfolio-sections/_portfolio-intro.html")
+        @@include("portfolio-sections/_work-list.html")
+
+    </main>
+    @@include("html/_footer.html")
+    @@include("html/_scrollIndicator.html")
+    @@include("html/_modal.html")
+    <script src="script.min.js" type="module"></script>
+</body>
+
+</html>

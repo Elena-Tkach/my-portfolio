@@ -202,10 +202,10 @@
 }
 
 .skills__overlay {
-    background: radial-gradient(rgba(42, 47, 63, 0.6), #1d1d1d 60%);
+    background: radial-gradient(rgba(42, 47, 63, 0.6), #2d2d2d 60%);
 
     @include tablet-768 {
-        background: radial-gradient(rgba(42, 47, 63, 0.7), #1d1d1d 72%);
+        background: radial-gradient(rgba(42, 47, 63, 0.7), #2d2d2d 72%);
     }
 }
 

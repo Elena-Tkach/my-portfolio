@@ -73,6 +73,10 @@
         transform: translateX(0);
     }
 
+    @include mobile-468{
+        width: 60%
+    }
+
     .article__inner {
         position: absolute;
     }

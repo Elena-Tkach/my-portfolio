@@ -1,10 +1,11 @@
 //color
 $yellowgreen: #9acd32;
 $manz: #ded849;
-$nero: #1d1d1d;
+$nero: #2d2d2d;
+// $nero: #1d1d1d;
 $razzmatazz: rgba(229, 46, 113, 1);
 $white: #e4ebee;
-$waikawaGrey: #2a2f3f;
+$waikawaGrey: #2e2f39;
 
 //gradient
 $gradient-yellowGreen: linear-gradient(90deg, #a7c939, #d8d823);
@@ -18,10 +19,10 @@ $slider-gradient-black: linear-gradient(#2a2f3f, #050505);
 $gradient-black-and-pinck: linear-gradient(180deg, #66253f 0%, #1b1b1b 100%);
 $slider-black-magenta: linear-gradient(184deg, rgb(85, 69, 104) 0%, rgb(16, 17, 7) 100%);
 
-$intro-gradient: radial-gradient(circle, rgba(177, 175, 204, 0.3) 0%, rgba(29, 29, 29, 1) 58%);
-$intro-gradient-overlay: linear-gradient(180deg, rgba(138, 135, 135, 0) 40%, rgba(29, 29, 29, 1) 98%);
-$skills-gradient: radial-gradient(circle, rgba(59, 59, 59, 0.767) 0%, rgba(29, 29, 29, 1) 35%);
-$skills-gradient-overlay: linear-gradient(180deg, rgba(135, 136, 138, 0) 80%, rgba(29, 29, 29, 1) 100%);
+$intro-gradient: radial-gradient(circle, #b1afcc4d 0%, #2d2d2d 58%);
+$intro-gradient-overlay: linear-gradient(180deg, #8a878700 40%, #2d2d2d 98%);
+$skills-gradient: radial-gradient(circle, #3b3b3bc4 0%, #2d2d2d 35%);
+$skills-gradient-overlay: linear-gradient(180deg, #87888a00 80%, #2d2d2d 100%);
 
 $box-shadow: 0 10px 15px #00000046;
 $text-shadow: 5px 7px 2px rgba(0, 0, 0, 0.2);
@@ -35,4 +36,4 @@ $outline: 1px solid $manz;
 $cubic-bizie: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
 $cubic-8sec: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-$intro-gradient2: radial-gradient(circle, rgba(144, 142, 163, 0.103) 0%, rgba(29, 29, 29, 1) 48%);
+$intro-gradient2: radial-gradient(circle, #908ea31a 0%, #2d2d2d 48%);

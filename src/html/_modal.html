@@ -9,10 +9,9 @@
             <fieldset class="form__group">
                 <legend class="form__title">Написать мне</legend>
                 <input class="form__input form__name name " type="text" name="Name" placeholder="Ваше имя*" required>
-                <input class="form__input form__phone " type="tel" data-validate-field="tel" name="Tel"
-                    placeholder="Номер телефона*" required>
+                <input class="form__input form__phone " type="tel" name="Tel" placeholder="Номер телефона*" required>
 
-                <textarea class="form__text " name="text" placeholder="Сообщение" required></textarea>
+                <textarea class="form__text " name="text" placeholder="Сообщение*" required></textarea>
 
             </fieldset>
             <button class="form__btn-link btn-link btn-link--green" type="submit"><span
@@ -28,12 +27,15 @@
             <div class="color"></div>
             <div class="color"></div>
         </div>
+
+        <div class="popup popup--color popup--hidden js-popup">
+            <span class="popup__head">Ура!</span>
+            <h3 class="popup__title"> Ваше сообщение успешно отправленно!</h3>
+            <p class="popup__subtitle">В ближайшее время я свяжусь с вами! </p>
+        </div>
+
     </div>
 
 
-    <!-- <div class="popup popup--color popup--hidden js-popup">
-        <span class="popup__head">Ура!</span>
-        <h3 class="popup__title"> Ваши данные успешно отправлены!</h3>
-        <p class="popup__subtitle">В течении часа я свяжусь с Вами! </p>
-    </div> -->
+
 </div>

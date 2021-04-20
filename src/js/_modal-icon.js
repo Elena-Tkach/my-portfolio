@@ -2,6 +2,8 @@ const modalEl = document.querySelector(`.js-modal`);
 const btnCloseEl = document.querySelector(`.js_btn-close`);
 const formEl = document.querySelector(`.js-form`);
 const footerBtnEl = document.querySelector(`.js-modal-btn`);
+const popupEl = document.querySelector(`.js-popup`);
+
 let previousActiveElement;
 
 footerBtnEl.addEventListener(`click`, openModalIconClick);
@@ -20,9 +22,10 @@ window.addEventListener(`click`, function (event) {
 
 function openModalIconClick() {
     modalEl.classList.add(`modal--visible`);
+    body.classList.add(`no-scroll`);
 
     previousActiveElement = document.activeElement;
-
+    btnCloseEl.focus();
     setTimeout(() => {
         btnCloseEl.focus();
     }, 100);
@@ -32,6 +35,9 @@ function openModalIconClick() {
 
 function hideModalIconClick() {
     modalEl.classList.remove(`modal--visible`);
+    popupEl.classList.remove('popup__visible');
+    body.classList.remove('no-scroll');
+
     previousActiveElement.focus();
 
     document.removeEventListener('keydown', onPressEscKeydown);

@@ -1,0 +1,71 @@
+.popup {
+    z-index: 41;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 82%;
+    min-height: 80%;
+
+    padding: 10%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet-768 {
+        min-height: 84%;
+    }
+
+    &--color {
+        background: $nero;
+    }
+
+    &__head {
+        @include font-style(calc(4vw + 10px), 700);
+
+        color: $nero;
+        text-shadow: 2px 2px 35px $yellowgreen;
+        margin-bottom: 16%;
+
+        @include laptopS-1024 {
+            font-size: calc(5vw + 10px);
+        }
+    }
+
+    &__title {
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 18%;
+
+        @include laptopS-1024 {
+            font-size: calc(1vw + 10px);
+        }
+    }
+
+    &__subtitle {
+        @include font-style(calc(0.4vw + 10px), 400);
+        color: $white;
+        text-align: center;
+
+        @include laptopS-1024 {
+            font-size: calc(0.6vw + 10px);
+        }
+    }
+
+    &--hidden {
+        visibility: hidden;
+        opacity: 0;
+        overflow: auto;
+        transition: all 0.6s;
+    }
+}
+
+.popup__visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s;
+}

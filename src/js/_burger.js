@@ -9,7 +9,7 @@ btnBurgerEl.addEventListener('click', (e) => {
 
 const onShowHideMenuClick = () => {
     const addClassActive = menuEl.classList.toggle(`open`);
-    body.classList.toggle(`menu-open`);
+    body.classList.toggle(`no-scroll`);
 
     if (addClassActive) {
         btnBurgerEl.setAttribute(`aria-label`, `Закрыть навигационное меню`);

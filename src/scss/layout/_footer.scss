@@ -7,7 +7,7 @@
     &__overlay {
         transition: all 0.6s ease;
         opacity: 1;
-        background: linear-gradient(rgba(29, 29, 29, 1) 0%, rgba(42, 47, 63, 0.8));
+        background: linear-gradient(#2d2d2d 0%, #2a2f3fcc);
     }
 
     &__list {
@@ -108,7 +108,7 @@
         color: $white;
         position: relative;
 
-        // line-height: 1;
+        line-height: 1.5;
         margin: 0;
         @include font-style(calc(0.6vw + 10px), 500);
         transition: all 0.6s ease;

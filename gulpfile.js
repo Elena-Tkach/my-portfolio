@@ -62,7 +62,7 @@ const js = () => {
 
 
 const images = () => {
-    return src(['./src/img/**/*.{jpg,png,svg,ico,gif,webp}'])
+    return src(['./src/img/**/*.{jpg,png,svg,ico,gif,webp,mp4}'])
         // .pipe(imagemin({
         //     progressive: true,
         //     svgoPlugins: [{ removeViewBox: false }],

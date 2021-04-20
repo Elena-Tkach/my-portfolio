@@ -1,0 +1,180 @@
+.description {
+    z-index: 2;
+    position: relative;
+    padding: 10vh 0 40vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    background: $razzmatazz;
+
+    @include laptopM-1440 {
+        padding: 10vh 0 20vh;
+    }
+
+    @include tablet-768 {
+        flex-direction: column;
+        align-items: center;
+        padding: 5vh 0 5vh;
+    }
+
+    &__big-title {
+        top: -10%;
+
+        @include laptopS-1024 {
+            font-size: calc(10vw + 10px);
+        }
+
+        @include tablet-768 {
+            top: 0;
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 40%;
+
+        @include tablet-768 {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        @include position-absolute;
+        top: 10%;
+
+        @include laptopM-1440 {
+            top: 15%;
+        }
+
+        @include tablet-768 {
+            position: relative;
+            padding: 8% 0;
+        }
+    }
+
+    &__content {
+        z-index: 3;
+    }
+
+    .content {
+        width: 52%;
+        padding: 1% 10% 1% 5%;
+        color: #fff;
+
+        @include tablet-768 {
+            width: 100%;
+            padding: 5%;
+        }
+
+        @include mobile-468 {
+            padding: 0 10%;
+        }
+
+        &__title {
+            margin-bottom: 30px;
+            @include tablet-768 {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__subtitle {
+            margin: 0;
+            margin-bottom: 50px;
+            line-height: 1.5;
+            @include tablet-768 {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__list {
+            padding: 0;
+            padding: 2%;
+            line-height: 1.5;
+            margin-bottom: 50px;
+
+            @include laptopS-1024 {
+                margin-bottom: 30px;
+            }
+
+            @include tablet-768 {
+                padding: 5%;
+            }
+
+            @include mobile-468 {
+                padding: 1%;
+            }
+        }
+
+        .list-content__items {
+            margin-bottom: 10%;
+            &::marker {
+                color: $manz;
+            }
+
+            @include tablet-768 {
+                margin-bottom: 5%;
+            }
+        }
+
+        .list-content__title {
+            margin: 0;
+            margin-bottom: 2%;
+            @include font-style(calc(0.5vw + 10px), 700);
+
+            @include tablet-768 {
+                @include font-style(calc(1vw + 10px), 700);
+            }
+        }
+
+        .list-content__item {
+            &::marker {
+                color: $yellowgreen;
+            }
+
+            @include tablet-768 {
+                @include font-style(calc(0.8vw + 10px), 400);
+            }
+        }
+
+        &__btn-link {
+            padding: 16px 60px;
+
+            &:hover {
+                padding-right: 75px;
+            }
+
+            @include tablet-768 {
+                padding: 16px 50px;
+
+                &:hover {
+                    padding-right: 65px;
+                }
+            }
+        }
+    }
+}
+
+.img-boll {
+    z-index: 10;
+    position: absolute;
+    background: url("img/thesis/oval.png") no-repeat center;
+    background-size: 90%;
+    bottom: -10%;
+    right: 5%;
+    width: 30%;
+    height: 450px;
+    // padding: 15%;
+
+    @include laptopM-1440 {
+        bottom: -35%;
+    }
+
+    @include tablet-768 {
+        bottom: -15%;
+    }
+
+    @include mobile-468 {
+        bottom: -25%;
+    }
+}
