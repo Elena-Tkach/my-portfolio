@@ -62,7 +62,6 @@
     &:hover,
     &:focus {
         color: $yellowgreen;
-        // @include gradient-text;
         transition: all 0.6s ease;
     }
 
@@ -164,6 +163,8 @@
 
 .header__arrows {
     text-align: center;
+    padding: 20px;
+    border-radius: 50px;
 
     transition: $cubic-bizie;
     transform: translate3d(0, 0vh, 0);
@@ -193,6 +194,12 @@
 
     @include mobile-468 {
         display: none;
+    }
+
+    &:hover {
+        transform: translate3d(0, 2vh, 0);
+        box-shadow: 0px 1px 1px $manz;
+        transition: all 0.6s ease;
     }
 }
 

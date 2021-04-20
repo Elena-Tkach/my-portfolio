@@ -11,6 +11,7 @@
 }
 
 .slider__btn {
+    z-index: 15;
     position: absolute;
     top: 12%;
     right: 6%;
@@ -66,3 +67,4 @@
         right: 20%;
     }
 }
+
