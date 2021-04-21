@@ -1,8 +1,9 @@
 
 const successSentForm = function () {
     popupEl.classList.add('popup__visible');
+
     setTimeout(() => {
-        btnCloseEl.focus();
+        btnClose.focus();
     }, 100);
 };
 
@@ -21,16 +22,16 @@ const formSend = (form, successModal) => {
     xhr.open('POST', '../resources/mail.php', true);
     xhr.send(formData);
 
-    formEl.reset();
+    form.reset();
 }
 
 
 
 
 
-formEl.addEventListener('submit', event => {
+form.addEventListener('submit', event => {
     event.preventDefault();
-    formSend(formEl, successSentForm);
+    formSend(form, successSentForm);
 })
 
 

@@ -1,22 +1,22 @@
 const modalEl = document.querySelector(`.js-modal`);
-const btnCloseEl = document.querySelector(`.js_btn-close`);
-const formEl = document.querySelector(`.js-form`);
-const footerBtnEl = document.querySelector(`.js-modal-btn`);
+const btnClose = document.querySelector(`.js_btn-close`);
+const form = document.querySelector(`.js-form`);
+const footerBtn = document.querySelector(`.js-modal-btn`);
 const popupEl = document.querySelector(`.js-popup`);
 
 let previousActiveElement;
 
-footerBtnEl.addEventListener(`click`, openModalIconClick);
+footerBtn.addEventListener(`click`, openModalIconClick);
 
-btnCloseEl.addEventListener(`click`, function () {
+btnClose.addEventListener(`click`, function () {
     hideModalIconClick();
-    formEl.reset();
+    form.reset();
 });
 
 window.addEventListener(`click`, function (event) {
     if (event.target === modalEl) {
         hideModalIconClick()
-        formEl.reset();
+        form.reset();
     }
 })
 
@@ -25,9 +25,10 @@ function openModalIconClick() {
     body.classList.add(`no-scroll`);
 
     previousActiveElement = document.activeElement;
-    btnCloseEl.focus();
+
+    btnClose.focus();
     setTimeout(() => {
-        btnCloseEl.focus();
+        btnClose.focus();
     }, 100);
 
     document.addEventListener('keydown', onPressEscKeydown);
@@ -46,7 +47,7 @@ function hideModalIconClick() {
 function onPressEscKeydown(el) {
     if (el.code === `Escape`) {
         hideModalIconClick()
-        formEl.reset();
+        form.reset();
     }
 }
 

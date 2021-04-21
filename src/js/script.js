@@ -13,6 +13,7 @@ const body = document.body;
 @@include('_addedElem.js');
 @@include('_parallax.js');
 @@include('_modal-icon.js');
+@@include('_submitForm.js');
 
 
 
