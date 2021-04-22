@@ -15,7 +15,7 @@
     }
 
     @include mobile-468 {
-        padding: 100px 0 50px;
+        padding: 110px 0 50px;
 
         &__image {
             display: none;
@@ -45,6 +45,11 @@
         &--animation {
             animation: subtitle 2s cubic-bezier(0.645, 0.045, 0.355, 1);
             animation-duration: 2s;
+        }
+
+        @include tablet-768 {
+            font-size: calc(2vw + 10px);
+            margin-bottom: 5%;
         }
     }
 
@@ -89,7 +94,7 @@
         &::before {
             @include text-before(#e4ebee);
 
-            animation: anim-text 3s ease-in-out;
+            animation: anim-text 1s ease-in-out;
             animation-fill-mode: forwards;
             animation-delay: 1s;
 
@@ -115,9 +120,9 @@
         &::before {
             line-height: 1.23;
             @include text-before($nero);
-            animation: anim-text 3s alternate;
+            animation: anim-text 1s alternate;
             animation-fill-mode: forwards;
-            animation-delay: 1.6s;
+            animation-delay: 1.2s;
 
             @include mobile-468 {
                 animation: none;
@@ -142,7 +147,7 @@
         }
 
         @include mobile-468 {
-            font-size: 14px;
+            font-size: 16px;
             @include gradient-text;
             line-height: 0.8;
         }
@@ -164,9 +169,8 @@
             position: absolute;
             filter: blur(100px);
             transition: all 0.6s ease;
-            animation: intro-image 2s cubic-bezier(0.645, 0.045, 0.355, 1);
-            animation-duration: 2s;
-            // animation-delay: 2s;
+            animation: intro-color 3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            animation-duration: 3s;
 
             @include mobile-468 {
                 display: none;
@@ -176,12 +180,12 @@
         .color-green {
             top: 25%;
             left: 38%;
-            // background: $yellowgreen;
+
             width: 600px;
             height: 400px;
-            // background: $white;
-            background: linear-gradient(45deg, $manz, $yellowgreen);
 
+            background: linear-gradient(45deg, $manz, $yellowgreen);
+            // animation-delay: 2s;
             @include tablet-768 {
                 left: 50%;
             }
@@ -189,9 +193,11 @@
         .color-yellow {
             bottom: 0px;
             left: 34%;
-            background: #cce3f1;
+
             width: 600px;
             height: 400px;
+
+            background: #cce3f1;
             @include tablet-768 {
                 left: 50%;
                 bottom: -12%;
@@ -200,10 +206,11 @@
         .color-pink {
             bottom: 5%;
             left: 55%;
-            background: $manz;
-            // background: linear-gradient(45deg, $manz, $yellowgreen);
+
             width: 300px;
             height: 300px;
+
+            background: $manz;
             @include tablet-768 {
                 left: 60%;
                 bottom: -12%;

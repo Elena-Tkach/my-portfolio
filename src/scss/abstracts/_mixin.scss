@@ -28,7 +28,6 @@
     &:focus,
     &:active {
         outline: none;
-        // box-shadow: 0px 0px 8px 2px rgba(126, 160, 5, 0.5);
         box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.5);
     }
 }
@@ -160,6 +159,8 @@
     font-weight: #{$weight};
 }
 
+//adaptive
+
 @mixin laptopM-1440 {
     @media (max-width: 1440px) {
         @content;
@@ -195,6 +196,8 @@
         @content;
     }
 }
+
+//animation
 
 @keyframes marque-text {
     0% {
@@ -241,6 +244,7 @@
         transform: rotate(0.001deg) translate3d(-842px, 10px, 0);
     }
 }
+
 @keyframes marker {
     0% {
         color: #cfcfcf;
@@ -323,6 +327,18 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes intro-color {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 

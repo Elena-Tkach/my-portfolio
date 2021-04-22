@@ -14,10 +14,10 @@ $button-gradient: linear-gradient(90deg, #a7c939, #d8d823);
 $scroll-line: linear-gradient(#758d25, #f6fa2a);
 
 //gradient slider
-$slider-gradient-green: linear-gradient(#437953, #5f5f07);
-$slider-gradient-black: linear-gradient(#2a2f3f, #050505);
-$gradient-black-and-pinck: linear-gradient(180deg, #66253f 0%, #1b1b1b 100%);
-$slider-black-magenta: linear-gradient(184deg, rgb(85, 69, 104) 0%, rgb(16, 17, 7) 100%);
+$slider-gradient-green: linear-gradient(#1a8139, #868605);
+$slider-gradient-black: linear-gradient(#0c1944, $nero);
+$gradient-black-and-pinck: linear-gradient(150deg, rgba(77, 3, 32, 0.9), #b8034b);
+$slider-black-magenta: linear-gradient(184deg, rgb(42, 9, 82), $nero);
 
 $intro-gradient: radial-gradient(circle, #b1afcc4d 0%, #2d2d2d 58%);
 $intro-gradient-overlay: linear-gradient(180deg, #8a878700 40%, #2d2d2d 98%);

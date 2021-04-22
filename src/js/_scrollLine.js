@@ -5,16 +5,9 @@ const defaultOffset = 200;
 const header = document.querySelector(`.js-header`);
 const animateArrow = document.querySelector(`.js-arrows`);
 const scrollItems = document.querySelectorAll(`.js-scroll`);
-
-
-
 const progressEl = document.querySelector(`.js-progress`);
-// const article = document.querySelectorAll(`.article__content`);
+const anchors = document.querySelectorAll(`.js-anchors`);
 const pos = document.documentElement;
-
-// const windowClient = document.documentElement.scrollTop;
-// const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-// const scrollPercent = (windowClient / windowHeight) * 100;
 
 
 window.addEventListener(`scroll`, function () {
@@ -23,6 +16,12 @@ window.addEventListener(`scroll`, function () {
     checkBoxes();
 });
 
+pos.addEventListener(`mousemove`, e => {
+    pos.style.setProperty(`--x`, e.clientX + `px`);
+    pos.style.setProperty(`--y`, e.clientY + `px`);
+});
+
+slowScroll(anchors);
 
 function scrollheader() {
     const scrollPosition = () => window.pageXOffset || document.documentElement.scrollTop;
@@ -52,12 +51,6 @@ function onProgressScroll(element) {
     element.style.height = `${percentageProgress}%`;
 };
 
-
-pos.addEventListener(`mousemove`, e => {
-    pos.style.setProperty(`--x`, e.clientX + `px`);
-    pos.style.setProperty(`--y`, e.clientY + `px`);
-});
-
 function checkBoxes(box) {
     const triggerTop = window.innerHeight - 100;
 
@@ -68,4 +61,18 @@ function checkBoxes(box) {
             box.classList.add("animation-class");
         }
     });
+}
+
+
+function slowScroll(anchors) {
+    for (let anchor of anchors) {
+        anchor.addEventListener(`click`, (e) => {
+            e.preventDefault();
+            const blockID = anchor.getAttribute(`href`)
+            document.querySelector(`${blockID}`).scrollIntoView({
+                behavior: `smooth`,
+                block: `start`
+            })
+        })
+    }
 }

@@ -72,12 +72,6 @@
             outline: none;
             box-shadow: 0 1px 22px #ffffff80;
         }
-
-        @include tablet-768 {
-            &:hover {
-                box-shadow: none;
-            }
-        }
     }
 
     &__link {
@@ -94,12 +88,6 @@
         &:focus {
             outline: none;
             box-shadow: 0 1px 22px #ffffff80;
-        }
-
-        @include tablet-768 {
-            &:hover {
-                box-shadow: none;
-            }
         }
     }
 

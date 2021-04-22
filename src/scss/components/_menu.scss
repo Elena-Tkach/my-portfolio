@@ -125,6 +125,10 @@
     .nav__list {
         margin-bottom: 5%;
         transition: all 0.6s ease;
+
+        @include mobile-468 {
+            margin-bottom: 15%;
+        }
     }
 
     .nav__socials {
@@ -195,8 +199,10 @@
             transform: scaleX(0);
             transition: $cubic-bizie;
             transform-origin: left center;
+        }
 
-            &:hover {
+        &:hover {
+            &:before {
                 transform: scaleX(1);
             }
         }
@@ -211,6 +217,10 @@
         &:focus,
         &:hover {
             outline: none;
+        }
+
+        @include tablet-768 {
+            font-size: calc(3vw + 10px);
         }
     }
 }
@@ -291,4 +301,3 @@
         transition-delay: 2.2s;
     }
 }
-

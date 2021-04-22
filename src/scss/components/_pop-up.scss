@@ -60,12 +60,12 @@
         visibility: hidden;
         opacity: 0;
         overflow: auto;
-        transition: all 0.6s;
+        transition: all 0.4s ease;
     }
 }
 
 .popup__visible {
     opacity: 1;
     visibility: visible;
-    transition: all 0.6s;
+    transition: all 0.4s ease;
 }

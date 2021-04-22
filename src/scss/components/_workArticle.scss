@@ -36,11 +36,12 @@
         transform: scale(1.1) translateZ(0);
         transition-duration: 1.2s;
         &--work-card1 {
-            background: linear-gradient(280deg, rgba(9, 48, 95, 0.5) 10%, rgb(1, 15, 31) 80%);
+            background: $slider-gradient-black;
+            // background: linear-gradient(280deg, rgba(9, 48, 95, 0.5) 10%, rgb(1, 15, 31) 80%);
         }
 
         &--work-card2 {
-            background: $slider-gradient-black;
+            background: $slider-black-magenta;
         }
 
         &--work-card3 {
