@@ -1,19 +1,23 @@
 .portfolio-intro {
-    position: relative;
-    padding: 35vh 0 10vh;
-    min-height: 80vh;
-    background: $waikawaGrey;
+    @include position-relative;
 
-    text-align: center;
+    &--padding {
+        padding: 35vh 0 10vh;
+        min-height: 80vh;
 
-    @include laptopS-1024 {
-        padding: 20vh 0 10vh;
-        min-height: 40vh;
+        @include laptopS-1024 {
+            padding: 20vh 0 10vh;
+            min-height: 40vh;
+        }
+
+        @include mobile-468 {
+            padding: 15vh 0 10vh;
+            min-height: 30vh;
+        }
     }
 
-    @include mobile-468 {
-        padding: 15vh 0 10vh;
-        min-height: 30vh;
+    &--background {
+        background: $waikawaGrey;
     }
 
     &__overlay {

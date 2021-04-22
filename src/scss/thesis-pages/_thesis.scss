@@ -1,0 +1,50 @@
+.thesis {
+    @include position-relative;
+
+    &--padding {
+        padding: 250px 0 150px;
+
+        @include laptopS-1024 {
+            padding: 250px 0 100px;
+        }
+
+        @include tablet-768 {
+            padding: 150px 0 50px;
+        }
+
+        @include mobile-468 {
+            padding: 150px 0 0;
+        }
+    }
+
+    &--background {
+        background: url(img/thesis/intro.png) no-repeat;
+        background-position: 100% -10%;
+        background-color: $white;
+
+        @include laptopS-1024 {
+            background-position: 130% -10%;
+            background-size: 80%;
+        }
+
+        @include mobile-468 {
+            background-position: 130% 30%;
+        }
+    }
+
+    &__overlay {
+        background: linear-gradient(to bottom, rgba(229, 46, 113, 0.5), rgba(229, 46, 113, 1));
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        margin-bottom: 50px;
+
+        @include tablet-768 {
+            margin-bottom: 30px;
+        }
+    }
+}

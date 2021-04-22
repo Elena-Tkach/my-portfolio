@@ -1,10 +1,16 @@
-.intro {
-    position: relative;
+.primary {
     display: flex;
-    overflow: hidden;
     justify-content: space-between;
-    width: 100%;
-    padding: 300px 0 150px;
+
+    &--position {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &--padding {
+        padding: 300px 0 150px;
+    }
 
     @include laptopM-1200 {
         padding: 350px 0 150px;
@@ -83,7 +89,7 @@
         animation-duration: 2s;
     }
 
-    .intro__span--name {
+    .primary__span--name {
         position: relative;
         line-height: 1.2;
         margin-right: 10%;
@@ -110,7 +116,7 @@
         }
     }
 
-    .itro__span--surname {
+    .primary__span--surname {
         position: relative;
         line-height: 1.8;
         margin-left: 45%;
@@ -135,7 +141,7 @@
         }
     }
 
-    .intro__span {
+    .primary__span {
         margin: 0;
 
         color: $white;
@@ -253,6 +259,6 @@
     }
 }
 
-.intro__overlay {
+.primary__overlay {
     background: $intro-gradient-overlay;
 }

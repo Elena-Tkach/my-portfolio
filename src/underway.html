@@ -31,11 +31,16 @@
     @@include("html/_header.html")
 
     <main class="main">
-        @@include("thesis-sections/_thesis.html")
-        @@include("thesis-sections/_description.html")
-        @@include("thesis-sections/_done.html")
-        @@include("thesis-sections/_technical.html")
-        @@include("thesis-sections/_bigImage.html")
+        <section class="underway underway--padding">
+            <div class="underway__background background js-parallax">
+                <div class="underway__overlay overlay"></div>
+            </div>
+            <h1 class="underway__title intro-title">Сайта в работе</h1>
+            <p class="underway__subtitle intro-subtitle">В ближайшее время работа над сайтом будет завершенна, а пока
+                можно
+                посмотреть
+                другие работы</p>
+        </section>
         @@include("html/_portfolio.html")
 
     </main>

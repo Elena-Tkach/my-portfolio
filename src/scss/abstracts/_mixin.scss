@@ -15,6 +15,13 @@
     border: 0 !important;
 }
 
+@mixin position-relative {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
 @mixin position-absolute {
     position: absolute;
     top: 0;
