@@ -19,28 +19,22 @@
     <meta name="theme-color" content="#0c0c0c">
 
     <meta name="robots" content="index, follow">
-    <meta name="keywords" content="портфолио разработчика, портфолио верстальщика, сайт-портфолио, лендинг">
-    <meta name="description" content="Портфолио. Сайты любой сложности">
-
-    <link rel="stylesheet" type="text/css" href="style.min.css">
-
-    <title>Портфолио. Ткач Елена</title>
-
-
+    <meta name="keywords" content="frontend-разработчик, верстальщик">
+    <meta name="description" content="Разработка сайтов любой сложности">
+    <title>Frontend-разработчик. Веб-верстальщик</title>
     <script src="script.min.js" type="module" defer="defer"></script>
 </head>
 
-<body class="body">
-    @@include("html/_header.html")
+<body class="body body--nero">
+    @@include("page/_header.html")
 
     <main class="main">
-        @@include("portfolio-sections/_portfolio-intro.html")
-        @@include("portfolio-sections/_work-list.html")
-
+        @@include("contact-page/_contact.html")
     </main>
-    @@include("html/_footer.html")
-    @@include("html/_scrollIndicator.html")
-    @@include("html/_modal.html")
+    @@include("page/_footer.html")
+    @@include("page/_scrollIndicator.html")
+    @@include("page/_modal.html")
+
 </body>
 
 </html>

@@ -14,9 +14,7 @@ const body = document.body;
 @@include('_parallax.js');
 @@include('_modal-icon.js');
 @@include('_submitForm.js');
-
-
-
+@@include('_typeText.js');
 
 //маска телефона 
 const selector = document.querySelectorAll(`input[type="tel"]`);

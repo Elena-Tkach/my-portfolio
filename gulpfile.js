@@ -17,7 +17,7 @@ const htmlmin = require('gulp-htmlmin');
 
 
 const html = () => {
-    return src(['./src/*.html'])
+    return src(['./src/html/*.html'])
         .pipe(fileInclude())
         .pipe(dest('./dist'))
         .pipe(browserSync.stream())
@@ -91,7 +91,7 @@ const watchFiles = () => {
         }
     });
     //watch('./src/index.html', html);
-    watch('./src/**/*.html', html);
+    watch('./src/html/**/*.html', html);
     watch('./src/scss/**/*.scss', css);
     watch('./src/resources/**', resources);
     watch('./src/js/**.js', js);
@@ -138,7 +138,7 @@ const jsBuild = () => {
 }
 
 const htmlBuild = () => {
-    return src(['./src/*.html'])
+    return src(['./src/html/*.html'])
         .pipe(fileInclude())
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest('./dist'))
