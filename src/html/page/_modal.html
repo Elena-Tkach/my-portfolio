@@ -3,10 +3,10 @@
     <div class="modal__inner">
         <button class="modal__btn-close btn-close js_btn-close" aria-label="Закрыть окно" type="button">
         </button>
-        <form class="form js-form" action="mail.php" enctype="multipart/form-data" method="POST">
-            <input type="hidden" name="admin_email[]" value="lenuta87@mail.ru">
+        <form class="form form--modal js-form" action="mail.php" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="admin_email[]" value="tcachelena@gmail.com">
             <input type="hidden" name="form_subject" value="Заявка с сайта">
-            <fieldset class="form__group">
+            <fieldset class="form__group form__group--modal">
                 <legend class="form__title">Написать мне</legend>
                 <input class="form__input form__name name " type="text" name="Name" placeholder="Ваше имя*" required>
                 <input class="form__input form__phone " type="tel" name="Tel" placeholder="Номер телефона*" required>
@@ -35,7 +35,4 @@
         </div>
 
     </div>
-
-
-
 </div>

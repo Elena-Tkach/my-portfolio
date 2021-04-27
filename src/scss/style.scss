@@ -21,6 +21,7 @@
 @import "components/modal";
 @import "components/form";
 @import "components/pop-up";
+@import "components/socials";
 
 @import "layout/header";
 @import "layout/main";
@@ -43,3 +44,6 @@
 
 @import "portfolio-pages/portfolio-intro";
 @import "portfolio-pages/work-list";
+
+@import "contact-page/contact";
+@import "contact-page/form-send";

@@ -1,0 +1,41 @@
+.form-send {
+    position: relative;
+    padding: 20vh 0 5vh;
+
+    @include laptopS-1024 {
+        padding: 5vh 0 10vh;
+    }
+
+    @include mobile-468 {
+        padding: 5vh 0 5vh;
+    }
+
+    &__big-title {
+        z-index: 13;
+        top: 0%;
+        opacity: 0.01;
+
+        @include tablet-768 {
+            top: 0;
+        }
+    }
+}
+
+.form__subtitle {
+    position: absolute;
+    color: $yellowgreen;
+    @include gradient-text;
+    top: -40px;
+    transform: translate(0, -100px);
+
+    &--hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s ease;
+    }
+
+    &--visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}

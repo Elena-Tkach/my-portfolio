@@ -7,6 +7,11 @@ const successSentForm = function () {
     }, 100);
 };
 
+const successSentFormContacts = function () {
+    subtitleEl.classList.add('form__subtitle--visible');
+};
+
+
 
 const formSend = (form, successModal) => {
     const formData = new FormData(form);
@@ -16,6 +21,7 @@ const formSend = (form, successModal) => {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 successModal();
+                console.log(`отправленно!`)
             }
         }
     }
@@ -27,11 +33,13 @@ const formSend = (form, successModal) => {
 
 
 
-
-
 form.addEventListener('submit', event => {
     event.preventDefault();
     formSend(form, successSentForm);
 })
 
+formContacts.addEventListener('submit', event => {
+    event.preventDefault();
+    formSend(formContacts, successSentFormContacts);
+})
 

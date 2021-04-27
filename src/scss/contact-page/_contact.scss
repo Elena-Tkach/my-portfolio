@@ -1,0 +1,159 @@
+.contact {
+    @include position-relative;
+    overflow: auto;
+
+    &--padding {
+        padding: 200px 0 100px;
+
+        @include mobile-468 {
+            padding: 100px 0 50px;
+        }
+    }
+
+    &--background {
+        background: $nero;
+        background: url("img/image/moscow1.jpg") no-repeat center/cover;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        width: 60%;
+
+        @include tablet-768 {
+            width: 80%;
+        }
+
+        @include mobile-468 {
+            width: 100%;
+        }
+    }
+
+    &__overlay {
+        background: linear-gradient(180deg, hsla(0, 0%, 18%, 0.8) 0%, #2d2d2d 100%);
+        // background: rgba(45, 45, 45, 0.8);
+    }
+
+    &__inner {
+        position: relative;
+        // padding: 20px;
+        width: 100%;
+        z-index: 12;
+        margin-bottom: 55px;
+        min-height: 120px;
+
+        @include tablet-768 {
+            width: 80%;
+            min-height: 50px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+.contact__background {
+    z-index: 12;
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet-768 {
+        width: 20%;
+    }
+
+    @include mobile-468 {
+        display: none;
+    }
+
+    .contact__svg {
+        width: 80px;
+        fill: $yellowgreen;
+
+        animation: bouns 2s infinite alternate;
+        transition: all 0.6s ease;
+    }
+
+    .contact__text {
+        z-index: 12;
+        position: relative;
+        margin: 0;
+
+        line-height: 1.5;
+        color: #888888;
+    }
+}
+
+.contact__title {
+    position: absolute;
+    text-align: start;
+    @include font-style(calc(2vw + 16px), 700);
+
+    .input-cursor {
+        border-right: 0.08em solid #666;
+        animation: blink 0.6s linear infinite alternate;
+    }
+}
+
+.address {
+    z-index: 12;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    font-style: normal;
+
+    &__list {
+        @include list-reset;
+        width: 100%;
+    }
+    &__item {
+        width: 40%;
+        margin-bottom: 3%;
+
+        @include laptopM-1440 {
+            width: 60%;
+        }
+
+        @include laptopS-1024 {
+            width: 70%;
+        }
+    }
+
+    &__link {
+        @include outline-none;
+        padding: 2%;
+        display: flex;
+        align-items: center;
+
+        transition: all 0.6s ease;
+
+        .address__span {
+            padding-left: 5%;
+        }
+
+        &:focus,
+        &:active,
+        &:hover {
+            .socials__svg {
+                outline: none;
+                // @include outline-none;
+                opacity: 1;
+                fill: $manz;
+            }
+
+            color: $manz;
+            @include gradient-text;
+        }
+    }
+}

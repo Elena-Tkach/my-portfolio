@@ -1,5 +1,6 @@
 .header {
     position: fixed;
+
     z-index: 13;
     top: 0;
     left: 0;
@@ -33,54 +34,68 @@
     }
 
     &__menu {
-        width: 30%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         position: relative;
     }
 
-    &__contact {
-        width: 30%;
+    &__link {
         transition: $cubic-bizie;
         transform: translate3d(0, 0vh, 0);
     }
 }
 
 .phone {
-    font-weight: 500;
-    font-size: calc(0.3vw + 10px);
-    padding: 5px;
     @include outline-none;
 
     &__span {
         font-weight: 700;
         color: $yellowgreen;
         @include gradient-text;
+
+        @include tablet-768 {
+            font-size: 0px;
+            position: absolute;
+        }
     }
 
-    &:hover,
-    &:focus {
-        color: $yellowgreen;
+    &__number {
+        font-weight: 500;
+        font-size: calc(0.3vw + 10px);
+        padding: 5px;
+
+        &:hover,
+        &:focus {
+            color: $yellowgreen;
+            transition: all 0.6s ease;
+        }
+
+        @include tablet-768 {
+            position: absolute;
+            font-size: 0px;
+        }
+    }
+
+    &__svg {
+        display: none;
+
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+
+        fill: $yellowgreen;
         transition: all 0.6s ease;
-    }
 
-    &--img {
+        &:hover,
+        &:focus,
+        &:active {
+            fill: $manz;
+            transition: all 0.6s ease;
+        }
         @include tablet-768 {
             display: block;
-            width: 20px;
-            height: 20px;
-            padding: 18px;
-            font-size: 0px;
-            background: url("img/header/phone.svg") no-repeat center;
-            background-size: auto 70%;
             transition: all 0.6s ease;
-
-            &:hover,
-            &:focus,
-            &:active {
-                transition: all 0.6s ease;
-            }
         }
     }
 }
@@ -162,27 +177,31 @@
 }
 
 .header__arrows {
-    text-align: center;
-    padding: 20px;
+    // text-align: center;
+    @include outline-none;
+    padding: 15px;
     border-radius: 50px;
 
     transition: $cubic-bizie;
-    transform: translate3d(0, 0vh, 0);
 
     .header__logo {
         display: block;
         width: 30px;
         height: 30px;
+
         border-bottom: 6px solid $yellowgreen;
         border-right: 6px solid $yellowgreen;
         border-image: $gradient-yellowGreen;
         border-image-slice: 1;
 
-        transform: rotate(45deg);
-        // margin: -42px 0;
+        transform: translate3d(0, -1vh, 0) rotate(45deg);
         border-radius: 3px;
 
         transition: all 0.6s ease;
+
+        &:hover {
+            transform: translate3d(0, 0vh, 0) rotate(45deg);
+        }
 
         @include tablet-768 {
             width: 20px;
@@ -238,7 +257,7 @@
         transform: translate3d(0, -15vh, 0);
     }
 
-    .header__contact,
+    .phone,
     .header__arrows {
         transform: translate3d(0, -15vh, 0);
     }

@@ -1,15 +1,17 @@
 <header class="header js-header">
     <div class="container">
         <div class="header__wrap">
-            <div class="header__contact">
-                <a class="header__phone phone phone--img" href="tel:+79091561420">
-                    <span class="phone__span">+</span> 7 (909) 156 14 20
-                </a>
-            </div>
+            <a class="header__link phone" href="tel:+79091561420">
+                <svg class="phone__svg phone__svg--header">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <span class="phone__span">+</span>
+                <span class="phone__number">7 (909) 156 14 20</span>
+            </a>
+
             <a class="header__arrows js-arrows" href="index.html">
                 <span class="header__logo"></span>
             </a>
-
 
             <div class="header__menu menu  js-menu">
                 <button class="header__burger burger js-burger" aria-label="Открыть навигационное меню">
@@ -82,7 +84,7 @@
 
 
                         <address class="nav__socials socials">
-                            <ul class="socials__list ">
+                            <ul class="socials__list  socials__list--header">
                                 <li class="socials__item">
                                     <a class="socials__link socials__link--vk" href="https://vk.com/"
                                         aria-label="я в Вконтакте" target="_blank" rel="noopener">
@@ -96,7 +98,7 @@
                                     <a class="socials__link socials__link--fb" href="https://facebook.com/"
                                         aria-label="Я в фэйсбук" target="_blank" rel="noopener"><svg
                                             class="socials__svg">
-                                            <use xlink:href="img/sprite.svg#fb"></use>
+                                            <use xlink:href="img/sprite.svg#facebook"></use>
                                         </svg></a>
                                 </li>
 

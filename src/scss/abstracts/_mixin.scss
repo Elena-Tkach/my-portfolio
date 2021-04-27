@@ -378,3 +378,31 @@
         transform: translateX(-1110px) translateY(0px) rotate(0deg) scale(1, 1);
     }
 }
+
+@keyframes bouns {
+    0% {
+        transform: translate3d(0, 0px, 0);
+    }
+
+    70%,
+    100% {
+        transform: translate3d(0, 0px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 30px, 0);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

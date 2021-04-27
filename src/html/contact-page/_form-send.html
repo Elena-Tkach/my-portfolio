@@ -1,0 +1,48 @@
+<section class="form-send">
+    <div class="form-send__big-title big-title ">say hi</div>
+    <div class="container">
+        <h2 class="form-send__title title title--line">
+            Напишите мне :))
+        </h2>
+        <p class="form-send__subtitle subtitle">
+            Буду рада, если мое резюме заинтересовало вас!
+            <span class="form-send--span">
+                Напишите ваши контакты и я обязательно свяжусь с вами!
+            </span>
+        </p>
+
+        <form class="form  form--cotacts js-form--contacts" action="mail.php" enctype="multipart/form-data"
+            method="POST">
+            <input type="hidden" name="admin_email[]" value="tcachelena@gmail.com">
+            <input type="hidden" name="form_subject" value="Заявка с сайта">
+            <fieldset class="form__group form__group--contacts">
+                <legend class="form__title">Написать мне</legend>
+                <span class="form__subtitle subtitle form__subtitle--hidden js-subtitle">Ура! Ура! Сообщение
+                    отправленно! В ближайшее время я
+                    свяжусь с вами!</span>
+                <input class="form__input form__input--contacts form__name" type="text" name="Name"
+                    placeholder="Ваше имя *" required>
+
+                <input class="form__input form__input--contacts form__name" type="text" name="Compani"
+                    placeholder="Компания*" required>
+
+                <input class="form__input form__input--contacts form__phone" type="tel" name="Tel"
+                    placeholder="Номер телефона*" required>
+
+                <input class="form__input form__input--contacts form__email" type="email" name="Email"
+                    placeholder="Email*" required>
+
+                <textarea class="form__text form__text--contacts" name="text" placeholder="Сообщение*"
+                    required></textarea>
+
+            </fieldset>
+            <button class="form__btn-link btn-link btn-link--green" type="submit"><span
+                    class="btn-span">Отправить</span></button>
+
+            <div class="placeholder">
+                <small>* поле обязательно для заполнения</small>
+            </div>
+
+        </form>
+    </div>
+</section>
