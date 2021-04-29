@@ -1,6 +1,6 @@
 const modalEl = document.querySelector(`.js-modal`);
 const btnClose = document.querySelector(`.js_btn-close`);
-const form = document.querySelector(`.js-form`);
+const form = document.querySelectorAll(`.js-form`);
 const formContacts = document.querySelector(`.js-form--contacts`);
 const footerBtn = document.querySelector(`.js-modal-btn`);
 const popupEl = document.querySelector(`.js-popup`);

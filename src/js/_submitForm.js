@@ -7,9 +7,8 @@ const successSentForm = function () {
     }, 100);
 };
 
-const successSentFormContacts = function () {
-    subtitleEl.classList.add('form__subtitle--visible');
-};
+const successSentFormContacts = subtitleEl.classList.add('form__subtitle--visible');
+
 
 
 
@@ -31,15 +30,17 @@ const formSend = (form, successModal) => {
     form.reset();
 }
 
-
-
-form.addEventListener('submit', event => {
-    event.preventDefault();
-    formSend(form, successSentForm);
+form.btns.forEach((el) => {
+    el.addEventListener('submit', successSentForm)
 })
 
-formContacts.addEventListener('submit', event => {
-    event.preventDefault();
-    formSend(formContacts, successSentFormContacts);
-})
+// form.addEventListener('submit', event => {
+//     event.preventDefault();
+//     formSend(form, successSentForm);
+// })
+
+// formContacts.addEventListener('submit', event => {
+//     event.preventDefault();
+//     formSend(formContacts, successSentFormContacts);
+// })
 

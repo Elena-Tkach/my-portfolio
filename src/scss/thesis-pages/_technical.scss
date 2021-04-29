@@ -10,7 +10,7 @@
     &__inner {
         position: relative;
 
-        @include tablet-768 {
+        @include tablet-820 {
             display: flex;
             flex-direction: column;
         }
@@ -19,7 +19,7 @@
     &__content {
         position: relative;
 
-        @include tablet-768 {
+        @include tablet-820 {
             order: 2;
         }
     }
@@ -31,7 +31,7 @@
         top: 0;
         bottom: 0;
 
-        @include tablet-768 {
+        @include tablet-820 {
             display: none;
         }
     }
@@ -86,7 +86,7 @@
         padding: 1% 10% 1% 5%;
         color: #fff;
 
-        @include tablet-768 {
+        @include tablet-820 {
             width: 100%;
             padding: 5%;
         }
@@ -97,7 +97,7 @@
 
         &__title {
             margin-bottom: 30px;
-            @include tablet-768 {
+            @include tablet-820 {
                 margin-bottom: 20px;
             }
         }
@@ -106,7 +106,7 @@
             margin: 0;
             margin-bottom: 50px;
             line-height: 1.5;
-            @include tablet-768 {
+            @include tablet-820 {
                 margin-bottom: 30px;
             }
         }
@@ -121,7 +121,7 @@
                 margin-bottom: 30px;
             }
 
-            @include tablet-768 {
+            @include tablet-820 {
                 padding: 5%;
             }
 
@@ -136,7 +136,7 @@
                 color: $manz;
             }
 
-            @include tablet-768 {
+            @include tablet-820 {
                 margin-bottom: 5%;
             }
         }
@@ -146,7 +146,7 @@
             margin-bottom: 2%;
             @include font-style(calc(0.5vw + 10px), 700);
 
-            @include tablet-768 {
+            @include tablet-820 {
                 @include font-style(calc(1vw + 10px), 700);
             }
         }
@@ -156,7 +156,7 @@
                 color: $yellowgreen;
             }
 
-            @include tablet-768 {
+            @include tablet-820 {
                 @include font-style(calc(0.8vw + 10px), 400);
             }
         }
@@ -168,13 +168,21 @@
                 padding-right: 75px;
             }
 
-            @include tablet-768 {
-                padding: 16px 50px;
+            @include tablet-820 {
+                padding: 16px 45px;
 
                 &:hover {
                     padding-right: 65px;
                 }
             }
+
+            // @include tablet-768 {
+            //     padding: 16px 50px;
+
+            //     &:hover {
+            //         padding-right: 65px;
+            //     }
+            // }
         }
     }
 }
@@ -182,7 +190,7 @@
 .image__mobile {
     display: none;
 
-    @include tablet-768 {
+    @include tablet-820 {
         position: relative;
         margin: 0 auto;
         width: 80%;
