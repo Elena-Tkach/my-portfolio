@@ -150,12 +150,11 @@
         transition: all 0.6s ease;
         cursor: zoom-in;
         box-shadow: 0 10px 35px #000000;
-
-        &:hover {
-            z-index: 10;
-
-            transform: translate(-90%, -50%) scale(2.8);
-            transition-delay: 0.3s;
-        }
     }
+}
+
+.image-large {
+    z-index: 10;
+
+    transform: translate(-90%, -50%) scale(2.8);
 }

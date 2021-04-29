@@ -67,7 +67,6 @@ function hideModalIconClick() {
 
 
 function successSentForm() {
-    hideModalIconClick();
     popupEl.classList.add('popup__visible');
 
     setTimeout(() => {
@@ -80,6 +79,8 @@ function successSentForm() {
 
 
 function hidePoupClick() {
+    modalEl.classList.remove(`modal--visible`);
+    body.classList.remove('no-scroll');
     popupEl.classList.remove('popup__visible');
 
     document.removeEventListener('keydown', onPressEscKeydown);
