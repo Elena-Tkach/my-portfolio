@@ -1,16 +1,4 @@
 
-const successSentForm = function () {
-    popupEl.classList.add('popup__visible');
-
-    setTimeout(() => {
-        btnClose.focus();
-    }, 100);
-};
-
-const successSentFormContacts = subtitleEl.classList.add('form__subtitle--visible');
-
-
-
 
 const formSend = (form, successModal) => {
     const formData = new FormData(form);
@@ -19,8 +7,11 @@ const formSend = (form, successModal) => {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                successModal();
-                console.log(`отправленно!`)
+
+                setTimeout(() => {
+                    successModal();
+                }, 100);
+
             }
         }
     }
@@ -30,14 +21,14 @@ const formSend = (form, successModal) => {
     form.reset();
 }
 
-form.btns.forEach((el) => {
-    el.addEventListener('submit', successSentForm)
+
+form.forEach((el) => {
+    el.addEventListener('submit', event => {
+        event.preventDefault();
+        formSend(el, successSentForm);
+    })
 })
 
-// form.addEventListener('submit', event => {
-//     event.preventDefault();
-//     formSend(form, successSentForm);
-// })
 
 // formContacts.addEventListener('submit', event => {
 //     event.preventDefault();

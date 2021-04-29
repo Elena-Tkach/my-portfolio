@@ -20,22 +20,3 @@
         }
     }
 }
-
-.form__subtitle {
-    position: absolute;
-    color: $yellowgreen;
-    @include gradient-text;
-    top: -40px;
-    transform: translate(0, -100px);
-
-    &--hidden {
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.6s ease;
-    }
-
-    &--visible {
-        opacity: 1;
-        visibility: visible;
-    }
-}
