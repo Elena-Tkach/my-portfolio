@@ -1,6 +1,5 @@
 .slider__btn-list {
     @include list-reset;
-    // z-index: 1;
 }
 
 .btn {
@@ -11,7 +10,7 @@
 }
 
 .slider__btn {
-    z-index: 15;
+    z-index: 12;
     position: absolute;
     top: 12%;
     right: 6%;

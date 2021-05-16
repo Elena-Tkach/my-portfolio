@@ -1,9 +1,13 @@
 .education {
     position: relative;
-    padding: 15vh 0 35vh;
+    padding: 15vh 0 55vh;
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    @include laptopM-1440 {
+        padding-bottom: 35px;
+    }
 
     @include laptopM-1200 {
         padding: 5vh 0 15vh;
@@ -123,6 +127,7 @@
 
     &__list-img {
         @include list-reset;
+        position: relative;
         width: 80%;
         display: flex;
         flex-wrap: wrap;
@@ -130,12 +135,18 @@
 
         @include tablet-768 {
             width: 100%;
+            margin: 0 0 20% 0;
+        }
+
+        @include mobile-468 {
+            margin: 0 0 40% 0;
         }
     }
 
     &__item-img {
-        width: 45%;
+        width: 40%;
         margin-bottom: 20px;
+        position: relative;
 
         &:nth-last-child(-n + 2) {
             margin-bottom: 0;
@@ -147,14 +158,33 @@
     }
 
     &__img {
+        top: 0;
+        left: 0;
+        position: absolute;
         transition: all 0.6s ease;
         cursor: zoom-in;
         box-shadow: 0 10px 35px #000000;
+        transform: translate(0%, 0%) scale(1);
+
+        @include tablet-768 {
+            transform: translate(0%, 0%) scale(1);
+        }
     }
 }
 
 .image-large {
     z-index: 10;
+    transform: translate(-50%, -50%) scale(2.8);
 
-    transform: translate(-90%, -50%) scale(2.8);
+    @include tablet-768 {
+        transform: translate(50%, 0%) scale(1.8);
+    }
+}
+
+.ed-article__item-img {
+    &:nth-child(2) {
+        .image-large {
+            transform: translate(-60%, 0%) scale(1.8);
+        }
+    }
 }
