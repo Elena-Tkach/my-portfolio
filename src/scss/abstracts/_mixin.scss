@@ -394,15 +394,30 @@
     }
 }
 
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
+// @keyframes blink {
+//     0% {
+//         opacity: 1;
+//     }
 
-    50% {
+//     50% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
+
+@keyframes scroll {
+    0% {
+        transform: rotate(-90deg) translate3d(40px, -50%, 0);
         opacity: 0;
     }
-    100% {
+    33%,
+    66% {
         opacity: 1;
+    }
+    100% {
+        transform: rotate(-90deg) translate3d(10px, -50%, 0);
+        opacity: 0;
     }
 }

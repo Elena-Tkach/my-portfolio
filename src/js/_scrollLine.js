@@ -3,18 +3,25 @@
 let scroll = 0;
 const defaultOffset = 200;
 const header = document.querySelector(`.js-header`);
-const animateArrow = document.querySelector(`.js-arrows`);
 const scrollItems = document.querySelectorAll(`.js-scroll`);
 const progressEl = document.querySelector(`.js-progress`);
 const anchors = document.querySelectorAll(`.js-anchors`);
+const scrollText = document.querySelector(`.js-scroll-text`);
 const pos = document.documentElement;
 
+const sc = body.scrollY;
 
+
+if (sc >= 600) {
+    header.style.cssText = `display:none`;
+}
 window.addEventListener(`scroll`, function () {
-    onProgressScroll(progressEl);
+    onProgressScroll(progressEl, scrollText);
     scrollheader();
     checkBoxes();
 });
+
+
 
 pos.addEventListener(`mousemove`, e => {
     pos.style.setProperty(`--x`, e.clientX + `px`);
@@ -23,9 +30,12 @@ pos.addEventListener(`mousemove`, e => {
 
 slowScroll(anchors);
 
+
+
 function scrollheader() {
     const scrollPosition = () => window.pageXOffset || document.documentElement.scrollTop;
     const containHide = () => header.classList.contains(`hide`);
+
 
     if (scrollPosition() >
         scroll && !containHide() &&
@@ -42,14 +52,27 @@ function scrollheader() {
     scroll = scrollPosition();
 }
 
-function onProgressScroll(element) {
+function onProgressScroll(element, scrollText) {
     let scrollTop = window.scrollY;
     let windowHeight = window.innerHeight;
     let siteHeight = document.documentElement.scrollHeight;
     let percentageProgress = Math.floor(scrollTop / (siteHeight - windowHeight) * 100);
 
     element.style.height = `${percentageProgress}%`;
+
+    if (scrollTop > 400) {
+
+        scrollText.classList.add(`hide`);
+    }
+
+    if (scrollTop < 400) {
+        scrollText.classList.remove(`hide`);
+    }
+
+    console.log(scrollTop);
 };
+
+
 
 function checkBoxes(box) {
     const triggerTop = window.innerHeight - 100;

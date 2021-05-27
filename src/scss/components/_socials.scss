@@ -20,6 +20,12 @@
         &--contact {
             margin-top: 5%;
         }
+
+        &--aside {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__item {
@@ -32,17 +38,22 @@
         &:last-child {
             padding-right: 0;
         }
-    }
 
-    &__item--footer {
-        @include tablet-768 {
-            padding: 6%;
-            &:first-child {
-                padding-top: 0;
-            }
+        &--aside {
+            padding-left: 0;
+            margin-top: 20px;
+        }
 
-            &:last-child {
-                padding-bottom: 0;
+        &--footer {
+            @include tablet-768 {
+                padding: 6%;
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
             }
         }
     }
@@ -73,6 +84,10 @@
         &--address {
             width: 30px;
             height: 30px;
+        }
+
+        &--aside {
+            opacity: 0.2;
         }
 
         // &:focus,
