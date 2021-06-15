@@ -68,8 +68,6 @@ function onProgressScroll(element, scrollText) {
     if (scrollTop < 400) {
         scrollText.classList.remove(`hide`);
     }
-
-    console.log(scrollTop);
 };
 
 

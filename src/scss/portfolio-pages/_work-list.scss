@@ -3,6 +3,10 @@
     padding: 5vh 0 10vh;
     background: #2e2f39;
 
+    &__title {
+        @include visually-hidden;
+    }
+
     &__list {
         @include list-reset;
         // display: flex;

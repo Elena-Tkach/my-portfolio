@@ -1,11 +1,15 @@
 .aside {
-    z-index: 3;
+    z-index: 6;
     position: fixed;
     top: 0;
     left: 4.5vw;
     transform: translate3d(0, 60vh, 0);
 
     transition: all 1s ease;
+
+    @include mobile-468 {
+        display: none;
+    }
 
     &__socials {
         font-style: normal;

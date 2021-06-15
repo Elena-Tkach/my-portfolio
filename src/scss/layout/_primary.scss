@@ -197,26 +197,28 @@
             }
         }
         .color-yellow {
-            bottom: 0px;
-            left: 34%;
+            bottom: 5%;
+            left: 50%;
 
             width: 600px;
             height: 400px;
 
-            background: #cce3f1;
+            background: $manz;
+
             @include tablet-768 {
                 left: 50%;
                 bottom: -12%;
             }
         }
         .color-pink {
-            bottom: 5%;
-            left: 55%;
+            bottom: 5px;
+            left: 37%;
 
-            width: 300px;
-            height: 300px;
+            width: 350px;
+            height: 350px;
 
-            background: $manz;
+            background: linear-gradient(45deg, $manz, $yellowgreen);
+
             @include tablet-768 {
                 left: 60%;
                 bottom: -12%;
