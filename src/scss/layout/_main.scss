@@ -15,6 +15,10 @@
         @include title-before;
     }
 
+    &--nero {
+        color: $nero;
+    }
+
     &--animate {
         opacity: 0;
         transform: translateY(50px);

@@ -1,5 +1,0 @@
-class SliderItem {
-    constructor() {
-        
-    }
-}

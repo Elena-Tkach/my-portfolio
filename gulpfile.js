@@ -1,6 +1,6 @@
 'use strict';
 const { src, dest, parallel, series, watch } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const fileInclude = require('gulp-file-include');
@@ -10,7 +10,7 @@ const svgSprite = require('gulp-svg-sprite');
 const rename = require("gulp-rename");
 const uglify = require('gulp-uglify-es').default;
 const cleanCSS = require('gulp-clean-css');
-const imagemin = require('gulp-imagemin');
+// const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 
 
@@ -63,13 +63,14 @@ const js = () => {
 
 const images = () => {
     return src(['./src/img/**/*.{jpg,png,svg,ico,gif,webp,mp4}'])
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            interlaced: true,
-            optomizationLevel: 2
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     svgoPlugins: [{ removeViewBox: false }],
+        //     interlaced: true,
+        //     optomizationLevel: 2
+        // }))
         .pipe(dest('./dist/img'))
+        .pipe(browserSync.stream());
 }
 
 const resources = () => {
@@ -97,7 +98,7 @@ const watchFiles = () => {
     watch('./src/js/**.js', js);
     watch('./src/fonts/*.{woff,woff2}', fonts);
     watch('./src/img/**.svg', svgSprites);
-    // watch('./src/img/**/*.{jpg,png,svg,ico,gif,webp}', images);
+    watch('./src/img/**/*.{jpg,png,svg,ico,gif,webp}', images);
 
 }
 

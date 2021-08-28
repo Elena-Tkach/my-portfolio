@@ -2,11 +2,10 @@
     @include position-relative;
 
     &--padding {
-        padding: 35vh 0 10vh;
-        min-height: 80vh;
+        padding: 35vh 0 2vh;
 
         @include laptopS-1024 {
-            padding: 20vh 0 10vh;
+            padding: 20vh 0 2vh;
             min-height: 40vh;
         }
 

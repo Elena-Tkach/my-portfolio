@@ -1,0 +1,30 @@
+.images {
+    position: relative;
+    // overflow: hidden;
+
+    &--padding {
+        padding: 15vh 0 20vh;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        margin: 0 0 50px;
+    }
+
+    &--background {
+        background: linear-gradient(to top, #063638b7 20%, #289296 100%);
+    }
+}
+
+.image-big {
+    position: relative;
+}
+
+.image-small__img {
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+}

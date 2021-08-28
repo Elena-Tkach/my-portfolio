@@ -13,7 +13,7 @@
         }
 
         &--card2 {
-            background: url("../../img/portfolio/slide2.jpg") no-repeat center/cover;
+            background: url("../../img/portfolio/slide2-2.jpg") no-repeat center/cover;
         }
 
         &--card3 {
@@ -31,7 +31,7 @@
                 background: $gradient-black-and-pinck;
             }
             &--card2 {
-                background: $slider-gradient-black;
+                background: linear-gradient(-220deg, #063638 45%, #33b9bd 130%);
             }
 
             &--card3 {

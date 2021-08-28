@@ -9,34 +9,50 @@
 
     &__list {
         @include list-reset;
-        // display: flex;
-        // flex-wrap: wrap;
-        // width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
 
     &__item {
         padding: 8%;
-        // width: 48%;
+        width: 50%;
+
+        @include laptopM-1200 {
+            width: 70%;
+
+            &:nth-child(odd) {
+                margin-right: 10%;
+
+                @include mobile-468 {
+                    margin-right: 0;
+                }
+            }
+
+            &:nth-child(even) {
+                margin-left: 10%;
+
+                @include mobile-468 {
+                    margin-left: 0;
+                }
+            }
+        }
 
         @include laptopS-1024 {
             margin-bottom: 4%;
             padding: 2%;
         }
 
-        &:nth-child(odd) {
-            margin-right: 10%;
-
-            @include mobile-468 {
-                margin-right: 0;
-            }
+        @include tablet-768 {
+            width: 100%;
         }
 
-        &:nth-child(even) {
-            margin-left: 10%;
+        &:first-child {
+            width: 100%;
+        }
 
-            @include mobile-468 {
-                margin-left: 0;
-            }
+        &:last-child {
+            width: 100%;
         }
 
         .slider__article {

@@ -2,7 +2,6 @@
     position: relative;
     width: 100%;
     padding: 100px 0 100px;
-    background: rgba(229, 46, 113, 1);
 
     @include laptopM-1200 {
         padding: 80px 0 100px;
@@ -11,8 +10,18 @@
     @include tablet-820 {
         padding-bottom: 30px;
     }
+
+    &--background-thesis {
+        background: rgba(229, 46, 113, 1);
+    }
+
+    &--background-cyber {
+        z-index: 3;
+        background: #e0e4e7;
+        box-shadow: 0 10px 10px #00000033, 0 -10px 10px #00000033;
+    }
+
     &__title {
-        color: #fff;
         opacity: 1;
         margin-bottom: 8%;
     }
@@ -33,7 +42,7 @@
         text-align: center;
 
         width: 23%;
-        padding-top: 7%;
+        // padding-top: 7%;
         margin-right: 2%;
         margin-bottom: 7%;
 
@@ -44,34 +53,6 @@
         @include tablet-768 {
             width: 45%;
             padding-top: 12%;
-        }
-
-        &--layout {
-            background: url("img/svg/layout.svg") no-repeat top;
-            background-size: 20%;
-        }
-
-        &--adaptive {
-            background: url("img/svg/adaptive.svg") no-repeat top;
-            background-size: 25%;
-        }
-
-        &--flexbox {
-            background: url("img/svg/split.svg") no-repeat top;
-            background-size: 20%;
-        }
-
-        &--pixel {
-            background: url("img/svg/pixel.svg") no-repeat top;
-            background-size: 20%;
-        }
-        &::before {
-            content: "";
-            background: linear-gradient(90deg, #a7c939, #d8d823);
-            width: 90%;
-            height: 3px;
-            display: inline-block;
-            vertical-align: middle;
         }
 
         @include mobile-468 {
@@ -86,17 +67,56 @@
         }
     }
 
+    .item {
+        &__svg {
+            width: 50px;
+            height: 60px;
+            transition: all 0.6s ease;
+
+            &--blue {
+                fill: #ffffff;
+            }
+
+            &--manz {
+                fill: #289296;
+            }
+
+            &--adaptive {
+                width: 60px;
+                height: 60px;
+            }
+
+            &--linguistics {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
     &__text {
         margin: 0;
         color: #fff;
         font-weight: 500;
         font-size: 16px;
 
+        &::before {
+            content: "";
+            background: linear-gradient(90deg, #a7c939, #d8d823);
+            width: 90%;
+            height: 3px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         @include mobile-468 {
             font-size: 16px;
             margin: 0 5%;
             line-height: 1.5;
             margin-bottom: 5%;
+        }
+
+        &--nero {
+            color: $nero;
         }
     }
 }
