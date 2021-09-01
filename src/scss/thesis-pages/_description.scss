@@ -2,7 +2,6 @@
     z-index: 2;
     position: relative;
     padding: 10vh 0 30vh;
-    // overflow: hidden;
 
     width: 100%;
 
@@ -15,12 +14,8 @@
         align-items: center;
         padding: 5vh 0 5vh;
     }
+    
     &--flex {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__inner {
         display: flex;
         justify-content: space-between;
     }
@@ -31,7 +26,7 @@
 
     &--cyber {
         background: linear-gradient(to bottom, #063638b7 45%, #289296 90%);
-        // background: #289296;
+        padding-bottom: 15vh;
     }
 
     &__title {
