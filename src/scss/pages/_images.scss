@@ -1,5 +1,6 @@
 .images {
     position: relative;
+    overflow: hidden;
 
     &--padding {
         padding: 15vh 0 20vh;
@@ -7,6 +8,10 @@
 
     &--background {
         background: linear-gradient(to top, #063638b7 20%, #289296 100%);
+    }
+
+    @include min-1441 {
+        padding-bottom: 10vh;
     }
 
     @include tablet-768 {
@@ -20,22 +25,31 @@
     &__subtitle {
         margin: 0 0 50px;
     }
+
+    @include mobile-468 {
+        padding-bottom: 10vh;
+    }
 }
 
 .image-big {
     position: relative;
-
-    &__img {
-        width: 80%;
+    @include min-1441 {
+        margin: 0 15%;
     }
 }
 
 .image-small__img {
     position: absolute;
+    transition: all 0.6s ease-in-out;
     bottom: 10%;
     right: 15%;
 
-    @include mobile-468 {
-        bottom: 20%;
+    @include min-1441 {
+        left: 55%;
+    }
+
+    @include tablet-768 {
+        right: 6%;
+        bottom: 4%;
     }
 }

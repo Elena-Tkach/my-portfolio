@@ -14,7 +14,7 @@
         align-items: center;
         padding: 5vh 0 5vh;
     }
-    
+
     &--flex {
         display: flex;
         justify-content: space-between;
@@ -83,7 +83,7 @@
 
         @include tablet-768 {
             width: 100%;
-            padding: 5%;
+            padding: 5% 12%;
         }
 
         @include mobile-468 {

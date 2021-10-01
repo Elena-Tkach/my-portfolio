@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="fonts/montserrat-500.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-700.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-alter-700.woff2" as="font">
+    <link rel="stylesheet" type="text/css" href="style.min.css">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#0c0c0c">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tkachelena.ru/">
+    <meta name="keywords" content="frontend-разработчик, верстальщик, сайт, лэндос">
+    <meta name="description" content="Разработка сайтов любой сложности">
+    <title>Прелендинг для зарубежного проекта. Ткач Елена</title>
+</head>
+
+<body class="body">
+    @@include("page/_header.html")
+
+    <main class="main">
+        @@include("donut/_intro.html")
+        <!-- @@include("thesis-sections/_description.html")
+        @@include("thesis-sections/_done.html")
+        @@include("thesis-sections/_technical.html")
+        @@include("thesis-sections/_bigImage.html") -->
+    </main>
+    @@include("page/_portfolio.html")
+    @@include("page/_footer.html")
+    @@include("page/_scrollIndicator.html")
+    @@include("page/_modal.html")
+    @@include("page/_aside.html")
+
+    <script src="script.min.js" type="module"></script>
+</body>
+
+</html>

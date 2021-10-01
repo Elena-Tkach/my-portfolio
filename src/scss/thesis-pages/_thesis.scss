@@ -32,8 +32,16 @@
         }
     }
 
+    &--background-donut {
+        background: url(img/donut/donut2.jpg) no-repeat center/cover;
+    }
+
     &__overlay {
         background: linear-gradient(to bottom, rgba(229, 46, 113, 0.5), rgba(229, 46, 113, 1));
+    }
+
+    &__overlay-donut {
+        background: linear-gradient(180deg, #d4607fa6 10%, #03778b 100%);
     }
 
     &__title {

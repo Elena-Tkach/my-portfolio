@@ -8,6 +8,10 @@
     &__background {
         @include position-absolute;
 
+        &--donut {
+            background: url("../../img/donut/donut.jpg") no-repeat center/cover;
+        }
+
         &--card1 {
             background: url("../../img/portfolio/slide1.jpg") no-repeat center/cover;
         }
@@ -26,6 +30,10 @@
         .overlay {
             background: $waikawaGrey;
             opacity: 0.8;
+
+            &--donut {
+                background: radial-gradient(circle, #026773 20%, #11192c 100%);
+            }
 
             &--card1 {
                 background: $gradient-black-and-pinck;

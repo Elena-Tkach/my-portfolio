@@ -167,7 +167,11 @@
 }
 
 //adaptive
-
+@mixin min-1441 {
+    @media (min-width: 1441px) {
+        @content;
+    }
+}
 @mixin laptopM-1440 {
     @media (max-width: 1440px) {
         @content;
