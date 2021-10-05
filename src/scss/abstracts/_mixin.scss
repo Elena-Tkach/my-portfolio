@@ -108,12 +108,12 @@
     }
 }
 
-@mixin title-before {
+@mixin title-before($color) {
     &:before {
         content: "";
         width: 40px;
         height: 3px;
-        background: #fff;
+        background: $color;
         display: inline-block;
         margin-right: 15px;
         vertical-align: middle;

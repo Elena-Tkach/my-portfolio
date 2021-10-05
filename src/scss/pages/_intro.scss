@@ -1,0 +1,127 @@
+.intro {
+    @include position-relative;
+
+    &--padding {
+        padding: 250px 0 150px;
+
+        @include laptopS-1024 {
+            padding: 250px 0 100px;
+        }
+
+        @include tablet-768 {
+            padding: 150px 0 50px;
+        }
+
+        @include mobile-468 {
+            padding: 150px 0 0;
+        }
+    }
+
+    &--bg {
+        &-portfolio {
+            background: $waikawaGrey;
+        }
+
+        &-thesis {
+            background: url(img/thesis/intro.png) no-repeat;
+            background-color: $white;
+            background-position: 100% -10%;
+
+            @include laptopS-1024 {
+                background-position: 130% -10%;
+                background-size: 80%;
+            }
+
+            @include mobile-468 {
+                background-position: 130% 30%;
+            }
+        }
+
+        &-cyber {
+            @include position-absolute;
+            background: url("img/cyber/intro.jpg") no-repeat center/cover;
+        }
+
+        &-donut {
+            background: url("img/donut/donut2.jpg") no-repeat center/cover;
+        }
+
+        &-underway {
+            @include position-absolute;
+            background: url("img/image/under.jpg") no-repeat center/cover;
+        }
+    }
+
+    &__overlay {
+        &--portfolio {
+            background: linear-gradient(180deg, rgba(46, 47, 57, 0), rgb(46, 47, 57));
+        }
+        &--cyber {
+            background: linear-gradient(to top, #063638da 45%, #2892961e 100%);
+        }
+        &--thesis {
+            background: linear-gradient(to bottom, rgba(229, 46, 113, 0.5), rgba(229, 46, 113, 1));
+        }
+        &--donut {
+            background: linear-gradient(180deg, #d4607fa6 10%, #03778b 100%);
+        }
+
+        &--underway {
+            background: linear-gradient(hsla(0, 0%, 23%, 0.6) 0%, hsla(0, 0%, 18%, 1) 90%);
+        }
+    }
+
+    &__title {
+        z-index: 2;
+        position: relative;
+        margin: 0;
+
+        color: #fff;
+        @include font-style(calc(3vw + 10px), 700);
+        text-shadow: $text-shadow;
+
+        &--margin {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__subtitle {
+        z-index: 3;
+        position: relative;
+        margin: 0;
+        padding: 0 25%;
+
+        color: #fff;
+        @include font-style(calc(1vw + 8px), 400);
+        text-shadow: $text-shadow;
+        line-height: 1.5;
+
+        @include tablet-768 {
+            @include font-style(calc(1vw + 10px), 400);
+            padding: 0 10%;
+        }
+
+        @include mobile-468 {
+            padding: 0 10%;
+        }
+
+        &--margin {
+            margin-bottom: 50px;
+
+            @include tablet-768 {
+                margin-bottom: 30px;
+            }
+        }
+
+        &--cyber {
+            padding: 0 5%;
+        }
+    }
+
+    &__video {
+        @include position-absolute;
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

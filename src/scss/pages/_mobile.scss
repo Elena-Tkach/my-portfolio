@@ -2,7 +2,7 @@
     position: relative;
 
     &--padding {
-        padding: 15vh 0 20vh;
+        padding: 20vh 0;
     }
 
     &--background {
@@ -14,7 +14,7 @@
     }
 
     &__content {
-        margin-bottom: 15vh;
+        margin-bottom: 5vh;
     }
 
     &__title {
@@ -32,6 +32,5 @@
 }
 
 .image__img {
-    width: 80%;
     box-shadow: 0px 0px 15px 0px #00000046;
 }

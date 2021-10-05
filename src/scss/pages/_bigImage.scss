@@ -1,0 +1,18 @@
+.big-image {
+    position: relative;
+    text-align: center;
+
+    &--bg {
+        background: $razzmatazz;
+    }
+
+    &--pading {
+        padding: 5vh 0 20vh;
+    }
+
+    &__img {
+        &--shadow {
+            box-shadow: $box-shadow;
+        }
+    }
+}

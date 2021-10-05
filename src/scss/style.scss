@@ -34,22 +34,18 @@
 @import "layout/work";
 @import "layout/about-me";
 @import "layout/footer";
-@import "layout/underway";
 
+@import "pages/intro";
 @import "pages/images";
 @import "pages/mobile";
+@import "pages/bigImage";
+@import "pages/done";
+@import "pages/description";
+@import "pages/technical";
 
-@import "thesis-pages/thesis";
-@import "thesis-pages/description";
-@import "thesis-pages/done";
-@import "thesis-pages/technical";
-@import "thesis-pages/bigImage";
 @import "thesis-pages/elements";
 
-@import "portfolio-pages/portfolio-intro";
 @import "portfolio-pages/work-list";
 
 @import "contact-page/contact";
 @import "contact-page/form-send";
-
-@import "cyber-pages/intro";

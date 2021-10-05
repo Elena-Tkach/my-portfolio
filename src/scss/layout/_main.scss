@@ -12,7 +12,13 @@
     }
 
     &--line {
-        @include title-before;
+        &-white {
+            @include title-before($white);
+        }
+
+        &-nero {
+            @include title-before($nero);
+        }
     }
 
     &--nero {
@@ -50,36 +56,5 @@
             transition: none;
             transform: translateY(0);
         }
-    }
-}
-
-.intro-title {
-    z-index: 2;
-    position: relative;
-    margin: 0;
-
-    color: #fff;
-    @include font-style(calc(3vw + 10px), 700);
-    text-shadow: $text-shadow;
-}
-
-.intro-subtitle {
-    z-index: 2;
-    position: relative;
-    margin: 0;
-    padding: 0 25%;
-
-    color: #fff;
-    @include font-style(calc(1vw + 8px), 400);
-    text-shadow: $text-shadow;
-    line-height: 1.5;
-
-    @include tablet-768 {
-        @include font-style(calc(1vw + 10px), 400);
-        padding: 0 10%;
-    }
-
-    @include mobile-468 {
-        padding: 0 10%;
     }
 }

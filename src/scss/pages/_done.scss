@@ -11,14 +11,15 @@
         padding-bottom: 30px;
     }
 
-    &--background-thesis {
-        background: rgba(229, 46, 113, 1);
-    }
-
-    &--background-cyber {
-        z-index: 3;
-        background: #e0e4e7;
-        box-shadow: 0 10px 10px #00000033, 0 -10px 10px #00000033;
+    &--bg {
+        &-thesis {
+            background: rgba(229, 46, 113, 1);
+        }
+        &-cyber {
+            z-index: 3;
+            background: #e0e4e7;
+            box-shadow: 0 10px 10px #00000033, 0 -10px 10px #00000033;
+        }
     }
 
     &__title {
@@ -40,9 +41,7 @@
 
     &__item {
         text-align: center;
-
         width: 23%;
-        // padding-top: 7%;
         margin-right: 2%;
         margin-bottom: 7%;
 
