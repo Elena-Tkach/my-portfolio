@@ -15,10 +15,15 @@
         &-thesis {
             background: rgba(229, 46, 113, 1);
         }
+
         &-cyber {
             z-index: 3;
             background: #e0e4e7;
             box-shadow: 0 10px 10px #00000033, 0 -10px 10px #00000033;
+        }
+
+        &-donut {
+            background: #03778b;
         }
     }
 

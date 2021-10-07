@@ -1,5 +1,10 @@
 .socials {
     text-align: center;
+    margin-top: 3%;
+
+    @include tablet-820 {
+        margin-top: 10%;
+    }
 
     &__list {
         @include list-reset;

@@ -6,6 +6,7 @@
     margin: 0;
 
     @include font-style(calc(1vw + 16px), 700);
+    line-height: 1.4;
 
     @include tablet-768 {
         font-size: calc(2vw + 16px);

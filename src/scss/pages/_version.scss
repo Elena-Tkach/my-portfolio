@@ -1,0 +1,116 @@
+.version {
+    z-index: 2;
+    position: relative;
+    &--padding {
+        padding: 5vh 0 5vh;
+
+        @include tablet-768 {
+            padding-top: 5vh;
+        }
+    }
+
+    &--bg {
+        &-donut {
+            background: #03778b;
+        }
+    }
+
+    &__big-title {
+        top: -10%;
+    }
+
+    .content {
+        margin-bottom: 5%;
+
+        @include tablet-768 {
+            margin-bottom: 15%;
+        }
+
+        &__title {
+            margin: 0 0 20px;
+        }
+
+        &__subtitle {
+            margin: 0;
+            margin-bottom: 5%;
+        }
+
+        &__list {
+            padding: 0;
+            margin: 0;
+        }
+
+        &__item {
+            margin-bottom: 2%;
+            &::marker {
+                color: $yellowgreen;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include tablet-768 {
+                margin-bottom: 5%;
+            }
+        }
+
+        &__text {
+            margin: 0;
+            line-height: 1.2;
+            padding-right: 15%;
+            @include tablet-768 {
+                padding-right: 0;
+                font-size: calc(1vw + 10px);
+            }
+        }
+    }
+
+    &__list {
+        @include list-reset;
+    }
+
+    .list-version {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include tablet-768 {
+            flex-direction: column;
+        }
+
+        &__item {
+            width: 49%;
+            text-align: center;
+            position: relative;
+            @include tablet-768 {
+                width: 100%;
+                margin-bottom: 15%;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include mobile-468 {
+                margin-bottom: 25%;
+            }
+        }
+
+        &__inner {
+            margin-bottom: 10%;
+        }
+
+        &__img {
+            box-shadow: $box-shadow;
+        }
+
+        &__title {
+            margin: 0;
+            margin-bottom: 2%;
+
+            color: $yellowgreen;
+            font-size: calc(1vw + 10px);
+        }
+    }
+}

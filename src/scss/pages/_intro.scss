@@ -5,7 +5,7 @@
         padding: 250px 0 150px;
 
         @include laptopS-1024 {
-            padding: 250px 0 100px;
+            padding: 150px 0 50px;
         }
 
         @include tablet-768 {
@@ -43,7 +43,8 @@
         }
 
         &-donut {
-            background: url("img/donut/donut2.jpg") no-repeat center/cover;
+            @include position-absolute;
+            background: url("img/donut/donut3.jpg") no-repeat center/cover;
         }
 
         &-underway {

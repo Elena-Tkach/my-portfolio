@@ -3,17 +3,25 @@
 
     &--padding {
         padding: 20vh 0;
+
+        @include tablet-768 {
+            padding: 10vh 0 10vh;
+        }
     }
 
-    &--background {
-        background: linear-gradient(to bottom, #063638b7 20%, #289296 100%);
-    }
+    &--bg {
+        &-cyber {
+            background: linear-gradient(to bottom, #063638b7 20%, #289296 100%);
+        }
 
-    @include tablet-768 {
-        padding: 10vh 0 5vh;
+        &-donut {
+            background: #03778b;
+        }
     }
 
     &__content {
+        z-index: 3;
+        position: relative;
         margin-bottom: 5vh;
     }
 
@@ -24,13 +32,31 @@
     &__subtitle {
         margin: 0 0 10vh;
     }
+
+    &__image {
+        text-align: center;
+        margin-bottom: 15vh;
+    }
+
+    &__list {
+        @include list-reset;
+    }
 }
 
-.mobile__image {
-    text-align: center;
-    margin-bottom: 15vh;
-}
+.image {
+    position: relative;
+    z-index: 3;
+    &--flex {
+        display: flex;
+        justify-content: space-around;
+    }
 
-.image__img {
-    box-shadow: 0px 0px 15px 0px #00000046;
+    &__item {
+        width: 100%;
+        padding: 15%;
+    }
+
+    &__img {
+        box-shadow: 0px 0px 15px 0px #00000046;
+    }
 }
